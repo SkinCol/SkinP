@@ -1,7 +1,7 @@
 <%-- 
-    Document   : index
-    Created on : 16/08/2019, 09:45:42 AM
-    Author     : Alejandro
+    Document   : Tabletas
+    Created on : 16/08/2019, 12:22:15 PM
+    Author     : vivelabtunja25
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -94,7 +94,7 @@
                             <!--Card content-->
                             <div class="card-body">
 
-                                <a href="Telefonos.jsp">
+                                <a href="dispositivos - phone.html">
                                     <img src="img/apple-iphone8plus-gold-1-3x.jpg" style="height: 200px;" alt="Foto iPhone" class="mb-2">
                                     <h4 class="entry-title p-1">
                                         <a>Telefonos</a>
@@ -117,7 +117,7 @@
 
                             <!--Card content-->
                             <div class="card-body">
-                                <a href="Tabletas.jsp">
+                                <a href="dispositivos - tablets.html">
                                     <img src="img/apple_mk9n2ll_a_128gb_ipad_mini_4_1185478.jpg" style="height: 200px;" alt="Foto ipad" class="mb-2">
                                     <h4 class="entry-title p-1">
                                         <a>Tabletas</a>
@@ -139,7 +139,7 @@
 
                             <!--Card content-->
                             <div class="card-body">
-                                <a href="Portatiles.jsp">
+                                <a href="dispositivos - computers.html">
                                     <img src="img/macbookproret13.png" style="height: 200px;" alt="Foto mackbook" class="mb-2">
                                     <h4 class="entry-title p-1">
                                         <a>Portatiles</a>
@@ -161,7 +161,7 @@
 
                             <!--Card content-->
                             <div class="card-body">
-                                <a href="Consolas.jsp">
+                                <a href="dispositivos - gaming.html">
                                     <img src="img/11558330.jpg" style="height: 200px;" alt="Foto XboxOne" class="mb-2">
                                     <h4 class="entry-title p-1">
                                         <a>Consolas</a>

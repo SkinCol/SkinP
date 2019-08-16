@@ -19,7 +19,7 @@ public class Conexion {
     String password = "";
     public Connection getConnection(){
         try {
-            Class.forName("con.mysql.jdbc.Driver");
+            Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection(url, user, password);
         } catch (Exception e) {
         }
