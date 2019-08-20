@@ -1,10 +1,9 @@
 <%-- 
-    Document   : Telefonos
-    Created on : 19/08/2019, 08:49:02 AM
+    Document   : Dispositivos
+    Created on : 19/08/2019, 08:48:06 AM
     Author     : Alejandro
 --%>
 
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -16,7 +15,7 @@
         <link href="css/style.min.css" rel="stylesheet" type="text/css"/>
         <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
         <link rel="shortcut icon" type="image/x-ico" href="favicon.ico" />
-        <title>Dispositivos - Telefonos</title>
+        <title>Dispositivos</title>
     </head>
     <body>
         <!-- Navbar -->
@@ -40,13 +39,13 @@
                     <!-- Left -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="Dispositivos.jsp">Dispositivos</a>
+                            <a class="nav-link" href="">Dispositivos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#" target="_blank">Limitado</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" target="_blank">Series</a>
+                            <a class="nav-link" href="ControllerSkin?accion=skintelefonos">Series</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#" target="_blank">Personalizador</a>
@@ -80,40 +79,102 @@
 
         <!--Main layout-->
         <main class="mt-5 pt-4">
-            <!-- iPhone -->
             <div class="container">
 
-                <h1 class="my-5 display-4 text-left">Telefonos</h1>
+                <h3 class="my-5 h3 text-center">Dispositivos</h3>
 
                 <!--Grid row-->
                 <div class="row text-center wow fadeIn">
 
                     <!--Grid column 1-->
-                    <c:forEach var="p" items="${phone}">
-                        <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="col-lg-3 col-md-6 mb-4">
 
-                            <!--Card-->
-                            <div class="card">
+                        <!--Card-->
+                        <div class="card">
 
-                                <!--Card content-->
-                                <div class="card-body">
-                                    <a href="">
-                                        <img src="ControladorIMG?id=${p.getIdDispositivo()}" style="height: 200px;" class="mb-2">
-                                    </a>
-                                </div>
-                                <div class="card-footer">
-                                    <h5 class="entry-title p-1">
-                                        <a>${p.getMarca()}</a>
-                                    </h5>
-                                </div>
+                            <!--Card content-->
+                            <div class="card-body">
+
+                                <a href="Controlador?accion=1">
+                                    <img src="img/apple-iphone8plus-gold-1-3x.jpg" style="height: 200px;" alt="Foto iPhone" class="mb-2">
+                                    <h4 class="entry-title p-1">
+                                        <a>Telefonos</a>
+                                    </h4>
+                                </a>
 
                             </div>
-                            <!--/.Card-->
 
                         </div>
-                    </c:forEach>
+                        <!--/.Card-->
 
+                    </div>
                     <!--Grid column 1-->
+
+                    <!--Grid column 2-->
+                    <div class="col-lg-3 col-md-6 mb-4">
+
+                        <!--Card-->
+                        <div class="card">
+
+                            <!--Card content-->
+                            <div class="card-body">
+                                <a href="Controlador?accion=2">
+                                    <img src="img/apple_mk9n2ll_a_128gb_ipad_mini_4_1185478.jpg" style="height: 200px;" alt="Foto ipad" class="mb-2">
+                                    <h4 class="entry-title p-1">
+                                        <a>Tabletas</a>
+                                    </h4>
+                                </a>
+                            </div>
+
+                        </div>
+                        <!--/.Card-->
+
+                    </div>
+                    <!--Grid column 2-->
+
+                    <!--Grid column 3-->
+                    <div class="col-lg-3 col-md-6 mb-4">
+
+                        <!--Card-->
+                        <div class="card">
+
+                            <!--Card content-->
+                            <div class="card-body">
+                                <a href="Controlador?accion=3">
+                                    <img src="img/macbookproret13.png" style="height: 200px;" alt="Foto mackbook" class="mb-2">
+                                    <h4 class="entry-title p-1">
+                                        <a>Portatiles</a>
+                                    </h4>
+                                </a>
+                            </div>
+
+                        </div>
+                        <!--/.Card-->
+
+                    </div>
+                    <!--Grid column 3-->
+
+                    <!--Grid column 4-->
+                    <div class="col-lg-3 col-md-6 mb-4">
+
+                        <!--Card-->
+                        <div class="card">
+
+                            <!--Card content-->
+                            <div class="card-body">
+                                <a href="Controlador?accion=4">
+                                    <img src="img/11558330.jpg" style="height: 200px;" alt="Foto XboxOne" class="mb-2">
+                                    <h4 class="entry-title p-1">
+                                        <a>Consolas</a>
+                                    </h4>
+                                </a>
+                            </div>
+
+                        </div>
+                        <!--/.Card-->
+
+                    </div>
+                    <!--Grid column 4-->
 
                 </div>
                 <!--Grid row-->
@@ -121,6 +182,8 @@
             </div>
         </main>
         <!--Main layout-->
+
+
 
         <!--Footer-->
         <footer class="page-footer font-small unique-color-dark pt-4">
@@ -154,7 +217,6 @@
 
         </footer>
         <!--/.Footer-->
-
         <!-- SCRIPTS -->
         <!-- JQuery -->
         <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>

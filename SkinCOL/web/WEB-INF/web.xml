@@ -2,11 +2,19 @@
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
         <servlet-name>Controller</servlet-name>
-        <servlet-class>Controller.Controller</servlet-class>
+        <servlet-class>Controller</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>ControllerIMG</servlet-name>
         <servlet-class>Controller.ControllerIMG</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Controlador</servlet-name>
+        <servlet-class>Controller.Controlador</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ControladorIMG</servlet-name>
+        <servlet-class>Controller.ControladorIMG</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Controller</servlet-name>
@@ -15,6 +23,14 @@
     <servlet-mapping>
         <servlet-name>ControllerIMG</servlet-name>
         <url-pattern>/ControllerIMG</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Controlador</servlet-name>
+        <url-pattern>/Controlador</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControladorIMG</servlet-name>
+        <url-pattern>/ControladorIMG</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -1,6 +1,6 @@
 <%-- 
-    Document   : index
-    Created on : 16/08/2019, 09:45:42 AM
+    Document   : Index
+    Created on : 19/08/2019, 08:47:00 AM
     Author     : Alejandro
 --%>
 
@@ -14,7 +14,8 @@
         <link href="css/mdb.min.css" rel="stylesheet" type="text/css"/>
         <link href="css/style.min.css" rel="stylesheet" type="text/css"/>
         <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
-        <title>JSP Page</title>
+        <link rel="shortcut icon" type="image/x-ico" href="favicon.ico" />
+        <title>SkinCol</title>
     </head>
     <body>
         <!-- Navbar -->
@@ -22,7 +23,7 @@
             <div class="container">
 
                 <!-- Brand -->
-                <a class="navbar-brand" href="home.html" target="_blank">
+                <a class="navbar-brand" href="index.jsp">
                     <img src="img/Logo Skin.png" style="width:150px" alt="">
                 </a>
 
@@ -38,16 +39,16 @@
                     <!-- Left -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="">Dispositivos</a>
+                            <a class="nav-link" href="Dispositivos.jsp">Dispositivos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" target="_blank">Limitado</a>
+                            <a class="nav-link" href="#">Limitado</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" target="_blank">Series</a>
+                            <a class="nav-link" href="ControllerSkin?accion=SkinTelefonos">Series</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" target="_blank">Personalizador</a>
+                            <a class="nav-link" href="#">Personalizador</a>
                         </li>
                     </ul>
 
@@ -64,8 +65,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="IncioSesion.html" class="nav-link border border-light rounded waves-effect waves-light"
-                               target="_blank">
+                            <a href="IncioSesion.html" class="nav-link border border-light rounded waves-effect waves-light" target="_blank">
                                 <i class="fas fa-user"></i> Iniciar Sesión
                             </a>
                         </li>
@@ -76,113 +76,58 @@
             </div>
         </nav>
 
-        <!--Main layout-->
-        <main class="mt-5 pt-4">
-            <div class="container">
+        <!--Carousel Wrapper-->
+        <div id="carousel-home" class="carousel slide carousel-fade">
 
-                <h3 class="my-5 h3 text-center">Dispositivos</h3>
+            <!--Indicators-->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-home" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-home" data-slide-to="1"></li>
+                <li data-target="#carousel-home" data-slide-to="2"></li>
+            </ol>
+            <!--/.Indicators-->
 
-                <!--Grid row-->
-                <div class="row text-center wow fadeIn">
-
-                    <!--Grid column 1-->
-                    <div class="col-lg-3 col-md-6 mb-4">
-
-                        <!--Card-->
-                        <div class="card">
-
-                            <!--Card content-->
-                            <div class="card-body">
-
-                                <a href="Telefonos.jsp">
-                                    <img src="img/apple-iphone8plus-gold-1-3x.jpg" style="height: 200px;" alt="Foto iPhone" class="mb-2">
-                                    <h4 class="entry-title p-1">
-                                        <a>Telefonos</a>
-                                    </h4>
-                                </a>
-
-                            </div>
-
-                        </div>
-                        <!--/.Card-->
-
+            <!--Slides-->
+            <div class="carousel-inner" role="listbox">
+                <!--First slide-->
+                <div class="carousel-item active">
+                    <div class="view col-md-12 col-sm-12"
+                         style="background-image: url('img/Limited/ColorShift-Limited.jpg'); background-repeat: no-repeat; background-size: cover;">
                     </div>
-                    <!--Grid column 1-->
-
-                    <!--Grid column 2-->
-                    <div class="col-lg-3 col-md-6 mb-4">
-
-                        <!--Card-->
-                        <div class="card">
-
-                            <!--Card content-->
-                            <div class="card-body">
-                                <a href="Tabletas.jsp">
-                                    <img src="img/apple_mk9n2ll_a_128gb_ipad_mini_4_1185478.jpg" style="height: 200px;" alt="Foto ipad" class="mb-2">
-                                    <h4 class="entry-title p-1">
-                                        <a>Tabletas</a>
-                                    </h4>
-                                </a>
-                            </div>
-
-                        </div>
-                        <!--/.Card-->
-
-                    </div>
-                    <!--Grid column 2-->
-
-                    <!--Grid column 3-->
-                    <div class="col-lg-3 col-md-6 mb-4">
-
-                        <!--Card-->
-                        <div class="card">
-
-                            <!--Card content-->
-                            <div class="card-body">
-                                <a href="Portatiles.jsp">
-                                    <img src="img/macbookproret13.png" style="height: 200px;" alt="Foto mackbook" class="mb-2">
-                                    <h4 class="entry-title p-1">
-                                        <a>Portatiles</a>
-                                    </h4>
-                                </a>
-                            </div>
-
-                        </div>
-                        <!--/.Card-->
-
-                    </div>
-                    <!--Grid column 3-->
-
-                    <!--Grid column 4-->
-                    <div class="col-lg-3 col-md-6 mb-4">
-
-                        <!--Card-->
-                        <div class="card">
-
-                            <!--Card content-->
-                            <div class="card-body">
-                                <a href="Consolas.jsp">
-                                    <img src="img/11558330.jpg" style="height: 200px;" alt="Foto XboxOne" class="mb-2">
-                                    <h4 class="entry-title p-1">
-                                        <a>Consolas</a>
-                                    </h4>
-                                </a>
-                            </div>
-
-                        </div>
-                        <!--/.Card-->
-
-                    </div>
-                    <!--Grid column 4-->
-
                 </div>
-                <!--Grid row-->
+                <!--/First slide-->
 
+                <!--Second slide-->
+                <div class="carousel-item">
+                    <div class="view"
+                         style="background-image: url('img/Limited/Transparent-Limited.jpg'); background-repeat: no-repeat; background-size: cover;">
+                    </div>
+                </div>
+                <!--/Second slide-->
+
+                <!--Third slide-->
+                <div class="carousel-item">
+                    <div class="view"
+                         style="background-image: url('img/Limited/Venom-limited.jpg'); background-repeat: no-repeat; background-size: cover;">
+                    </div>
+                </div>
+                <!--/Third slide-->
             </div>
-        </main>
-        <!--Main layout-->
+            <!--/.Slides-->
 
+            <!--Controles-->
+            <a class="carousel-control-prev" href="#carousel-home" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterio</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel-home" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Siguiente</span>
+            </a>
+            <!--/.Controles-->
 
+        </div>
+        <!--/.Carousel Wrapper-->
 
         <!--Footer-->
         <footer class="page-footer font-small unique-color-dark pt-4">
@@ -191,7 +136,11 @@
             <div class="container">
 
                 <!-- Llamar a la accion -->
-                <ul class="list-unstyled list-inline text-center py-2">
+                <ul class="list-unstyled list-inline text-center">
+                    <li class="list-inline-item">
+                        <h5>Con el Apoyo de: </h5>
+                        <img src="img/Vivelab.png" style="width: 50%;" alt="">
+                    </li>
                     <li class="list-inline-item">
                         <h5 class="mb-1">Regístrate Gratis</h5>
                     </li>
@@ -212,6 +161,7 @@
 
         </footer>
         <!--/.Footer-->
+
         <!-- SCRIPTS -->
         <!-- JQuery -->
         <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
@@ -226,6 +176,5 @@
             // Animations initialization
             new WOW().init();
         </script>
-
     </body>
 </html>

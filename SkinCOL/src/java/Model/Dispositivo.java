@@ -9,7 +9,7 @@ import java.io.InputStream;
 
 /**
  *
- * @author vivelabtunja25
+ * @author Alejandro
  */
 public class Dispositivo {
     private int IdDispositivo;
@@ -68,6 +68,4 @@ public class Dispositivo {
     public void setTipo(String Tipo) {
         this.Tipo = Tipo;
     }
-    
-    
 }
