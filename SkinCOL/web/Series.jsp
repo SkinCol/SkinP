@@ -1,9 +1,10 @@
 <%-- 
-    Document   : Index
-    Created on : 19/08/2019, 08:47:00 AM
-    Author     : Alejandro
+    Document   : Series
+    Created on : 20-ago-2019, 12:33:23
+    Author     : alejandro
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -15,7 +16,7 @@
         <link href="css/style.min.css" rel="stylesheet" type="text/css"/>
         <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
         <link rel="shortcut icon" type="image/x-ico" href="favicon.ico" />
-        <title>SkinCol</title>
+        <title>Series</title>
     </head>
     <body>
         <!-- Navbar -->
@@ -39,16 +40,16 @@
                     <!-- Left -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="Dispositivos.jsp">Dispositivos</a>
+                            <a class="nav-link" href="">Dispositivos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Limitado</a>
+                            <a class="nav-link" href="#" target="_blank">Limitado</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Controlador?accion=5">Series</a>
+                            <a class="nav-link" href="ControllerSkin?accion=skintelefonos">Series</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Personalizador</a>
+                            <a class="nav-link" href="#" target="_blank">Personalizador</a>
                         </li>
                     </ul>
 
@@ -65,7 +66,8 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="IncioSesion.html" class="nav-link border border-light rounded waves-effect waves-light" target="_blank">
+                            <a href="IncioSesion.html" class="nav-link border border-light rounded waves-effect waves-light"
+                               target="_blank">
                                 <i class="fas fa-user"></i> Iniciar Sesión
                             </a>
                         </li>
@@ -76,58 +78,46 @@
             </div>
         </nav>
 
-        <!--Carousel Wrapper-->
-        <div id="carousel-home" class="carousel slide carousel-fade">
+        <!--Main layout-->
+        <main class="mt-5 pt-4">
+            <div class="container">
 
-            <!--Indicators-->
-            <ol class="carousel-indicators">
-                <li data-target="#carousel-home" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-home" data-slide-to="1"></li>
-                <li data-target="#carousel-home" data-slide-to="2"></li>
-            </ol>
-            <!--/.Indicators-->
+                <h3 class="my-5 h3 text-center">Dispositivos</h3>
 
-            <!--Slides-->
-            <div class="carousel-inner" role="listbox">
-                <!--First slide-->
-                <div class="carousel-item active">
-                    <div class="view col-md-12 col-sm-12"
-                         style="background-image: url('img/Limited/ColorShift-Limited.jpg'); background-repeat: no-repeat; background-size: cover;">
-                    </div>
+                <!--Grid row-->
+                <div class="row text-center wow fadeIn">
+
+                    <!--Grid column 1-->
+                    <c:forEach var="s" items="${categoria}">
+                        <div class="col-lg-3 col-md-6 mb-4">
+
+                            <!--Card-->
+                            <div class="card">
+
+                                <!--Card content-->
+                                <div class="card-body">
+
+                                    <a href="">
+                                        <img src="img/apple-iphone8plus-gold-1-3x.jpg" style="height: 200px;" alt="Foto iPhone" class="mb-2">
+                                        <h4 class="entry-title p-1">
+                                            <a>${ca.getNombre()}</a>
+                                        </h4>
+                                    </a>
+
+                                </div>
+
+                            </div>
+                            <!--/.Card-->
+
+                        </div>
+                    </c:forEach>
+                    <!--Grid column 1-->
                 </div>
-                <!--/First slide-->
+                <!--Grid row-->
 
-                <!--Second slide-->
-                <div class="carousel-item">
-                    <div class="view"
-                         style="background-image: url('img/Limited/Transparent-Limited.jpg'); background-repeat: no-repeat; background-size: cover;">
-                    </div>
-                </div>
-                <!--/Second slide-->
-
-                <!--Third slide-->
-                <div class="carousel-item">
-                    <div class="view"
-                         style="background-image: url('img/Limited/Venom-limited.jpg'); background-repeat: no-repeat; background-size: cover;">
-                    </div>
-                </div>
-                <!--/Third slide-->
             </div>
-            <!--/.Slides-->
-
-            <!--Controles-->
-            <a class="carousel-control-prev" href="#carousel-home" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Anterio</span>
-            </a>
-            <a class="carousel-control-next" href="#carousel-home" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Siguiente</span>
-            </a>
-            <!--/.Controles-->
-
-        </div>
-        <!--/.Carousel Wrapper-->
+        </main>
+        <!--Main layout-->
 
         <!--Footer-->
         <footer class="page-footer font-small unique-color-dark pt-4">
@@ -161,7 +151,6 @@
 
         </footer>
         <!--/.Footer-->
-
         <!-- SCRIPTS -->
         <!-- JQuery -->
         <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
