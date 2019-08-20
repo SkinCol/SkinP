@@ -22,12 +22,13 @@ import javax.servlet.http.HttpServletResponse;
  * @author Alejandro
  */
 public class DispositivoDAO {
+
     Connection con;
     Conexion cn = new Conexion();
     PreparedStatement ps;
     ResultSet rs;
-    
-        public List ListarTelefonos() {
+
+    public List ListarTelefonos() {
         List<Dispositivo> phone = new ArrayList();
         String sql = "Select * From dispositivo where tipo='phone'";
         try {

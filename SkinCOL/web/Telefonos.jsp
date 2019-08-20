@@ -98,7 +98,7 @@
                                 <!--Card content-->
                                 <div class="card-body">
                                     <a href="">
-                                        <img src="ControladorIMG?id=${p.getIdDispositivo()}" style="height: 200px;" class="mb-2">
+                                        <img src="ControladorIMG?id=${p.getIdDispositivo()}" style="height: 200px; width: 200px;" class="mb-2">
                                     </a>
                                 </div>
                                 <div class="card-footer">
