@@ -40,16 +40,16 @@
                     <!-- Left -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="">Dispositivos</a>
+                            <a class="nav-link" href="Dispositivos.jsp">Dispositivos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" target="_blank">Limitado</a>
+                            <a class="nav-link" href="#">Limitado</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="ControllerSkin?accion=skintelefonos">Series</a>
+                            <a class="nav-link" href="ControladorSeries?accion=1">Series</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" target="_blank">Personalizador</a>
+                            <a class="nav-link" href="#">Personalizador</a>
                         </li>
                     </ul>
 
@@ -80,42 +80,39 @@
 
         <!--Main layout-->
         <main class="mt-5 pt-4">
-            <div class="container">
+            <!--<h1 class="my-5 display-4 text-left">Series</h1>-->
 
-                <h3 class="my-5 h3 text-center">Dispositivos</h3>
+            <!--Grid row-->
+            <div class="row text-center wow fadeIn mt-5">
 
-                <!--Grid row-->
-                <div class="row text-center wow fadeIn">
+                <!--Grid column 1-->
+                <c:forEach var="s" items="${categoria}">
+                    <div class="col-lg-4 col-md-6 mb-4">
 
-                    <!--Grid column 1-->
-                    <c:forEach var="s" items="${categoria}">
-                        <div class="col-lg-3 col-md-6 mb-4">
+                        <!--Card-->
+                        <div class="card">
 
-                            <!--Card-->
-                            <div class="card">
-
-                                <!--Card content-->
-                                <div class="card-body">
-
-                                    <a href="">
-                                        <img src="img/apple-iphone8plus-gold-1-3x.jpg" style="height: 200px;" alt="Foto iPhone" class="mb-2">
-                                        <h4 class="entry-title p-1">
-                                            <a>${ca.getNombre()}</a>
-                                        </h4>
-                                    </a>
-
-                                </div>
-
+                            <!--Card content-->
+                            <div class="card-body">
+                                <a href="">
+                                    <img src="ImagenSeries?id=${s.getIdCategoria()}" style="height: 200px;" alt="Foto Serie" class="mb-2">
+                                </a>
                             </div>
-                            <!--/.Card-->
-
+                            <div class="card-footer">
+                                <h4 class="entry-title p-1">
+                                    <a>${s.getNombre()}</a>
+                                </h4>
+                            </div>
                         </div>
-                    </c:forEach>
-                    <!--Grid column 1-->
-                </div>
-                <!--Grid row-->
+                        <!--/.Card-->
 
+                    </div>
+                </c:forEach>
+                <!--Grid column 1-->
             </div>
+            <!--Grid row-->
+
+
         </main>
         <!--Main layout-->
 

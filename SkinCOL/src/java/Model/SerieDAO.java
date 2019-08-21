@@ -21,7 +21,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author alejandro
  */
-public class CategoriaDAO {
+public class SerieDAO {
 
     Connection con;
     Conexion cn = new Conexion();
@@ -29,15 +29,15 @@ public class CategoriaDAO {
     ResultSet rs;
 
     public List ListarCategorias() {
-        List<Categoria> categoria = new ArrayList();
-        String sql = "Select * From Categoria";
+        List<Serie> categoria = new ArrayList();
+        String sql = "Select * From categoria";
         try {
             con = cn.getConnection();
             ps = con.prepareStatement(sql);
             rs = ps.executeQuery();
 
             while (rs.next()) {
-                Categoria s = new Categoria();
+                Serie s = new Serie();
                 s.setIdCategoria(rs.getInt(1));
                 s.setNombre(rs.getString(2));
                 s.setImagen(rs.getBinaryStream(3));
@@ -50,7 +50,7 @@ public class CategoriaDAO {
     }
 
     public void ListarImagen(int id, HttpServletResponse response) {
-        String sql = "select * From Categoria Where IdCateria=" + id;
+        String sql = "SELECT * FROM categoria WHERE IdCategoria=" + id;
 
         InputStream inputStream = null;
         OutputStream outputStream = null;

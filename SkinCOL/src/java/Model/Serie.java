@@ -11,15 +11,15 @@ import java.io.InputStream;
  *
  * @author alejandro
  */
-public class Categoria {
+public class Serie {
     private int IdCategoria;
     private String Nombre;
     private InputStream Imagen;
 
-    public Categoria() {
+    public Serie() {
     }
 
-    public Categoria(int IdCategoria, String Nombre, InputStream Imagen) {
+    public Serie(int IdCategoria, String Nombre, InputStream Imagen) {
         this.IdCategoria = IdCategoria;
         this.Nombre = Nombre;
         this.Imagen = Imagen;

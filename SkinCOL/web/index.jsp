@@ -45,7 +45,7 @@
                             <a class="nav-link" href="#">Limitado</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Controlador?accion=5">Series</a>
+                            <a class="nav-link" href="ControladorSeries?accion=1">Series</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Personalizador</a>

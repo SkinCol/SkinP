@@ -43,13 +43,13 @@
                             <a class="nav-link" href="Dispositivos.jsp">Dispositivos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" target="_blank">Limitado</a>
+                            <a class="nav-link" href="#">Limitado</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" target="_blank">Series</a>
+                            <a class="nav-link" href="ControladorSeries?accion=1">Series</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" target="_blank">Personalizador</a>
+                            <a class="nav-link" href="#">Personalizador</a>
                         </li>
                     </ul>
 
@@ -97,7 +97,7 @@
                                 <!--Card content-->
                                 <div class="card-body">
                                     <a href="">
-                                        <img src="ControladorIMG?id=${p.getIdDispositivo()}" style="height: 200px;" alt="Foto dispositivo" class="mb-2">
+                                        <img src="ImagenDispositivo?id=${p.getIdDispositivo()}" style="height: 200px;" alt="Foto dispositivo" class="mb-2">
                                     </a>
                                 </div>
                                 <!--Card content-->

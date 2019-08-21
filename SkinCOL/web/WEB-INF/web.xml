@@ -14,7 +14,15 @@
     </servlet>
     <servlet>
         <servlet-name>ControladorIMG</servlet-name>
-        <servlet-class>Controller.ControladorIMG</servlet-class>
+        <servlet-class>Controller.ImagenDispositivo</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ControladorSeries</servlet-name>
+        <servlet-class>Controller.ControladorSeries</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ImagenSeries</servlet-name>
+        <servlet-class>Controller.ImagenSeries</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Controller</servlet-name>
@@ -31,6 +39,14 @@
     <servlet-mapping>
         <servlet-name>ControladorIMG</servlet-name>
         <url-pattern>/ControladorIMG</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControladorSeries</servlet-name>
+        <url-pattern>/ControladorSeries</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ImagenSeries</servlet-name>
+        <url-pattern>/ImagenSeries</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

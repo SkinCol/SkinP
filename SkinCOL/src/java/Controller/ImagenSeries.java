@@ -5,7 +5,7 @@
  */
 package Controller;
 
-import Model.DispositivoDAO;
+import Model.SerieDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -15,11 +15,11 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Alejandro
+ * @author alejandro
  */
-public class ControladorIMG extends HttpServlet {
+public class ImagenSeries extends HttpServlet {
 
-    DispositivoDAO ddao = new DispositivoDAO();
+    SerieDAO cdao = new SerieDAO();
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -38,10 +38,10 @@ public class ControladorIMG extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet ControladorIMG</title>");
+            out.println("<title>Servlet ImagenSeries</title>");
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet ControladorIMG at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet ImagenSeries at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -60,7 +60,7 @@ public class ControladorIMG extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
-        ddao.listarImg(id, response);
+        cdao.ListarImagen(id, response);
     }
 
     /**

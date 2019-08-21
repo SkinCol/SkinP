@@ -7,8 +7,6 @@ package Controller;
 
 import Model.Serie;
 import Model.SerieDAO;
-import Model.Dispositivo;
-import Model.DispositivoDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -20,9 +18,9 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Alejandro
+ * @author alejandro
  */
-public class Controlador extends HttpServlet {
+public class ControladorSeries extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,47 +31,23 @@ public class Controlador extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    DispositivoDAO ddao = new DispositivoDAO();
-    List<Dispositivo> phone = new ArrayList();
-    List<Dispositivo> tablet = new ArrayList();
-    List<Dispositivo> portatil = new ArrayList();
-    List<Dispositivo> otro = new ArrayList();
-    List<Dispositivo> consola = new ArrayList();
+    SerieDAO cdao = new SerieDAO();
+    List<Serie> categoria = new ArrayList();
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String accion = request.getParameter("accion");
-
-        phone = ddao.ListarTelefonos();
-        tablet = ddao.ListarTablets();
-        portatil = ddao.ListarPortatiles();
-        consola = ddao.ListarConsolas();
+        categoria = cdao.ListarCategorias();
 
         switch (accion) {
             case "1":
-                request.setAttribute("phone", phone);
-                request.getRequestDispatcher("Telefonos.jsp").forward(request, response);
+                request.setAttribute("categoria", categoria);
+                request.getRequestDispatcher("Series.jsp").forward(request, response);
                 break;
-
-            case "2":
-                request.setAttribute("tablet", tablet);
-                request.getRequestDispatcher("Tabletas.jsp").forward(request, response);
-                break;
-
-            case "3":
-                request.setAttribute("portatil", portatil);
-                request.getRequestDispatcher("Portatiles.jsp").forward(request, response);
-                break;
-
-            case "4":
-                request.setAttribute("consola", consola);
-                request.getRequestDispatcher("Consolas.jsp").forward(request, response);
-                break;
-
             default:
                 break;
-        }
 
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
