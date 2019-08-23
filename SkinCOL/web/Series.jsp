@@ -10,6 +10,9 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <script src="https://kit.fontawesome.com/960e8817a0.js"></script>
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link href="css/mdb.min.css" rel="stylesheet" type="text/css"/>
@@ -81,39 +84,38 @@
         <!--Main layout-->
         <main class="mt-5 pt-5">
             <div class="container">
-                
+
                 <h1 class="my-5 display-4 text-left">Serie Limitada</h1>
-                
+
                 <!--Section: Jumbotron-->
-                                <c:forEach var="s" items="${categoria}">
-                <section class="card blue-gradient wow fadeIn" id="intro">
+                <c:forEach var="s" items="${categoria}">
+                    <section class="card blue-gradient wow fadeIn" id="intro">
 
-                    <!-- Content -->
-                    <!-- Card -->
-                    <div class="card">
+                        <!-- Content -->
+                        <!-- Card -->
+                        <div class="card">
 
-                        <!-- Card image -->
-                        <div class="view overlay">
-                            <img class="card-img-top" src="${s.getImagen()}" alt="Card image cap">
-                            <a href="#!">
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
+                            <!-- Card image -->
+                            <div class="view overlay">
+                                <img class="card-img-top" src="${s.getImagen()}" alt="Card image cap">
+                                <a href="#!">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+
+                            <!-- Card content -->
+                            <div class="card-body justify-content-center">
+
+                                <!-- Title -->
+                                <h1 class="text-center display-3 ">${s.getNombre()}</h1>
+
+                            </div>
                         </div>
+                        <!-- Card -->
 
-                        <!-- Card content -->
-                        <div class="card-body justify-content-center">
-
-                            <!-- Title -->
-                            <h1 class="text-center display-3 ">${s.getNombre()}</h1>
-
-                        </div>
-                    </div>
-                    <!-- Card -->
-
-                </section>
+                    </section>
                 </c:forEach>
                 <!--Section: Jumbotron-->
-
             </div>
         </main>
         <!--Main layout-->

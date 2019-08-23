@@ -10,6 +10,7 @@ package Model;
  * @author alejandro
  */
 public class Serie {
+
     private int IdCategoria;
     private String Nombre;
     private String Imagen;
@@ -46,5 +47,5 @@ public class Serie {
     public void setImagen(String Imagen) {
         this.Imagen = Imagen;
     }
-    
+
 }

@@ -9,6 +9,9 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <script src="https://kit.fontawesome.com/960e8817a0.js"></script>
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link href="css/mdb.min.css" rel="stylesheet" type="text/css"/>
@@ -76,7 +79,7 @@
             </div>
         </nav>
         <!-- Navbar -->
-        
+
         <!--Carousel Wrapper-->
         <div id="carousel-home" class="carousel slide carousel-fade">
 
