@@ -40,10 +40,11 @@ public class SerieDAO {
                 Serie s = new Serie();
                 s.setIdCategoria(rs.getInt(1));
                 s.setNombre(rs.getString(2));
-                s.setImagen(rs.getBinaryStream(3));
+                s.setImagen(rs.getString(3));
 
                 categoria.add(s);
             }
+            con.close();
         } catch (Exception e) {
         }
         return categoria;
@@ -71,6 +72,7 @@ public class SerieDAO {
             while ((i = bufferedInputStream.read()) != -1) {
                 bufferedOutputstream.write(i);
             }
+            con.close();
         } catch (Exception e) {
         }
     }

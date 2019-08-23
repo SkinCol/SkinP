@@ -5,7 +5,6 @@
  */
 package Controller;
 
-import Model.SerieDAO;
 import Model.DispositivoDAO;
 import java.io.IOException;
 import java.io.PrintWriter;

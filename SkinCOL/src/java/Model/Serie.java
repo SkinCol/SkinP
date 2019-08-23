@@ -5,8 +5,6 @@
  */
 package Model;
 
-import java.io.InputStream;
-
 /**
  *
  * @author alejandro
@@ -14,22 +12,14 @@ import java.io.InputStream;
 public class Serie {
     private int IdCategoria;
     private String Nombre;
-    private InputStream Imagen;
+    private String Imagen;
 
     public Serie() {
     }
 
-    public Serie(int IdCategoria, String Nombre, InputStream Imagen) {
+    public Serie(int IdCategoria, String Nombre, String Imagen) {
         this.IdCategoria = IdCategoria;
         this.Nombre = Nombre;
-        this.Imagen = Imagen;
-    }
-
-    public InputStream getImagen() {
-        return Imagen;
-    }
-
-    public void setImagen(InputStream Imagen) {
         this.Imagen = Imagen;
     }
 
@@ -48,6 +38,13 @@ public class Serie {
     public void setNombre(String Nombre) {
         this.Nombre = Nombre;
     }
-    
+
+    public String getImagen() {
+        return Imagen;
+    }
+
+    public void setImagen(String Imagen) {
+        this.Imagen = Imagen;
+    }
     
 }

@@ -98,12 +98,12 @@
                                 <!--Card content-->
                                 <div class="card-body">
                                     <a href="">
-                                        <img src="ImagenDispositivo?id=${p.getIdDispositivo()}" style="height: 200px; width: 200px;" class="mb-2">
+                                        <img src="ControladorIMG?id=${p.getIdDispositivo()}" style="height: 200px; width: 200px;" class="mb-2">
                                     </a>
                                 </div>
                                 <div class="card-footer">
                                     <h5 class="entry-title p-1">
-                                        <a>${p.getMarca()}</a>
+                                            <a>${p.getMarca()}</a>
                                     </h5>
                                 </div>
 

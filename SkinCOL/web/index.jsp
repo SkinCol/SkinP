@@ -75,7 +75,8 @@
 
             </div>
         </nav>
-
+        <!-- Navbar -->
+        
         <!--Carousel Wrapper-->
         <div id="carousel-home" class="carousel slide carousel-fade">
 
@@ -92,7 +93,10 @@
                 <!--First slide-->
                 <div class="carousel-item active">
                     <div class="view col-md-12 col-sm-12"
-                         style="background-image: url('img/Limited/ColorShift-Limited.jpg'); background-repeat: no-repeat; background-size: cover;">
+                         style="background-image: url('img/Limited/ColorShift-Limited.jpg'); background-repeat: no-repeat;
+                         background-size: cover;
+                         background-position: center center;
+                         ">
                     </div>
                 </div>
                 <!--/First slide-->
@@ -100,7 +104,11 @@
                 <!--Second slide-->
                 <div class="carousel-item">
                     <div class="view"
-                         style="background-image: url('img/Limited/Transparent-Limited.jpg'); background-repeat: no-repeat; background-size: cover;">
+                         style="background-image: url('img/Limited/Transparent-Limited.jpg'); background-repeat: no-repeat;
+                         background-size: cover;
+                         background-position: center center;
+                         height: 100%;
+                         ">
                     </div>
                 </div>
                 <!--/Second slide-->
@@ -108,7 +116,10 @@
                 <!--Third slide-->
                 <div class="carousel-item">
                     <div class="view"
-                         style="background-image: url('img/Limited/Venom-limited.jpg'); background-repeat: no-repeat; background-size: cover;">
+                         style="background-image: url('img/Limited/Venom-limited.jpg'); background-repeat: no-repeat;
+                         background-size: cover;
+                         background-position: center center;
+                         ">
                     </div>
                 </div>
                 <!--/Third slide-->

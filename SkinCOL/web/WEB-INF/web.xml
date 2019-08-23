@@ -24,6 +24,14 @@
         <servlet-name>ImagenSeries</servlet-name>
         <servlet-class>Controller.ImagenSeries</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ControladorSkin</servlet-name>
+        <servlet-class>Controller.ControladorSkin</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ImagenSkin</servlet-name>
+        <servlet-class>Controller.ImagenSkin</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Controller</servlet-name>
         <url-pattern>/Controller</url-pattern>
@@ -47,6 +55,14 @@
     <servlet-mapping>
         <servlet-name>ImagenSeries</servlet-name>
         <url-pattern>/ImagenSeries</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControladorSkin</servlet-name>
+        <url-pattern>/ControladorSkin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ImagenSkin</servlet-name>
+        <url-pattern>/ImagenSkin</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -79,40 +79,42 @@
         </nav>
 
         <!--Main layout-->
-        <main class="mt-5 pt-4">
-            <!--<h1 class="my-5 display-4 text-left">Series</h1>-->
+        <main class="mt-5 pt-5">
+            <div class="container">
+                
+                <h1 class="my-5 display-4 text-left">Serie Limitada</h1>
+                
+                <!--Section: Jumbotron-->
+                                <c:forEach var="s" items="${categoria}">
+                <section class="card blue-gradient wow fadeIn" id="intro">
 
-            <!--Grid row-->
-            <div class="row text-center wow fadeIn mt-5">
+                    <!-- Content -->
+                    <!-- Card -->
+                    <div class="card">
 
-                <!--Grid column 1-->
-                <c:forEach var="s" items="${categoria}">
-                    <div class="col-lg-4 col-md-6 mb-4">
-
-                        <!--Card-->
-                        <div class="card">
-
-                            <!--Card content-->
-                            <div class="card-body">
-                                <a href="">
-                                    <img src="ImagenSeries?id=${s.getIdCategoria()}" style="height: 200px;" alt="Foto Serie" class="mb-2">
-                                </a>
-                            </div>
-                            <div class="card-footer">
-                                <h4 class="entry-title p-1">
-                                    <a>${s.getNombre()}</a>
-                                </h4>
-                            </div>
+                        <!-- Card image -->
+                        <div class="view overlay">
+                            <img class="card-img-top" src="${s.getImagen()}" alt="Card image cap">
+                            <a href="#!">
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
                         </div>
-                        <!--/.Card-->
 
+                        <!-- Card content -->
+                        <div class="card-body justify-content-center">
+
+                            <!-- Title -->
+                            <h1 class="text-center display-3 ">${s.getNombre()}</h1>
+
+                        </div>
                     </div>
+                    <!-- Card -->
+
+                </section>
                 </c:forEach>
-                <!--Grid column 1-->
+                <!--Section: Jumbotron-->
+
             </div>
-            <!--Grid row-->
-
-
         </main>
         <!--Main layout-->
 

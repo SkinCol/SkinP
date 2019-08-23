@@ -45,6 +45,7 @@ public class DispositivoDAO {
 
                 phone.add(p);
             }
+            con.close();
         } catch (Exception e) {
         }
         return phone;
@@ -67,6 +68,7 @@ public class DispositivoDAO {
 
                 tabletas.add(t);
             }
+            con.close();
         } catch (Exception e) {
         }
         return tabletas;
@@ -89,6 +91,7 @@ public class DispositivoDAO {
 
                 portatiles.add(l);
             }
+            con.close();
         } catch (Exception e) {
         }
         return portatiles;
@@ -111,6 +114,7 @@ public class DispositivoDAO {
 
                 consolas.add(c);
             }
+            con.close();
         } catch (Exception e) {
         }
         return consolas;
@@ -138,6 +142,7 @@ public class DispositivoDAO {
             while ((i = bufferedInputStream.read()) != -1) {
                 bufferedOutputstream.write(i);
             }
+            con.close();
         } catch (Exception e) {
         }
     }
