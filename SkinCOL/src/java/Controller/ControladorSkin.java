@@ -51,6 +51,7 @@ public class ControladorSkin extends HttpServlet {
         
         switch(accion){
             case "1":
+                int idp =Integer.parseInt(request.getParameter("id"));
                 request.setAttribute("brain", brain);
                 request.getRequestDispatcher("SkinBrain.jsp").forward(request, response);
                 break;

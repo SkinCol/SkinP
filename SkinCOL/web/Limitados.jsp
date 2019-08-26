@@ -19,7 +19,7 @@
         <link href="css/style.min.css" rel="stylesheet" type="text/css"/>
         <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
         <link rel="shortcut icon" type="image/x-ico" href="favicon.ico" />
-        <title>Series</title>
+        <title>Limitados</title>
     </head>
     <body>
         <!-- Navbar -->
@@ -88,8 +88,8 @@
                 <h1 class="my-5 display-4 text-left">Serie Limitada</h1>
 
                 <!--Section: Jumbotron-->
-                <c:forEach var="s" items="${categoria}">
-                    <section class="card blue-gradient wow fadeIn" id="intro">
+                <c:forEach var="l" items="${limitado}">
+                    <section class="card blue-gradient wow fadeIn mb-4" id="intro">
 
                         <!-- Content -->
                         <!-- Card -->
@@ -97,8 +97,8 @@
 
                             <!-- Card image -->
                             <div class="view overlay">
-                                <img class="card-img-top" src="${s.getImagen()}" alt="Card image cap">
-                                <a href="#!">
+                                <img class="card-img-top" src="${l.getImagen()}" alt="Card image cap">
+                                <a href="ControladorSkin?=1&id=${l.getIdCategoria}">
                                     <div class="mask rgba-white-slight"></div>
                                 </a>
                             </div>
@@ -107,7 +107,7 @@
                             <div class="card-body justify-content-center">
 
                                 <!-- Title -->
-                                <h1 class="text-center display-3 ">${s.getNombre()}</h1>
+                                <h1 class="text-center display-3 entry-title p-1">${l.getNombre()}</h1>
 
                             </div>
                         </div>

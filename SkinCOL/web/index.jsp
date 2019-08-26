@@ -45,10 +45,10 @@
                             <a class="nav-link" href="Dispositivos.jsp">Dispositivos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Limitado</a>
+                            <a class="nav-link" href="ControladorSeries?accion=1">Limitado</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="ControladorSeries?accion=1">Series</a>
+                            <a class="nav-link" href="">Series</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Personalizador</a>

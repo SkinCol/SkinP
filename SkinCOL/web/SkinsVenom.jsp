@@ -4,6 +4,7 @@
     Author     : alejandro
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -246,11 +247,11 @@
                                 <!-- Default input -->
                                 *Selecione Dispositivo
                                 <div class="form-group">
-                                    <select class="custom-select col-sm-12 col-md-6">
+                                    <select class="custom-select col-sm-12 col-md-6" name="IdDispositivo">
                                         <option selected>- Por favor selecione -</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
+                                        <c:forEach var="p" items="${phone}">
+                                            <option value="${p.getIdDispositivo()}">${p.getModelo()}</option>
+                                        </c:forEach>
                                     </select>
                                 </div>
                                 *Cantidad

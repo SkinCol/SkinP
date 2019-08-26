@@ -32,17 +32,17 @@ public class ControladorSeries extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     SerieDAO cdao = new SerieDAO();
-    List<Serie> categoria = new ArrayList();
+    List<Serie> limitado = new ArrayList();
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String accion = request.getParameter("accion");
-        categoria = cdao.ListarCategorias();
+        limitado = cdao.ListarCategorias();
 
         switch (accion) {
             case "1":
-                request.setAttribute("categoria", categoria);
-                request.getRequestDispatcher("Series.jsp").forward(request, response);
+                request.setAttribute("limitado", limitado);
+                request.getRequestDispatcher("Limitados.jsp").forward(request, response);
                 break;
             default:
                 break;

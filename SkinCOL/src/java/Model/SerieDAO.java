@@ -29,7 +29,7 @@ public class SerieDAO {
     ResultSet rs;
 
     public List ListarCategorias() {
-        List<Serie> categoria = new ArrayList();
+        List<Serie> limitado = new ArrayList();
         String sql = "Select * From categoria";
         try {
             con = cn.getConnection();
@@ -37,17 +37,17 @@ public class SerieDAO {
             rs = ps.executeQuery();
 
             while (rs.next()) {
-                Serie s = new Serie();
-                s.setIdCategoria(rs.getInt(1));
-                s.setNombre(rs.getString(2));
-                s.setImagen(rs.getString(3));
+                Serie l = new Serie();
+                l.setIdCategoria(rs.getInt(1));
+                l.setNombre(rs.getString(2));
+                l.setImagen(rs.getString(3));
 
-                categoria.add(s);
+                limitado.add(l);
             }
             con.close();
         } catch (Exception e) {
         }
-        return categoria;
+        return limitado;
     }
 
     public void ListarImagen(int id, HttpServletResponse response) {
