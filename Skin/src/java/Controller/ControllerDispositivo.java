@@ -5,8 +5,12 @@
  */
 package Controller;
 
+import Model.Dispositivo;
+import Model.DispositivoDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -27,20 +31,53 @@ public class ControllerDispositivo extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
+    DispositivoDAO ddao = new DispositivoDAO();
+    List<Dispositivo> iphone = new ArrayList();
+    List<Dispositivo> samsung = new ArrayList();
+    List<Dispositivo> google = new ArrayList();
+    List<Dispositivo> htc = new ArrayList();
+    List<Dispositivo> lg = new ArrayList();
+    List<Dispositivo> motorola = new ArrayList();
+    List<Dispositivo> sony = new ArrayList();
+    List<Dispositivo> huawei = new ArrayList();
+    List<Dispositivo> xiaomi = new ArrayList();
+    List<Dispositivo> tablet = new ArrayList();
+    List<Dispositivo> portatil = new ArrayList();
+    List<Dispositivo> playstation = new ArrayList();
+    List<Dispositivo> xbox = new ArrayList();
+    List<Dispositivo> nitendo = new ArrayList();  
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet ControllerDispositivo</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet ControllerDispositivo at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+        String accion = request.getParameter("accion");
+        
+        iphone = ddao.ListariPhone();
+        samsung = ddao.ListarSamsung();
+        google = ddao.ListarGoogle();
+        htc = ddao.ListarHTC();
+        lg = ddao.ListarLG();
+        motorola = ddao.ListarMotorola();
+        sony = ddao.ListarSony();
+        huawei = ddao.ListarHuawei();
+        xiaomi = ddao.ListarXiaomi();
+        tablet = ddao.ListarTablets();
+        portatil = ddao.ListarPortatiles();
+        xbox = ddao.ListarXbox();
+        nitendo = ddao.ListarNintendo();
+        
+        switch(accion){
+            case "1":
+                request.setAttribute("iphone", iphone);
+                request.setAttribute("samsung", samsung);
+                request.setAttribute("google", google);
+                request.setAttribute("htc", htc);
+                request.setAttribute("lg", lg);
+                request.setAttribute("motorola", motorola);
+                request.setAttribute("sony", sony);
+                request.setAttribute("huawei", huawei);
+                request.setAttribute("xiaomi", xiaomi);
+                request.getRequestDispatcher("Telefonos.jsp").forward(request, response);
+                break;
         }
     }
 

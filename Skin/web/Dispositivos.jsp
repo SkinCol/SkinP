@@ -98,7 +98,7 @@
                             <!--Card content-->
                             <div class="card-body">
 
-                                <a href="Controlador?accion=1">
+                                <a href="ControllerDispositivo?accion=1">
                                     <img src="css/img/apple-iphone8plus-gold-1-3x.jpg" style="height: 200px;" alt="Foto iPhone" class="mb-2">
                                     <h4 class="entry-title p-1">
                                         <a>Telefonos</a>

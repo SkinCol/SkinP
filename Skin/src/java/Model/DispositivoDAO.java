@@ -146,14 +146,14 @@ public class DispositivoDAO {
             ps = con.prepareStatement(sql);
             rs = ps.executeQuery();
             while (rs.next()) {
-                Dispositivo h = new Dispositivo();
-                h.setIdDispositivo(rs.getInt(1));
-                h.setMarca(rs.getString(2));
-                h.setModelo(rs.getString(3));
-                h.setTipo(rs.getString(4));
-                h.setImagen(rs.getString(5));
+                Dispositivo m = new Dispositivo();
+                m.setIdDispositivo(rs.getInt(1));
+                m.setMarca(rs.getString(2));
+                m.setModelo(rs.getString(3));
+                m.setTipo(rs.getString(4));
+                m.setImagen(rs.getString(5));
 
-                Motorola.add(h);
+                Motorola.add(m);
             }
             con.close();
         } catch (Exception e) {
@@ -192,14 +192,14 @@ public class DispositivoDAO {
             ps = con.prepareStatement(sql);
             rs = ps.executeQuery();
             while (rs.next()) {
-                Dispositivo h = new Dispositivo();
-                h.setIdDispositivo(rs.getInt(1));
-                h.setMarca(rs.getString(2));
-                h.setModelo(rs.getString(3));
-                h.setTipo(rs.getString(4));
-                h.setImagen(rs.getString(5));
+                Dispositivo ha = new Dispositivo();
+                ha.setIdDispositivo(rs.getInt(1));
+                ha.setMarca(rs.getString(2));
+                ha.setModelo(rs.getString(3));
+                ha.setTipo(rs.getString(4));
+                ha.setImagen(rs.getString(5));
 
-                Huawei.add(h);
+                Huawei.add(ha);
             }
             con.close();
         } catch (Exception e) {

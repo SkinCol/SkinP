@@ -4,6 +4,7 @@
     Author     : alejandro
 --%>
 
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -86,13 +87,13 @@
             <!-- iPhone -->
             <div class="container">
 
-                <h1 class="my-5 display-4 text-left">Telefonos</h1>
+                <h1 class="my-5 display-4 text-left">Apple</h1>
 
                 <!--Grid row-->
                 <div class="row text-center wow fadeIn">
 
                     <!--Grid column 1-->
-                    <c:forEach var="p" items="${phone}">
+                    <c:forEach var="i" items="${iphone}">
                         <div class="col-lg-3 col-md-6 mb-4">
 
                             <!--Card-->
@@ -101,12 +102,12 @@
                                 <!--Card content-->
                                 <div class="card-body">
                                     <a href="">
-                                        <img src="ControladorIMG?id=${p.getIdDispositivo()}" style="height: 200px; width: 200px;" class="mb-2">
+                                        <img src="${i.getImagen()}" style="height: 200px; width: 200px;" class="mb-2">
                                     </a>
                                 </div>
                                 <div class="card-footer">
                                     <h5 class="entry-title p-1">
-                                        <a>${p.getMarca()}</a>
+                                        <a>${i.getMarca()}</a>
                                     </h5>
                                 </div>
 
@@ -114,14 +115,334 @@
                             <!--/.Card-->
 
                         </div>
-                    </c:forEach>
-
+                    </c:forEach>                 
                     <!--Grid column 1-->
 
                 </div>
                 <!--Grid row-->
 
             </div>
+            <!-- iPhone -->
+
+            <!-- Samsung -->
+            <div class="container">
+
+                <h1 class="my-5 display-4 text-left">Samsung</h1>
+
+                <!--Grid row-->
+                <div class="row text-center wow fadeIn">
+
+                    <!--Grid column 1-->
+                    <c:forEach var="sa" items="${samsung}">
+                        <div class="col-lg-3 col-md-6 mb-4">
+
+                            <!--Card-->
+                            <div class="card">
+
+                                <!--Card content-->
+                                <div class="card-body">
+                                    <a href="">
+                                        <img src="${sa.getImagen()}" style="height: 200px; width: 200px;" class="mb-2">
+                                    </a>
+                                </div>
+                                <div class="card-footer">
+                                    <h5 class="entry-title p-1">
+                                        <a>${sa.getMarca()}</a>
+                                    </h5>
+                                </div>
+
+                            </div>
+                            <!--/.Card-->
+
+                        </div>
+                    </c:forEach>                 
+                    <!--Grid column 1-->
+
+                </div>
+                <!--Grid row-->
+
+            </div>
+            <!-- Samsung -->
+
+            <!-- Google -->
+            <div class="container">
+
+                <h1 class="my-5 display-4 text-left">Google</h1>
+
+                <!--Grid row-->
+                <div class="row text-center wow fadeIn">
+
+                    <!--Grid column 1-->
+                    <c:forEach var="g" items="${google}">
+                        <div class="col-lg-3 col-md-6 mb-4">
+
+                            <!--Card-->
+                            <div class="card">
+
+                                <!--Card content-->
+                                <div class="card-body">
+                                    <a href="">
+                                        <img src="${g.getImagen()}" style="height: 200px; width: 200px;" class="mb-2">
+                                    </a>
+                                </div>
+                                <div class="card-footer">
+                                    <h5 class="entry-title p-1">
+                                        <a>${g.getMarca()}</a>
+                                    </h5>
+                                </div>
+
+                            </div>
+                            <!--/.Card-->
+
+                        </div>
+                    </c:forEach>                 
+                    <!--Grid column 1-->
+
+                </div>
+                <!--Grid row-->
+
+            </div>
+            <!-- Goole -->
+
+            <!-- HTC -->
+            <div class="container">
+
+                <h1 class="my-5 display-4 text-left">HTC</h1>
+
+                <!--Grid row-->
+                <div class="row text-center wow fadeIn">
+
+                    <!--Grid column 1-->
+                    <c:forEach var="h" items="${htc}">
+                        <div class="col-lg-3 col-md-6 mb-4">
+
+                            <!--Card-->
+                            <div class="card">
+
+                                <!--Card content-->
+                                <div class="card-body">
+                                    <a href="">
+                                        <img src="${h.getImagen()}" style="height: 200px; width: 200px;" class="mb-2">
+                                    </a>
+                                </div>
+                                <div class="card-footer">
+                                    <h5 class="entry-title p-1">
+                                        <a>${h.getMarca()}</a>
+                                    </h5>
+                                </div>
+
+                            </div>
+                            <!--/.Card-->
+
+                        </div>
+                    </c:forEach>                 
+                    <!--Grid column 1-->
+
+                </div>
+                <!--Grid row-->
+
+            </div>
+            <!-- HTC -->
+
+            <!-- LG -->
+            <div class="container">
+
+                <h1 class="my-5 display-4 text-left">LG</h1>
+
+                <!--Grid row-->
+                <div class="row text-center wow fadeIn">
+
+                    <!--Grid column 1-->
+                    <c:forEach var="lg" items="${lg}">
+                        <div class="col-lg-3 col-md-6 mb-4">
+
+                            <!--Card-->
+                            <div class="card">
+
+                                <!--Card content-->
+                                <div class="card-body">
+                                    <a href="">
+                                        <img src="${lg.getImagen()}" style="height: 200px; width: 200px;" class="mb-2">
+                                    </a>
+                                </div>
+                                <div class="card-footer">
+                                    <h5 class="entry-title p-1">
+                                        <a>${lg.getMarca()}</a>
+                                    </h5>
+                                </div>
+
+                            </div>
+                            <!--/.Card-->
+
+                        </div>
+                    </c:forEach>                 
+                    <!--Grid column 1-->
+
+                </div>
+                <!--Grid row-->
+
+            </div>
+            <!-- LG -->
+
+            <!-- Motorola -->
+            <div class="container">
+
+                <h1 class="my-5 display-4 text-left">Motorola</h1>
+
+                <!--Grid row-->
+                <div class="row text-center wow fadeIn">
+
+                    <!--Grid column 1-->
+                    <c:forEach var="m" items="${motorola}">
+                        <div class="col-lg-3 col-md-6 mb-4">
+
+                            <!--Card-->
+                            <div class="card">
+
+                                <!--Card content-->
+                                <div class="card-body">
+                                    <a href="">
+                                        <img src="${m.getImagen()}" style="height: 200px; width: 200px;" class="mb-2">
+                                    </a>
+                                </div>
+                                <div class="card-footer">
+                                    <h5 class="entry-title p-1">
+                                        <a>${m.getMarca()}</a>
+                                    </h5>
+                                </div>
+
+                            </div>
+                            <!--/.Card-->
+
+                        </div>
+                    </c:forEach>                 
+                    <!--Grid column 1-->
+
+                </div>
+                <!--Grid row-->
+
+            </div>
+            <!-- Motorola -->
+
+            <!-- Sony -->
+            <div class="container">
+
+                <h1 class="my-5 display-4 text-left">Sony</h1>
+
+                <!--Grid row-->
+                <div class="row text-center wow fadeIn">
+
+                    <!--Grid column 1-->
+                    <c:forEach var="s" items="${sony}">
+                        <div class="col-lg-3 col-md-6 mb-4">
+
+                            <!--Card-->
+                            <div class="card">
+
+                                <!--Card content-->
+                                <div class="card-body">
+                                    <a href="">
+                                        <img src="${s.getImagen()}" style="height: 200px; width: 200px;" class="mb-2">
+                                    </a>
+                                </div>
+                                <div class="card-footer">
+                                    <h5 class="entry-title p-1">
+                                        <a>${s.getMarca()}</a>
+                                    </h5>
+                                </div>
+
+                            </div>
+                            <!--/.Card-->
+
+                        </div>
+                    </c:forEach>                 
+                    <!--Grid column 1-->
+
+                </div>
+                <!--Grid row-->
+
+            </div>
+            <!-- Sony -->
+
+            <!-- Huawei -->
+            <div class="container">
+
+                <h1 class="my-5 display-4 text-left">Huawei</h1>
+
+                <!--Grid row-->
+                <div class="row text-center wow fadeIn">
+
+                    <!--Grid column 1-->
+                    <c:forEach var="ha" items="${huawei}">
+                        <div class="col-lg-3 col-md-6 mb-4">
+
+                            <!--Card-->
+                            <div class="card">
+
+                                <!--Card content-->
+                                <div class="card-body">
+                                    <a href="">
+                                        <img src="${ha.getImagen()}" style="height: 200px; width: 200px;" class="mb-2">
+                                    </a>
+                                </div>
+                                <div class="card-footer">
+                                    <h5 class="entry-title p-1">
+                                        <a>${ha.getMarca()}</a>
+                                    </h5>
+                                </div>
+
+                            </div>
+                            <!--/.Card-->
+
+                        </div>
+                    </c:forEach>                 
+                    <!--Grid column 1-->
+
+                </div>
+                <!--Grid row-->
+
+            </div>
+            <!-- Huawei -->
+
+            <!-- Xioami -->
+            <div class="container">
+
+                <h1 class="my-5 display-4 text-left">Xioami</h1>
+
+                <!--Grid row-->
+                <div class="row text-center wow fadeIn">
+
+                    <!--Grid column 1-->
+                    <c:forEach var="x" items="${xiaomi}">
+                        <div class="col-lg-3 col-md-6 mb-4">
+
+                            <!--Card-->
+                            <div class="card">
+
+                                <!--Card content-->
+                                <div class="card-body">
+                                    <a href="">
+                                        <img src="${x.getImagen()}" style="height: 200px; width: 200px;" class="mb-2">
+                                    </a>
+                                </div>
+                                <div class="card-footer">
+                                    <h5 class="entry-title p-1">
+                                        <a>${x.getMarca()}</a>
+                                    </h5>
+                                </div>
+
+                            </div>
+                            <!--/.Card-->
+
+                        </div>
+                    </c:forEach>                 
+                    <!--Grid column 1-->
+
+                </div>
+                <!--Grid row-->
+
+            </div>
+            <!-- Xioami -->
         </main>
         <!--Main layout-->
 
