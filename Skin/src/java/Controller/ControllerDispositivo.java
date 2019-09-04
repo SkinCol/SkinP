@@ -67,7 +67,7 @@ public class ControllerDispositivo extends HttpServlet {
         playstation = ddao.ListarPlayStation();
 
         switch (accion) {
-            case "1":
+            case "telefonos":
                 request.setAttribute("iphone", iphone);
                 request.setAttribute("samsung", samsung);
                 request.setAttribute("google", google);
@@ -79,23 +79,22 @@ public class ControllerDispositivo extends HttpServlet {
                 request.setAttribute("xiaomi", xiaomi);
                 request.getRequestDispatcher("Dispositivos/Telefonos.jsp").forward(request, response);
                 break;
-            case "2":
+            case "tabletas":
                 request.setAttribute("tablet", tablet);
                 request.getRequestDispatcher("Dispositivos/Tabletas.jsp").forward(request, response);
                 break;
-            case "3":
+            case "portatiles":
                 request.setAttribute("portatil", portatil);
                 request.getRequestDispatcher("Dispositivos/Portatiles.jsp").forward(request, response);
                 break;
-            case "4":
+            case "consolas":
                 request.setAttribute("xbox", xbox);
                 request.setAttribute("nitendo", nitendo);
                 request.setAttribute("playstation", playstation);
                 request.getRequestDispatcher("Dispositivos/Consolas.jsp").forward(request, response);
                 break;
-            case "5":
-            case "6":
-                
+            case "1":
+                request.getRequestDispatcher("Skins/iPhone6Skins.jsp").forward(request, response);
                 break;
         }
     }

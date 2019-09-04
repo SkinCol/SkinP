@@ -95,7 +95,7 @@
                             <!--Card content-->
                             <div class="card-body">
 
-                                <a href="ControllerDispositivo?accion=1">
+                                <a href="ControllerDispositivo?accion=telefonos">
                                     <img src="css/img/apple-iphone8plus-gold-1-3x.jpg" style="height: 200px;" alt="Foto iPhone" class="mb-2">
                                     <h4 class="entry-title p-1">
                                         <a>Telefonos</a>
@@ -118,7 +118,7 @@
 
                             <!--Card content-->
                             <div class="card-body">
-                                <a href="ControllerDispositivo?accion=2">
+                                <a href="ControllerDispositivo?accion=tabletas">
                                     <img src="css/img/apple_mk9n2ll_a_128gb_ipad_mini_4_1185478.jpg" style="height: 200px;" alt="Foto ipad" class="mb-2">
                                     <h4 class="entry-title p-1">
                                         <a>Tabletas</a>
@@ -140,7 +140,7 @@
 
                             <!--Card content-->
                             <div class="card-body">
-                                <a href="ControllerDispositivo?accion=3">
+                                <a href="ControllerDispositivo?accion=portatiles">
                                     <img src="css/img/macbookproret13.png" style="height: 200px;" alt="Foto mackbook" class="mb-2">
                                     <h4 class="entry-title p-1">
                                         <a>Portatiles</a>
@@ -162,7 +162,7 @@
 
                             <!--Card content-->
                             <div class="card-body">
-                                <a href="ControllerDispositivo?accion=4">
+                                <a href="ControllerDispositivo?accion=consolas">
                                     <img src="css/img/11558330.jpg" style="height: 200px;" alt="Foto XboxOne" class="mb-2">
                                     <h4 class="entry-title p-1">
                                         <a>Consolas</a>
