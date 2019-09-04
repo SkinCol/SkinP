@@ -85,7 +85,7 @@ public class ControllerDispositivo extends HttpServlet {
                 break;
             case "3":
                 request.setAttribute("portatil", portatil);
-                request.getRequestDispatcher("Dipositivos/Portatiles.jsp").forward(request, response);
+                request.getRequestDispatcher("Dispositivos/Portatiles.jsp").forward(request, response);
                 break;
             case "4":
                 request.setAttribute("xbox", xbox);

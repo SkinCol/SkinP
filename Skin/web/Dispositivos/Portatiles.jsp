@@ -83,7 +83,7 @@
             <!-- Portatiles -->
             <div class="container">
 
-                <h1 class="my-5 display-4 text-left">Xbox</h1>
+                <h1 class="my-5 display-4 text-left">Portatiles</h1>
 
                 <!--Grid row-->
                 <div class="row text-center wow fadeIn">

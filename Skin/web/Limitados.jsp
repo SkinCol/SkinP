@@ -94,7 +94,7 @@
                             <!-- Card image -->
                             <div class="view overlay">
                                 <img class="card-img-top" src="${li.getImagen()}" alt="Card image cap">
-                                <a href="ControllerLimitado?enlace=${li.getEnlace()}">
+                                <a href="ControllerLimitado?accion=${li.getEnlace()}">
                                     <div class="mask rgba-white-slight"></div>
                                 </a>
                             </div>

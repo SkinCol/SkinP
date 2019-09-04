@@ -87,29 +87,47 @@
 
                 <!--Grid row-->
                 <div class="row text-center wow fadeIn">
+                    <script type="text/javascript">
+                        var i = 0;
+                        var imagenes = [];
+                        var time = 300;
+                    </script>
                     <ul id="products_list" class="products-grid">
                         <li class="item">
                             <div>
-                                <a href="#" class="product-image">
-                                    <img src="https://res.cloudinary.com/skincol-me/image/upload/v1567571277/Series/iPhone/iPhone%206/Carbon%20Series/gunmetalcarbon_1_1_souxmz.jpg" width="300" height="300">
-                                </a>
-                                <div class="name">
-                                    <h5 class="entry-title p-1">
-                                        <a href="#">Carbon Series</a>
-                                    </h5>
+                                <div class="slideshow-container">
+
+                                    <!-- Full-width images with number and caption text -->
+                                    <div class="mySlides fade">
+                                        <div class="numbertext">1 / 3</div>
+                                        <img src="img1.jpg" style="width:100%">
+                                        <div class="text">Caption Text</div>
+                                    </div>
+
+                                    <div class="mySlides fade">
+                                        <div class="numbertext">2 / 3</div>
+                                        <img src="img2.jpg" style="width:100%">
+                                        <div class="text">Caption Two</div>
+                                    </div>
+
+                                    <div class="mySlides fade">
+                                        <div class="numbertext">3 / 3</div>
+                                        <img src="img3.jpg" style="width:100%">
+                                        <div class="text">Caption Three</div>
+                                    </div>
+
+                                    <!-- Next and previous buttons -->
+                                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
                                 </div>
-                            </div>
-                            <div>
-                                <div onclick="return loadProductImage('https://www.slickwraps.com/media/catalog/product/cache/1/small_image/300x300/9df78eab33525d08d6e5fb8d27136e95/b/l/blackcarbon_1_1.jpg', 3354)" class="colorswatch smlClr"><img src="data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAAAQBACdASpEAEQAPm02mUmkIyKhIUgAgA2JaQAACfGjRo0aNGjRo0Z+AAD++5zAAAAAAA==" alt="Black Carbon" title="Black Carbon" data-pagespeed-url-hash="1036376873" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
+                                <br>
+
+                                <!-- The dots/circles -->
+                                <div style="text-align:center">
+                                    <span class="dot" onclick="currentSlide(1)"></span> 
+                                    <span class="dot" onclick="currentSlide(2)"></span> 
+                                    <span class="dot" onclick="currentSlide(3)"></span> 
+                                </div>
                             </div>
                         </li>
                     </ul>
@@ -166,8 +184,8 @@
         <script src="css/js/mdb.min.js" type="text/javascript"></script>
         <!-- Initializations -->
         <script type="text/javascript">
-                                    // Animations initialization
-                                    new WOW().init();
+                                        // Animations initialization
+                                        new WOW().init();
         </script>
 
     </body>

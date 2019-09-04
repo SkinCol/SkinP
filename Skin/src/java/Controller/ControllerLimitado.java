@@ -50,116 +50,111 @@ public class ControllerLimitado extends HttpServlet {
                 request.setAttribute("limitado", limitado);
                 request.getRequestDispatcher("Limitados.jsp").forward(request, response);
                 break;
-            default:
-                break;
-        }
-        switch (enlace) {
-            case "1":
-                request.setAttribute("limitado", limitado);
+            case "2":
                 request.setAttribute("phone", phone);
                 request.getRequestDispatcher("Limitado/VenomSeries.jsp").forward(request, response);
-                break;
-            case "2":
-                request.setAttribute("limitado", limitado);
-                request.setAttribute("phone", phone);
-                request.getRequestDispatcher("Limitado/Trasparente.jsp").forward(request, response);
                 break;
             case "3":
                 request.setAttribute("limitado", limitado);
                 request.setAttribute("phone", phone);
-                request.getRequestDispatcher("Limitado/Alcantara.jsp").forward(request, response);
+                request.getRequestDispatcher("Limitado/Trasparente.jsp").forward(request, response);
                 break;
             case "4":
                 request.setAttribute("limitado", limitado);
                 request.setAttribute("phone", phone);
-                request.getRequestDispatcher("Limitado/Hemp.jsp").forward(request, response);
+                request.getRequestDispatcher("Limitado/Alcantara.jsp").forward(request, response);
                 break;
             case "5":
                 request.setAttribute("limitado", limitado);
                 request.setAttribute("phone", phone);
-                request.getRequestDispatcher("Limitado/Mosaico.jsp").forward(request, response);
+                request.getRequestDispatcher("Limitado/Hemp.jsp").forward(request, response);
                 break;
             case "6":
                 request.setAttribute("limitado", limitado);
                 request.setAttribute("phone", phone);
-                request.getRequestDispatcher("Limitado/Stale.jsp").forward(request, response);
+                request.getRequestDispatcher("Limitado/Mosaico.jsp").forward(request, response);
                 break;
             case "7":
                 request.setAttribute("limitado", limitado);
                 request.setAttribute("phone", phone);
-                request.getRequestDispatcher("Limitado/Charred.jsp").forward(request, response);
+                request.getRequestDispatcher("Limitado/Stale.jsp").forward(request, response);
                 break;
             case "8":
                 request.setAttribute("limitado", limitado);
                 request.setAttribute("phone", phone);
-                request.getRequestDispatcher("Limitado/WovenMetal.jsp").forward(request, response);
+                request.getRequestDispatcher("Limitado/Charred.jsp").forward(request, response);
                 break;
             case "9":
                 request.setAttribute("limitado", limitado);
                 request.setAttribute("phone", phone);
-                request.getRequestDispatcher("Limitado/Matrix.jsp").forward(request, response);
+                request.getRequestDispatcher("Limitado/WovenMetal.jsp").forward(request, response);
                 break;
             case "10":
                 request.setAttribute("limitado", limitado);
                 request.setAttribute("phone", phone);
-                request.getRequestDispatcher("Limitado/ColorShifting.jsp").forward(request, response);
+                request.getRequestDispatcher("Limitado/Matrix.jsp").forward(request, response);
                 break;
             case "11":
                 request.setAttribute("limitado", limitado);
                 request.setAttribute("phone", phone);
-                request.getRequestDispatcher("Limitado/Sloth.jsp").forward(request, response);
+                request.getRequestDispatcher("Limitado/ColorShifting.jsp").forward(request, response);
                 break;
             case "12":
                 request.setAttribute("limitado", limitado);
                 request.setAttribute("phone", phone);
-                request.getRequestDispatcher("Limitado/Shade.jsp").forward(request, response);
+                request.getRequestDispatcher("Limitado/Sloth.jsp").forward(request, response);
                 break;
             case "13":
                 request.setAttribute("limitado", limitado);
                 request.setAttribute("phone", phone);
-                request.getRequestDispatcher("Limitado/HoneyComb.jsp").forward(request, response);
+                request.getRequestDispatcher("Limitado/Shade.jsp").forward(request, response);
                 break;
             case "14":
                 request.setAttribute("limitado", limitado);
                 request.setAttribute("phone", phone);
-                request.getRequestDispatcher("Limitado/Aniversario.jsp").forward(request, response);
+                request.getRequestDispatcher("Limitado/HoneyComb.jsp").forward(request, response);
                 break;
             case "15":
                 request.setAttribute("limitado", limitado);
                 request.setAttribute("phone", phone);
-                request.getRequestDispatcher("Limitado/Retro.jsp").forward(request, response);
+                request.getRequestDispatcher("Limitado/Aniversario.jsp").forward(request, response);
                 break;
             case "16":
                 request.setAttribute("limitado", limitado);
                 request.setAttribute("phone", phone);
-                request.getRequestDispatcher("Limitado/RetroBlack.jsp").forward(request, response);
+                request.getRequestDispatcher("Limitado/Retro.jsp").forward(request, response);
                 break;
             case "17":
                 request.setAttribute("limitado", limitado);
                 request.setAttribute("phone", phone);
-                request.getRequestDispatcher("Limitado/DarkMatter.jsp").forward(request, response);
+                request.getRequestDispatcher("Limitado/RetroBlack.jsp").forward(request, response);
                 break;
             case "18":
                 request.setAttribute("limitado", limitado);
                 request.setAttribute("phone", phone);
-                request.getRequestDispatcher("Limitado/PrideCork.jsp").forward(request, response);
+                request.getRequestDispatcher("Limitado/DarkMatter.jsp").forward(request, response);
                 break;
             case "19":
                 request.setAttribute("limitado", limitado);
                 request.setAttribute("phone", phone);
-                request.getRequestDispatcher("Limitado/Marbol.jsp").forward(request, response);
+                request.getRequestDispatcher("Limitado/PrideCork.jsp").forward(request, response);
                 break;
             case "20":
                 request.setAttribute("limitado", limitado);
                 request.setAttribute("phone", phone);
-                request.getRequestDispatcher("Limitado/StickerBomb.jsp").forward(request, response);
+                request.getRequestDispatcher("Limitado/Marbol.jsp").forward(request, response);
                 break;
             case "21":
                 request.setAttribute("limitado", limitado);
                 request.setAttribute("phone", phone);
-                request.getRequestDispatcher("Limitado/Moon.jsp").forward(request, response);
+                request.getRequestDispatcher("Limitado/StickerBomb.jsp").forward(request, response);
                 break;
             case "22":
+                request.setAttribute("limitado", limitado);
+                request.setAttribute("phone", phone);
+                request.getRequestDispatcher("Limitado/Moon.jsp").forward(request, response);
+                break;
+            case "23":
                 request.setAttribute("limitado", limitado);
                 request.setAttribute("phone", phone);
                 request.getRequestDispatcher("Limitado/Forged.jsp").forward(request, response);
@@ -167,6 +162,7 @@ public class ControllerLimitado extends HttpServlet {
             default:
                 break;
         }
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
