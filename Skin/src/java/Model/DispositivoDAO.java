@@ -37,6 +37,7 @@ public class DispositivoDAO {
                 i.setModelo(rs.getString(3));
                 i.setTipo(rs.getString(4));
                 i.setImagen(rs.getString(5));
+                i.setEnlace(rs.getString(6));
 
                 iPhone.add(i);
             }
@@ -60,6 +61,7 @@ public class DispositivoDAO {
                 sa.setModelo(rs.getString(3));
                 sa.setTipo(rs.getString(4));
                 sa.setImagen(rs.getString(5));
+                sa.setEnlace(rs.getString(6));
 
                 Samsung.add(sa);
             }
@@ -83,6 +85,7 @@ public class DispositivoDAO {
                 g.setModelo(rs.getString(3));
                 g.setTipo(rs.getString(4));
                 g.setImagen(rs.getString(5));
+                g.setEnlace(rs.getString(6));
 
                 Google.add(g);
             }
@@ -106,6 +109,7 @@ public class DispositivoDAO {
                 h.setModelo(rs.getString(3));
                 h.setTipo(rs.getString(4));
                 h.setImagen(rs.getString(5));
+                h.setEnlace(rs.getString(6));
 
                 HTC.add(h);
             }
@@ -129,6 +133,7 @@ public class DispositivoDAO {
                 lg.setModelo(rs.getString(3));
                 lg.setTipo(rs.getString(4));
                 lg.setImagen(rs.getString(5));
+                lg.setEnlace(rs.getString(6));
 
                 LG.add(lg);
             }
@@ -152,6 +157,7 @@ public class DispositivoDAO {
                 m.setModelo(rs.getString(3));
                 m.setTipo(rs.getString(4));
                 m.setImagen(rs.getString(5));
+                m.setEnlace(rs.getString(6));
 
                 Motorola.add(m);
             }
@@ -175,6 +181,7 @@ public class DispositivoDAO {
                 s.setModelo(rs.getString(3));
                 s.setTipo(rs.getString(4));
                 s.setImagen(rs.getString(5));
+                s.setEnlace(rs.getString(6));
 
                 Sony.add(s);
             }
@@ -198,6 +205,7 @@ public class DispositivoDAO {
                 ha.setModelo(rs.getString(3));
                 ha.setTipo(rs.getString(4));
                 ha.setImagen(rs.getString(5));
+                ha.setEnlace(rs.getString(6));
 
                 Huawei.add(ha);
             }
@@ -221,6 +229,7 @@ public class DispositivoDAO {
                 x.setModelo(rs.getString(3));
                 x.setTipo(rs.getString(4));
                 x.setImagen(rs.getString(5));
+                x.setEnlace(rs.getString(6));
 
                 Xiaomi.add(x);
             }
@@ -244,6 +253,7 @@ public class DispositivoDAO {
                 t.setModelo(rs.getString(3));
                 t.setTipo(rs.getString(4));
                 t.setImagen(rs.getString(5));
+                t.setEnlace(rs.getString(6));
 
                 tabletas.add(t);
             }
@@ -267,6 +277,7 @@ public class DispositivoDAO {
                 l.setModelo(rs.getString(3));
                 l.setTipo(rs.getString(4));
                 l.setImagen(rs.getString(5));
+                l.setEnlace(rs.getString(6));
 
                 portatiles.add(l);
             }
@@ -290,6 +301,7 @@ public class DispositivoDAO {
                 ps.setModelo(rs.getString(3));
                 ps.setTipo(rs.getString(4));
                 ps.setImagen(rs.getString(5));
+                ps.setEnlace(rs.getString(6));
 
                 PlayStation.add(ps);
             }
@@ -313,6 +325,7 @@ public class DispositivoDAO {
                 xb.setModelo(rs.getString(3));
                 xb.setTipo(rs.getString(4));
                 xb.setImagen(rs.getString(5));
+                xb.setEnlace(rs.getString(6));
 
                 Xbox.add(xb);
             }
@@ -336,6 +349,7 @@ public class DispositivoDAO {
                 n.setModelo(rs.getString(3));
                 n.setTipo(rs.getString(4));
                 n.setImagen(rs.getString(5));
+                n.setEnlace(rs.getString(6));
 
                 Nintendo.add(n);
             }
@@ -359,6 +373,7 @@ public class DispositivoDAO {
                 ph.setMarca(rs.getString(3));
                 ph.setTipo(rs.getString(4));
                 ph.setImagen(rs.getString(5));
+                ph.setEnlace(rs.getString(6));
 
                 Phones.add(ph);
             }

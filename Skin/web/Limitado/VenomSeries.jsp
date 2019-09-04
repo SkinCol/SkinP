@@ -86,8 +86,10 @@
             </div>
         </nav>
         <!-- Navbar -->
+        <div class="container-fluid">
+            <img src="https://res.cloudinary.com/skincol-me/image/upload/v1566570265/Limited/Venom%20Series/aVenom-banner.jpg.pagespeed.ic.qsh_98E4bw_xikstc.webp" class="img-fluid">
+        </div>
 
-        <img src="https://res.cloudinary.com/skincol-me/image/upload/v1566570265/Limited/Venom%20Series/aVenom-banner.jpg.pagespeed.ic.qsh_98E4bw_xikstc.webp" class="img-fluid" >
 
         <!--Main layout-->
         <main class="mt-5 pt-4">
@@ -97,129 +99,129 @@
                 <!--Grid row-->
                 <div class="row wow fadeIn">
 
-                        <!--Card-->
-                        <div class="card ">
+                    <!--Card-->
+                    <div class="card ">
 
-                            <!--Card content-->
-                            <div class="card-body">
-                                <!--Carousel Wrapper-->
-                                <div id="carouselExampleIndicators" class="carousel slide .carousel-fade" data-ride="carousel">
-                                     <!--Indicators-->
-                                    <ol class="carousel-indicators">
-                                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                                        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                                        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-                                        <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>                                        
-                                        <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
-                                        <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>                                        
-                                        <li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
-                                        <li data-target="#carouselExampleIndicators" data-slide-to="9"></li>
-                                        <li data-target="#carouselExampleIndicators" data-slide-to="10"></li>
-                                        <li data-target="#carouselExampleIndicators" data-slide-to="11"></li>
-                                        <li data-target="#carouselExampleIndicators" data-slide-to="12"></li>
-                                    </ol>
-                                    <!--Indicators-->
-                                    
-                                    <!--Slides-->
-                                    <div class="carousel-inner" role="listbox">
-                                        <!--First slide-->
-                                        <div class="carousel-item active">
-                                            <img class="d-block w-100" src="https://res.cloudinary.com/skincol-me/image/upload/v1566577659/Limited/Venom%20Series/iphone-xs-venom_1_kbvyup.jpg">
-                                        </div>
-                                        <!--First slide-->
-                                        
-                                        <!--First slide-->
-                                        <div class="carousel-item">
-                                            <img class="d-block w-100" src="https://res.cloudinary.com/skincol-me/image/upload/v1566577648/Limited/Venom%20Series/iphone7plus-venom_1_xf5ck8.jpg">
-                                        </div>
-                                        <!--First slide-->
-                                        
-                                        <!--First slide-->
-                                        <div class="carousel-item">
-                                            <img class="d-block w-100" src="https://res.cloudinary.com/skincol-me/image/upload/v1566577637/Limited/Venom%20Series/iphone-8-venom_1_qqyc81.jpg">
-                                        </div>
-                                        <!--First slide-->
-                                        
-                                        <!--First slide-->
-                                        <div class="carousel-item">
-                                            <img class="d-block w-100" src="https://res.cloudinary.com/skincol-me/image/upload/v1566577626/Limited/Venom%20Series/oneplus_5t-venom_1_xajpqo.jpg">
-                                        </div>
-                                        <!--First slide-->
-                                        
-                                        <!--First slide-->
-                                        <div class="carousel-item">
-                                            <img class="d-block w-100" src="https://res.cloudinary.com/skincol-me/image/upload/v1566577615/Limited/Venom%20Series/lg-v30-venom_1_k001qs.jpg">
-                                        </div>
-                                        <!--First slide-->
-                                        
-                                        <!--First slide-->
-                                        <div class="carousel-item">
-                                            <img class="d-block w-100" src="https://res.cloudinary.com/skincol-me/image/upload/v1566577603/Limited/Venom%20Series/s9plus-venom_1_elkgmx.jpg">
-                                        </div>
-                                        <!--First slide-->
-                                        
-                                        <!--First slide-->
-                                        <div class="carousel-item">
-                                            <img class="d-block w-100" src="https://res.cloudinary.com/skincol-me/image/upload/v1566577592/Limited/Venom%20Series/s9-venom_1_khdgnm.jpg">
-                                        </div>
-                                        <!--First slide-->
-                                        
-                                        <!--First slide-->
-                                        <div class="carousel-item">
-                                            <img class="d-block w-100" src="https://res.cloudinary.com/skincol-me/image/upload/v1566577585/Limited/Venom%20Series/note9-venom_1_srxboj.jpg">
-                                        </div>
-                                        <!--First slide-->
-                                        
-                                        <!--First slide-->
-                                        <div class="carousel-item">
-                                            <img class="d-block w-100" src="https://res.cloudinary.com/skincol-me/image/upload/v1566577578/Limited/Venom%20Series/pixel2-venom_1_kropo4.jpg">
-                                        </div>
-                                        <!--First slide-->
-                                        
-                                        <!--First slide-->
-                                        <div class="carousel-item">
-                                            <img class="d-block w-100" src="https://res.cloudinary.com/skincol-me/image/upload/v1566577572/Limited/Venom%20Series/pixelxl2-venom_1_p6hoe4.jpg">
-                                        </div>
-                                        <!--First slide-->
-                                        
-                                        <!--First slide-->
-                                        <div class="carousel-item">
-                                            <img class="d-block w-100" src="https://res.cloudinary.com/skincol-me/image/upload/v1566577680/Limited/Venom%20Series/s8plus-venom_1_ro4a3y.jpg">
-                                        </div>
-                                        <!--First slide-->
-                                        
-                                        <!--First slide-->
-                                        <div class="carousel-item">
-                                            <img class="d-block w-100" src="https://res.cloudinary.com/skincol-me/image/upload/v1566577673/Limited/Venom%20Series/lgg7-venom_1_wpqwuq.jpg">
-                                        </div>
-                                        <!--First slide-->
-                                        
-                                        <!--First slide-->
-                                        <div class="carousel-item">
-                                            <img class="d-block w-100" src="https://res.cloudinary.com/skincol-me/image/upload/v1566577666/Limited/Venom%20Series/oneplus6-venom_1_sazdhq.jpg">
-                                        </div>
-                                        <!--First slide-->
+                        <!--Card content-->
+                        <div class="card-body">
+                            <!--Carousel Wrapper-->
+                            <div id="carouselExampleIndicators" class="carousel slide .carousel-fade" data-ride="carousel">
+                                <!--Indicators-->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>                                        
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>                                        
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="9"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="10"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="11"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="12"></li>
+                                </ol>
+                                <!--Indicators-->
+
+                                <!--Slides-->
+                                <div class="carousel-inner" role="listbox">
+                                    <!--First slide-->
+                                    <div class="carousel-item active">
+                                        <img class="d-block w-100" src="https://res.cloudinary.com/skincol-me/image/upload/v1566577659/Limited/Venom%20Series/iphone-xs-venom_1_kbvyup.jpg">
                                     </div>
-                                    <!--Slides-->
-                                    
-                                    <!--Controls-->
-                                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="sr-only">Previous</span>
-                                    </a>
-                                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="sr-only">Next</span>
-                                    </a>
-                                    <!--Controls-->
+                                    <!--First slide-->
+
+                                    <!--First slide-->
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="https://res.cloudinary.com/skincol-me/image/upload/v1566577648/Limited/Venom%20Series/iphone7plus-venom_1_xf5ck8.jpg">
+                                    </div>
+                                    <!--First slide-->
+
+                                    <!--First slide-->
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="https://res.cloudinary.com/skincol-me/image/upload/v1566577637/Limited/Venom%20Series/iphone-8-venom_1_qqyc81.jpg">
+                                    </div>
+                                    <!--First slide-->
+
+                                    <!--First slide-->
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="https://res.cloudinary.com/skincol-me/image/upload/v1566577626/Limited/Venom%20Series/oneplus_5t-venom_1_xajpqo.jpg">
+                                    </div>
+                                    <!--First slide-->
+
+                                    <!--First slide-->
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="https://res.cloudinary.com/skincol-me/image/upload/v1566577615/Limited/Venom%20Series/lg-v30-venom_1_k001qs.jpg">
+                                    </div>
+                                    <!--First slide-->
+
+                                    <!--First slide-->
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="https://res.cloudinary.com/skincol-me/image/upload/v1566577603/Limited/Venom%20Series/s9plus-venom_1_elkgmx.jpg">
+                                    </div>
+                                    <!--First slide-->
+
+                                    <!--First slide-->
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="https://res.cloudinary.com/skincol-me/image/upload/v1566577592/Limited/Venom%20Series/s9-venom_1_khdgnm.jpg">
+                                    </div>
+                                    <!--First slide-->
+
+                                    <!--First slide-->
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="https://res.cloudinary.com/skincol-me/image/upload/v1566577585/Limited/Venom%20Series/note9-venom_1_srxboj.jpg">
+                                    </div>
+                                    <!--First slide-->
+
+                                    <!--First slide-->
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="https://res.cloudinary.com/skincol-me/image/upload/v1566577578/Limited/Venom%20Series/pixel2-venom_1_kropo4.jpg">
+                                    </div>
+                                    <!--First slide-->
+
+                                    <!--First slide-->
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="https://res.cloudinary.com/skincol-me/image/upload/v1566577572/Limited/Venom%20Series/pixelxl2-venom_1_p6hoe4.jpg">
+                                    </div>
+                                    <!--First slide-->
+
+                                    <!--First slide-->
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="https://res.cloudinary.com/skincol-me/image/upload/v1566577680/Limited/Venom%20Series/s8plus-venom_1_ro4a3y.jpg">
+                                    </div>
+                                    <!--First slide-->
+
+                                    <!--First slide-->
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="https://res.cloudinary.com/skincol-me/image/upload/v1566577673/Limited/Venom%20Series/lgg7-venom_1_wpqwuq.jpg">
+                                    </div>
+                                    <!--First slide-->
+
+                                    <!--First slide-->
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="https://res.cloudinary.com/skincol-me/image/upload/v1566577666/Limited/Venom%20Series/oneplus6-venom_1_sazdhq.jpg">
+                                    </div>
+                                    <!--First slide-->
                                 </div>
-                                <!--Carousel Wrapper-->
+                                <!--Slides-->
+
+                                <!--Controls-->
+                                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                                <!--Controls-->
                             </div>
-                            <!--Card content-->
+                            <!--Carousel Wrapper-->
                         </div>
-                        <!--/.Card-->
+                        <!--Card content-->
+                    </div>
+                    <!--/.Card-->
 
                     <!--Grid column-->
                     <div class="col-md-6 mb-1">

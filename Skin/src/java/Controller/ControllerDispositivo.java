@@ -94,6 +94,7 @@ public class ControllerDispositivo extends HttpServlet {
                 request.getRequestDispatcher("Dispositivos/Consolas.jsp").forward(request, response);
                 break;
             case "5":
+            case "6":
                 
                 break;
         }
