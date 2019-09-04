@@ -4,9 +4,17 @@
         <servlet-name>ControllerDispositivo</servlet-name>
         <servlet-class>Controller.ControllerDispositivo</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ControllerLimitado</servlet-name>
+        <servlet-class>Controller.ControllerLimitado</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ControllerDispositivo</servlet-name>
         <url-pattern>/ControllerDispositivo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControllerLimitado</servlet-name>
+        <url-pattern>/ControllerLimitado</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

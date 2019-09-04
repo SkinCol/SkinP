@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-09-2019 a las 00:12:05
+-- Tiempo de generación: 04-09-2019 a las 01:00:53
 -- Versión del servidor: 10.4.6-MariaDB
 -- Versión de PHP: 7.1.31
 
@@ -234,7 +234,8 @@ CREATE TABLE `envio` (
 CREATE TABLE `factura` (
   `IdFactura` int(11) NOT NULL,
   `IdSolicitud` int(11) NOT NULL,
-  `IdUser` int(11) NOT NULL
+  `IdUser` int(11) NOT NULL,
+  `Fecha` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
 -- --------------------------------------------------------
@@ -268,8 +269,37 @@ INSERT INTO `facturainsumos` (`IdFacturaInsumos`, `IdProveedor`, `IdMaterial`, `
 CREATE TABLE `limitado` (
   `IdLimitado` int(11) NOT NULL,
   `Nombre` varchar(20) COLLATE utf8_spanish2_ci NOT NULL,
-  `Imagen` varchar(150) COLLATE utf8_spanish2_ci NOT NULL
+  `Imagen` varchar(150) COLLATE utf8_spanish2_ci DEFAULT NULL,
+  `Enlace` varchar(20) COLLATE utf8_spanish2_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+
+--
+-- Volcado de datos para la tabla `limitado`
+--
+
+INSERT INTO `limitado` (`IdLimitado`, `Nombre`, `Imagen`, `Enlace`) VALUES
+(1, 'Venom Series', 'https://res.cloudinary.com/skincol-me/image/upload/v1566554572/Limited/aVenom-limited.jpg.pagespeed.ic.jt9mwBPCGV_elrcm3.webp', '1'),
+(2, 'Trasparente Series', 'https://res.cloudinary.com/skincol-me/image/upload/v1566554450/Limited/aTransparent-Limited.jpg.pagespeed.ic.ycCVXpZSkU_oxid9d.webp', '2'),
+(3, 'Alcantara Series', 'https://res.cloudinary.com/skincol-me/image/upload/v1566554742/Limited/aLimited-Collections-Alcantara.jpg.pagespeed.ic.amVsun7Fyp_hcecpb.webp', '3'),
+(4, 'Hemp Series', 'https://res.cloudinary.com/skincol-me/image/upload/v1566554702/Limited/aLimited-Collections-Hemp.jpg.pagespeed.ic.H9Cl-tC8md_nzgvu9.webp', '4'),
+(5, 'Mosaico Series', 'https://res.cloudinary.com/skincol-me/image/upload/v1566554669/Limited/aLimited-Collections-Mosaic.jpg.pagespeed.ic.bFWZyC0BJj_caqt9j.webp', '5'),
+(6, 'Stale Series', 'https://res.cloudinary.com/skincol-me/image/upload/v1566554643/Limited/aLimited-Collections-Slate.jpg.pagespeed.ic.1wTem7186h_bzya4v.webp', '6'),
+(7, 'Charred Robot Series', 'https://res.cloudinary.com/skincol-me/image/upload/v1566554619/Limited/aCharred-Robot-Limited-Banner2.jpg.pagespeed.ic.1Ylc1Ws9nz_yw1nbt.webp', '7'),
+(8, 'Woven Metal Series', 'https://res.cloudinary.com/skincol-me/image/upload/v1566554595/Limited/aLimited-Collections-Woven-Metal.jpg.pagespeed.ic.HgMqNHdV9a_nh6rlg.webp', '8'),
+(9, 'Matrix Series', 'https://res.cloudinary.com/skincol-me/image/upload/v1566554549/Limited/aMatrix-Limited.jpg.pagespeed.ic.X3cYmdAdNy_gikmu2.webp', '9'),
+(10, 'Color Shifting Serie', 'https://res.cloudinary.com/skincol-me/image/upload/v1566554525/Limited/aColorShift-Limited.jpg.pagespeed.ic.Y7T0wvyflC_db7m9e.webp', '10'),
+(11, 'Sloth Series', 'https://res.cloudinary.com/skincol-me/image/upload/v1566554501/Limited/aLimited-Collections-Sloth.jpg.pagespeed.ic.pAg4Ray5_X_pkit5x.webp', '11'),
+(12, 'Shade ', 'https://res.cloudinary.com/skincol-me/image/upload/v1566554464/Limited/Shade_limited.jpg.pagespeed.ce.ImAXJpIJh4_j9uwfg.jpg', '12'),
+(13, 'Honey Comb ', 'https://res.cloudinary.com/skincol-me/image/upload/v1566554422/Limited/aLimited-Collections-Honeycomb.jpg.pagespeed.ic.sQ13-YYAvZ_anyan4.webp', '13'),
+(14, 'Aniversario', 'https://res.cloudinary.com/skincol-me/image/upload/v1566554411/Limited/aAnniversary-Limited-Banner.jpg.pagespeed.ic.LrasdiB7E8_wde9dy.webp', '14'),
+(15, 'Retro', 'https://res.cloudinary.com/skincol-me/image/upload/v1566554397/Limited/aLimited-Collections-Retro.jpg.pagespeed.ic.n_AvjPnR58_arj6uj.webp', '15'),
+(16, 'Retro Black', 'https://res.cloudinary.com/skincol-me/image/upload/v1566554377/Limited/aBlack_Apple_Retro_limited_banner.jpg.pagespeed.ic.QnCg1oZZJE_qiqx92.webp', '16'),
+(17, 'Dark Matter', 'https://res.cloudinary.com/skincol-me/image/upload/v1566554360/Limited/aDarkMatter_LimitedPage_03.jpg.pagespeed.ic.QJKDgCTgZ-_gosjjq.webp', '17'),
+(18, 'Pride Cork', 'https://res.cloudinary.com/skincol-me/image/upload/v1566554345/Limited/aPrideCork_LimitedPage_Crop_05.jpg.pagespeed.ic.f7p3xNCugt_yifvbe.webp', '18'),
+(19, 'Marbol Series', 'https://res.cloudinary.com/skincol-me/image/upload/v1566554326/Limited/aMarbleSeries_Limited_v2.jpg.pagespeed.ic.B2itfM5iMx_xyzg3l.webp', '19'),
+(20, 'Sticker Bomb', 'https://res.cloudinary.com/skincol-me/image/upload/v1566554303/Limited/aStickerBomb_LimitedPage.jpg.pagespeed.ic.W-EDgX1GtZ_b9ekia.webp', '20'),
+(21, 'Moon Series', 'https://res.cloudinary.com/skincol-me/image/upload/v1566554193/Limited/aMoonWrap_LimitedPage_02.jpg.pagespeed.ic.w5LbsjQUY6_ccbrtm.webp', '21'),
+(22, 'Forged Carbon', 'https://res.cloudinary.com/skincol-me/image/upload/v1566554096/Limited/aForged_Carbon-Limited.jpg.pagespeed.ic.xIsKG8XU33_jn2zng.webp', '22');
 
 -- --------------------------------------------------------
 
@@ -361,7 +391,6 @@ CREATE TABLE `usuario` (
   `Direccion` varchar(150) COLLATE utf8_spanish2_ci DEFAULT NULL,
   `Email` varchar(150) COLLATE utf8_spanish2_ci NOT NULL,
   `Contrasena` varchar(30) COLLATE utf8_spanish2_ci NOT NULL,
-  `Fecha` date DEFAULT NULL,
   `Estado` tinyint(1) DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
@@ -369,9 +398,9 @@ CREATE TABLE `usuario` (
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`IdUser`, `IdCiudad`, `Nivel`, `Nombres`, `Apellidos`, `Documento`, `Telefono`, `Direccion`, `Email`, `Contrasena`, `Fecha`, `Estado`) VALUES
-(1, 1, 1, 'Alejandro', 'Sorza', '1049652045', '3232011929', 'Calle 22 - 45', 'alejo@sorza.com', '1234', NULL, 1),
-(2, 2, 2, 'Angélica ', 'Gomez', '1917289179', '3115711574', 'Calle 45 - 34', 'user@mail.com', '12345', NULL, 1);
+INSERT INTO `usuario` (`IdUser`, `IdCiudad`, `Nivel`, `Nombres`, `Apellidos`, `Documento`, `Telefono`, `Direccion`, `Email`, `Contrasena`, `Estado`) VALUES
+(1, 1, 1, 'Alejandro', 'Sorza', '1049652045', '3232011929', 'Calle 22 - 45', 'alejo@sorza.com', '1234', 1),
+(2, 2, 2, 'Angélica ', 'Gomez', '1917289179', '3115711574', 'Calle 45 - 34', 'user@mail.com', '12345', 1);
 
 --
 -- Índices para tablas volcadas
@@ -506,7 +535,7 @@ ALTER TABLE `facturainsumos`
 -- AUTO_INCREMENT de la tabla `limitado`
 --
 ALTER TABLE `limitado`
-  MODIFY `IdLimitado` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `IdLimitado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT de la tabla `material`

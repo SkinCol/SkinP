@@ -1,8 +1,10 @@
 <%-- 
-    Document   : index
-    Created on : 28/08/2019, 11:50:41 AM
-    Author     : alejandro
+    Document   : Limitados
+    Created on : 03-sep-2019, 13:31:25
+    Author     : aleja
 --%>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -17,7 +19,7 @@
         <link href="css/css/style.min.css" rel="stylesheet" type="text/css"/>
         <link href="css/css/estilos.css" rel="stylesheet" type="text/css"/>
         <link rel="shortcut icon" type="image/x-ico" href="favicon.ico" />
-        <title>SkinCol</title>
+        <title>Limitados</title>
     </head>
     <body>
         <!-- Navbar -->
@@ -64,7 +66,8 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="IncioSesion.html" class="nav-link border border-light rounded waves-effect waves-light" target="_blank">
+                            <a href="IncioSesion.html" class="nav-link border border-light rounded waves-effect waves-light"
+                               target="_blank">
                                 <i class="fas fa-user"></i> Iniciar Sesión
                             </a>
                         </li>
@@ -74,70 +77,44 @@
 
             </div>
         </nav>
-        <!-- Navbar -->
 
-        <!--Carousel Wrapper-->
-        <div id="carousel-home" class="carousel slide carousel-fade">
+        <!--Main layout-->
+        <main class="mt-5 pt-5">
+            <div class="container">
 
-            <!--Indicators-->
-            <ol class="carousel-indicators">
-                <li data-target="#carousel-home" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-home" data-slide-to="1"></li>
-                <li data-target="#carousel-home" data-slide-to="2"></li>
-            </ol>
-            <!--/.Indicators-->
+                <h1 class="my-5 display-4 text-left">Serie Limitada</h1>
+                <!--Section: Jumbotron-->
+                <c:forEach var="li" items="${limitado}">
+                    <section class="card blue-gradient wow fadeIn mb-4" id="intro">
 
-            <!--Slides-->
-            <div class="carousel-inner" role="listbox">
-                <!--First slide-->
-                <div class="carousel-item active">
-                    <div class="view col-md-12 col-sm-12"
-                         style="background-image: url('css/img/Limited/ColorShift-Limited.jpg'); background-repeat: no-repeat;
-                         background-size: cover;
-                         background-position: center center;
-                         ">
-                    </div>
-                </div>
-                <!--/First slide-->
+                        <!-- Content -->
+                        <!-- Card -->
+                        <div class="card">
 
-                <!--Second slide-->
-                <div class="carousel-item">
-                    <div class="view"
-                         style="background-image: url('css/img/Limited/Transparent-Limited.jpg'); background-repeat: no-repeat;
-                         background-size: cover;
-                         background-position: center center;
-                         height: 100%;
-                         ">
-                    </div>
-                </div>
-                <!--/Second slide-->
+                            <!-- Card image -->
+                            <div class="view overlay">
+                                <img class="card-img-top" src="${li.getImagen()}" alt="Card image cap">
+                                <a href="ControllerLimitado?enlace=${li.getEnlace()}">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
 
-                <!--Third slide-->
-                <div class="carousel-item">
-                    <div class="view"
-                         style="background-image: url('css/img/Limited/Venom-limited.jpg'); background-repeat: no-repeat;
-                         background-size: cover;
-                         background-position: center center;
-                         ">
-                    </div>
-                </div>
-                <!--/Third slide-->
+                            <!-- Card content -->
+                            <div class="card-body justify-content-center">
+
+                                <!-- Title -->
+                                <h1 class="text-center display-3 entry-title p-1">${li.getNombre()}</h1>
+
+                            </div>
+                        </div>
+                        <!-- Card -->
+
+                    </section>
+                </c:forEach>
+                <!--Section: Jumbotron-->
             </div>
-            <!--/.Slides-->
-
-            <!--Controles-->
-            <a class="carousel-control-prev" href="#carousel-home" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Anterio</span>
-            </a>
-            <a class="carousel-control-next" href="#carousel-home" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Siguiente</span>
-            </a>
-            <!--/.Controles-->
-
-        </div>
-        <!--/.Carousel Wrapper-->
+        </main>
+        <!--Main layout-->
 
         <!--Footer-->
         <footer class="page-footer font-small unique-color-dark pt-4">
@@ -171,7 +148,6 @@
 
         </footer>
         <!--/.Footer-->
-
         <!-- SCRIPTS -->
         <!-- JQuery -->
         <script src="css/js/jquery-3.3.1.min.js" type="text/javascript"></script>

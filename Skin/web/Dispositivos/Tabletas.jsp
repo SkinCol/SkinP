@@ -1,8 +1,10 @@
 <%-- 
-    Document   : index
-    Created on : 28/08/2019, 11:50:41 AM
-    Author     : alejandro
+    Document   : Tabletas
+    Created on : 03-sep-2019, 17:02:45
+    Author     : aleja
 --%>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -17,7 +19,7 @@
         <link href="css/css/style.min.css" rel="stylesheet" type="text/css"/>
         <link href="css/css/estilos.css" rel="stylesheet" type="text/css"/>
         <link rel="shortcut icon" type="image/x-ico" href="favicon.ico" />
-        <title>SkinCol</title>
+        <title>Dispositivos - Tabletas</title>
     </head>
     <body>
         <!-- Navbar -->
@@ -38,7 +40,6 @@
                 <!-- Links -->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-                    <!-- Left -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
                             <a class="nav-link" href="Dispositivos.jsp">Dispositivos</a>
@@ -64,7 +65,8 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="IncioSesion.html" class="nav-link border border-light rounded waves-effect waves-light" target="_blank">
+                            <a href="IncioSesion.html" class="nav-link border border-light rounded waves-effect waves-light"
+                               target="_blank">
                                 <i class="fas fa-user"></i> Iniciar Sesión
                             </a>
                         </li>
@@ -74,70 +76,51 @@
 
             </div>
         </nav>
-        <!-- Navbar -->
 
-        <!--Carousel Wrapper-->
-        <div id="carousel-home" class="carousel slide carousel-fade">
+        <!--Main layout-->
+        <main class="mt-5 pt-4">
+            <!-- Tablets -->
+            <div class="container">
 
-            <!--Indicators-->
-            <ol class="carousel-indicators">
-                <li data-target="#carousel-home" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-home" data-slide-to="1"></li>
-                <li data-target="#carousel-home" data-slide-to="2"></li>
-            </ol>
-            <!--/.Indicators-->
+                <h1 class="my-5 display-4 text-left">Xbox</h1>
 
-            <!--Slides-->
-            <div class="carousel-inner" role="listbox">
-                <!--First slide-->
-                <div class="carousel-item active">
-                    <div class="view col-md-12 col-sm-12"
-                         style="background-image: url('css/img/Limited/ColorShift-Limited.jpg'); background-repeat: no-repeat;
-                         background-size: cover;
-                         background-position: center center;
-                         ">
-                    </div>
+                <!--Grid row-->
+                <div class="row text-center wow fadeIn">
+
+                    <!--Grid column 1-->
+                    <c:forEach var="t" items="${tablet}">
+                        <div class="col-lg-3 col-md-6 mb-4">
+
+                            <!--Card-->
+                            <div class="card">
+
+                                <!--Card content-->
+                                <div class="card-body">
+                                    <a href="">
+                                        <img src="${t.getImagen()}" style="height: 200px; width: 200px;" class="mb-2">
+                                    </a>
+                                </div>
+                                <div class="card-footer">
+                                    <h5 class="entry-title p-1">
+                                        <a>${t.getMarca()}</a>
+                                    </h5>
+                                </div>
+
+                            </div>
+                            <!--/.Card-->
+
+                        </div>
+                    </c:forEach>                 
+                    <!--Grid column 1-->
+
                 </div>
-                <!--/First slide-->
+                <!--Grid row-->
 
-                <!--Second slide-->
-                <div class="carousel-item">
-                    <div class="view"
-                         style="background-image: url('css/img/Limited/Transparent-Limited.jpg'); background-repeat: no-repeat;
-                         background-size: cover;
-                         background-position: center center;
-                         height: 100%;
-                         ">
-                    </div>
-                </div>
-                <!--/Second slide-->
-
-                <!--Third slide-->
-                <div class="carousel-item">
-                    <div class="view"
-                         style="background-image: url('css/img/Limited/Venom-limited.jpg'); background-repeat: no-repeat;
-                         background-size: cover;
-                         background-position: center center;
-                         ">
-                    </div>
-                </div>
-                <!--/Third slide-->
             </div>
-            <!--/.Slides-->
+            <!-- Tablets -->
 
-            <!--Controles-->
-            <a class="carousel-control-prev" href="#carousel-home" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Anterio</span>
-            </a>
-            <a class="carousel-control-next" href="#carousel-home" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Siguiente</span>
-            </a>
-            <!--/.Controles-->
-
-        </div>
-        <!--/.Carousel Wrapper-->
+        </main>
+        <!--Main layout-->
 
         <!--Footer-->
         <footer class="page-footer font-small unique-color-dark pt-4">
@@ -186,5 +169,6 @@
             // Animations initialization
             new WOW().init();
         </script>
+
     </body>
 </html>

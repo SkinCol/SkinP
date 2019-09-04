@@ -45,12 +45,12 @@ public class ControllerDispositivo extends HttpServlet {
     List<Dispositivo> portatil = new ArrayList();
     List<Dispositivo> playstation = new ArrayList();
     List<Dispositivo> xbox = new ArrayList();
-    List<Dispositivo> nitendo = new ArrayList();  
-    
+    List<Dispositivo> nitendo = new ArrayList();
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String accion = request.getParameter("accion");
-        
+
         iphone = ddao.ListariPhone();
         samsung = ddao.ListarSamsung();
         google = ddao.ListarGoogle();
@@ -64,8 +64,9 @@ public class ControllerDispositivo extends HttpServlet {
         portatil = ddao.ListarPortatiles();
         xbox = ddao.ListarXbox();
         nitendo = ddao.ListarNintendo();
-        
-        switch(accion){
+        playstation = ddao.ListarPlayStation();
+
+        switch (accion) {
             case "1":
                 request.setAttribute("iphone", iphone);
                 request.setAttribute("samsung", samsung);
@@ -76,7 +77,24 @@ public class ControllerDispositivo extends HttpServlet {
                 request.setAttribute("sony", sony);
                 request.setAttribute("huawei", huawei);
                 request.setAttribute("xiaomi", xiaomi);
-                request.getRequestDispatcher("Telefonos.jsp").forward(request, response);
+                request.getRequestDispatcher("Dispositivos/Telefonos.jsp").forward(request, response);
+                break;
+            case "2":
+                request.setAttribute("tablet", tablet);
+                request.getRequestDispatcher("Dispositivos/Tabletas.jsp").forward(request, response);
+                break;
+            case "3":
+                request.setAttribute("portatil", portatil);
+                request.getRequestDispatcher("Dipositivos/Portatiles.jsp").forward(request, response);
+                break;
+            case "4":
+                request.setAttribute("xbox", xbox);
+                request.setAttribute("nitendo", nitendo);
+                request.setAttribute("playstation", playstation);
+                request.getRequestDispatcher("Dispositivos/Consolas.jsp").forward(request, response);
+                break;
+            case "5":
+                
                 break;
         }
     }

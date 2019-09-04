@@ -42,16 +42,13 @@
                     <!-- Left -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="">Dispositivos</a>
+                            <a class="nav-link" href="Dispositivos.jsp">Dispositivos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" target="_blank">Limitado</a>
+                            <a class="nav-link" href="ControllerLimitado?accion=1">Limitado</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="ControllerSkin?accion=skintelefonos">Series</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" target="_blank">Personalizador</a>
+                            <a class="nav-link" href="#">Personalizador</a>
                         </li>
                     </ul>
 
@@ -121,7 +118,7 @@
 
                             <!--Card content-->
                             <div class="card-body">
-                                <a href="Controlador?accion=2">
+                                <a href="ControllerDispositivo?accion=2">
                                     <img src="css/img/apple_mk9n2ll_a_128gb_ipad_mini_4_1185478.jpg" style="height: 200px;" alt="Foto ipad" class="mb-2">
                                     <h4 class="entry-title p-1">
                                         <a>Tabletas</a>
@@ -143,7 +140,7 @@
 
                             <!--Card content-->
                             <div class="card-body">
-                                <a href="Controlador?accion=3">
+                                <a href="ControllerDispositivo?accion=3">
                                     <img src="css/img/macbookproret13.png" style="height: 200px;" alt="Foto mackbook" class="mb-2">
                                     <h4 class="entry-title p-1">
                                         <a>Portatiles</a>
@@ -165,7 +162,7 @@
 
                             <!--Card content-->
                             <div class="card-body">
-                                <a href="Controlador?accion=4">
+                                <a href="ControllerDispositivo?accion=4">
                                     <img src="css/img/11558330.jpg" style="height: 200px;" alt="Foto XboxOne" class="mb-2">
                                     <h4 class="entry-title p-1">
                                         <a>Consolas</a>

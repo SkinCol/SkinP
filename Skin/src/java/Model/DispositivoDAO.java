@@ -321,7 +321,7 @@ public class DispositivoDAO {
         }
         return Xbox;
     }
-    
+
     public List ListarNintendo() {
         List<Dispositivo> Nintendo = new ArrayList();
         String sql = "SELECT * FROM dispositivo WHERE Tipo='Consolas' and Marca='Nintendo'";
@@ -343,5 +343,28 @@ public class DispositivoDAO {
         } catch (Exception e) {
         }
         return Nintendo;
+    }
+
+    public List ListarPhones() {
+        List<Dispositivo> Phones = new ArrayList();
+        String sql = "SELECT * FROM dispositivo WHERE Tipo='phone'";
+        try {
+            con = cn.getConnection();
+            ps = con.prepareStatement(sql);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                Dispositivo ph = new Dispositivo();
+                ph.setIdDispositivo(rs.getInt(1));
+                ph.setModelo(rs.getString(2));
+                ph.setMarca(rs.getString(3));
+                ph.setTipo(rs.getString(4));
+                ph.setImagen(rs.getString(5));
+
+                Phones.add(ph);
+            }
+            con.close();
+        } catch (Exception e) {
+        }
+        return Phones;
     }
 }
