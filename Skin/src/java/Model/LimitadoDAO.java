@@ -25,7 +25,7 @@ public class LimitadoDAO {
 
     public List ListarLimitados() {
         List<Limitado> limitado = new ArrayList();
-        String sql = "SELECT * FROM Limitado";
+        String sql = "SELECT * FROM `limitado`";
         try {
             con = cn.getConnection();
             ps = con.prepareStatement(sql);

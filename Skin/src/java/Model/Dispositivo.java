@@ -11,8 +11,8 @@ package Model;
  */
 public class Dispositivo {
     private int IdDispositivo;
-    private String Marca;
     private String Modelo;
+    private String Marca;
     private String Tipo;
     private String Imagen;
     private String Enlace;
@@ -20,14 +20,22 @@ public class Dispositivo {
     public Dispositivo() {
     }
 
-    public Dispositivo(int IdDispositivo, String Marca, String Modelo, String Tipo, String Imagen, String Enlace) {
+    public Dispositivo(int IdDispositivo, String Modelo, String Marca, String Tipo, String Imagen, String Enlace) {
         this.IdDispositivo = IdDispositivo;
-        this.Marca = Marca;
         this.Modelo = Modelo;
+        this.Marca = Marca;
         this.Tipo = Tipo;
         this.Imagen = Imagen;
         this.Enlace = Enlace;
-    } 
+    }
+
+    public String getEnlace() {
+        return Enlace;
+    }
+
+    public void setEnlace(String Enlace) {
+        this.Enlace = Enlace;
+    }
 
     public int getIdDispositivo() {
         return IdDispositivo;
@@ -37,20 +45,20 @@ public class Dispositivo {
         this.IdDispositivo = IdDispositivo;
     }
 
-    public String getMarca() {
-        return Marca;
-    }
-
-    public void setMarca(String Marca) {
-        this.Marca = Marca;
-    }
-
     public String getModelo() {
         return Modelo;
     }
 
     public void setModelo(String Modelo) {
         this.Modelo = Modelo;
+    }
+
+    public String getMarca() {
+        return Marca;
+    }
+
+    public void setMarca(String Marca) {
+        this.Marca = Marca;
     }
 
     public String getTipo() {
@@ -68,13 +76,6 @@ public class Dispositivo {
     public void setImagen(String Imagen) {
         this.Imagen = Imagen;
     }
-
-    public String getEnlace() {
-        return Enlace;
-    }
-
-    public void setEnlace(String Enlace) {
-        this.Enlace = Enlace;
-    }
+    
     
 }

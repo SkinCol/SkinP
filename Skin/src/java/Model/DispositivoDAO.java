@@ -33,8 +33,8 @@ public class DispositivoDAO {
             while (rs.next()) {
                 Dispositivo i = new Dispositivo();
                 i.setIdDispositivo(rs.getInt(1));
-                i.setMarca(rs.getString(2));
-                i.setModelo(rs.getString(3));
+                i.setModelo(rs.getString(2));
+                i.setMarca(rs.getString(3));
                 i.setTipo(rs.getString(4));
                 i.setImagen(rs.getString(5));
                 i.setEnlace(rs.getString(6));

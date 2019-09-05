@@ -98,13 +98,15 @@
 
                                 <!--Card content-->
                                 <div class="card-body">
-                                    <a href="">
-                                        <img src="${i.getImagen()}" style="height: 200px; width: 200px;" class="mb-2">
+                                    <a href="ControllerDispositivo?accion=${i.getEnlace()}">
+                                        <div class="mask rgba-white-slight">
+                                            <img src="${i.getImagen()}" style="height: 200px; width: 200px;" class="mb-2">
+                                        </div>
                                     </a>
                                 </div>
                                 <div class="card-footer">
                                     <h5 class="entry-title p-1">
-                                        <a>${i.getMarca()}</a>
+                                        <a>${i.getModelo()}</a>
                                     </h5>
                                 </div>
 

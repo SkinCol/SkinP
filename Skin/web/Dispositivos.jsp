@@ -81,7 +81,7 @@
         <main class="mt-5 pt-4">
             <div class="container">
 
-                <h3 class="my-5 h3 text-center">Dispositivos</h3>
+                <h1 class="my-5 display-4 text-center">Dispositivos</h1>
 
                 <!--Grid row-->
                 <div class="row text-center wow fadeIn">

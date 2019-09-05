@@ -86,9 +86,8 @@
             </div>
         </nav>
         <!-- Navbar -->
-        <div class="container-fluid">
+
             <img src="https://res.cloudinary.com/skincol-me/image/upload/v1566570265/Limited/Venom%20Series/aVenom-banner.jpg.pagespeed.ic.qsh_98E4bw_xikstc.webp" class="img-fluid">
-        </div>
 
 
         <!--Main layout-->

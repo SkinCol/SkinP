@@ -41,7 +41,6 @@ public class ControllerLimitado extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String accion = request.getParameter("accion");
-        String enlace = request.getParameter("enlace");
         limitado = ldao.ListarLimitados();
         phone = ddao.ListarPhones();
 
