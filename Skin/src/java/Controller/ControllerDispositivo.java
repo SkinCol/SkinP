@@ -96,6 +96,15 @@ public class ControllerDispositivo extends HttpServlet {
             case "1":
                 request.getRequestDispatcher("Skins/iPhone6Skins.jsp").forward(request, response);
                 break;
+            case "2":
+                request.getRequestDispatcher("Skins/iPhone5sSkins.jsp").forward(request, response);
+                break;
+            case "3":
+                request.getRequestDispatcher("Skins/iPhone5Skins.jsp").forward(request, response);
+                break;
+            case "4":
+                request.getRequestDispatcher("Skins/iPhone4-4skins.jsp").forward(request, response);
+                break;
         }
     }
 

@@ -84,6 +84,12 @@
 
                 <h1 class="my-5 display-4 text-left">Serie Limitada</h1>
                 <!--Section: Jumbotron-->
+                <div class="view col-md-12 col-sm-12"
+                     style="background-image: url('css/img/Limited/ColorShift-Limited.jpg'); background-repeat: no-repeat;
+                     background-size: cover;
+                     background-position: center center;
+                     ">
+                </div>
                 <c:forEach var="li" items="${limitado}">
                     <section class="card blue-gradient wow fadeIn mb-4" id="intro">
 
