@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 04-09-2019 a las 18:38:20
+-- Tiempo de generación: 06-09-2019 a las 05:47:06
 -- Versión del servidor: 10.4.6-MariaDB
 -- Versión de PHP: 7.1.32
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `Skincol`
+-- Base de datos: `skincol`
 --
 
 -- --------------------------------------------------------
@@ -90,7 +90,7 @@ INSERT INTO `dispositivo` (`IdDispositivo`, `Modelo`, `Marca`, `Tipo`, `Imagen`,
 (7, 'iPhone 7 Plus', 'Apple', 'phone', 'https://res.cloudinary.com/skincol-me/image/upload/v1566566081/Dispositivos/Phone/Apple/i7P_3_zefgwc.jpg', NULL),
 (8, 'iPhone 7', 'Apple', 'phone', 'https://res.cloudinary.com/skincol-me/image/upload/v1566566080/Dispositivos/Phone/Apple/iphonex_7_1_k20zop.jpg', NULL),
 (9, 'iPhone 6S Plus', 'Apple', 'phone', 'https://res.cloudinary.com/skincol-me/image/upload/v1566566082/Dispositivos/Phone/Apple/6s_plus_2_ut8gfq.jpg', NULL),
-(10, 'iPhone 6', 'Apple', 'phone', 'https://res.cloudinary.com/skincol-me/image/upload/v1566566082/Dispositivos/Phone/Apple/iphone6s_1_q4bvuv.jpg', NULL),
+(10, 'iPhone 6s', 'Apple', 'phone', 'https://res.cloudinary.com/skincol-me/image/upload/v1566566082/Dispositivos/Phone/Apple/iphone6s_1_q4bvuv.jpg', NULL),
 (11, 'iPhone SE', 'Apple', 'phone', 'https://res.cloudinary.com/skincol-me/image/upload/v1566566080/Dispositivos/Phone/Apple/iphone_se_1_hweiqo.jpg', NULL),
 (12, 'iPhone 6 Plus', 'Apple', 'phone', 'https://res.cloudinary.com/skincol-me/image/upload/v1566566083/Dispositivos/Phone/Apple/6plus_1_don6yt.jpg', NULL),
 (13, 'Galaxy S7 Edge', 'Samsung', 'phone', 'https://res.cloudinary.com/skincol-me/image/upload/v1566568479/Dispositivos/Phone/Samsung/galaxy7edge_a8skac.jpg', NULL),
@@ -206,11 +206,11 @@ INSERT INTO `dispositivo` (`IdDispositivo`, `Modelo`, `Marca`, `Tipo`, `Imagen`,
 (157, 'PlayStation 4', 'PlayStation', 'Consolas', 'https://res.cloudinary.com/skincol-me/image/upload/v1566568943/Dispositivos/Gaming/PlayStation/ps4_new_vogttu.jpg', NULL),
 (158, 'PlayStation 4 Slim', 'PlayStation', 'Consolas', 'https://res.cloudinary.com/skincol-me/image/upload/v1566568942/Dispositivos/Gaming/PlayStation/ps4_newslim_feezgc.jpg', NULL),
 (159, 'PlayStation 4 Pro', 'PlayStation', 'Consolas', 'https://res.cloudinary.com/skincol-me/image/upload/v1566568942/Dispositivos/Gaming/PlayStation/ps4_pro_new_1_gs9d0j.jpg', NULL),
-(160, 'iPhone 6', 'Apple', 'phone', 'https://res.cloudinary.com/skincol-me/image/upload/v1566566082/Dispositivos/Phone/Apple/iphone6_k7dmq7.jpg', NULL),
-(161, 'iPhone 5S', 'Apple', 'phone', 'https://res.cloudinary.com/skincol-me/image/upload/v1566566082/Dispositivos/Phone/Apple/iphone_5s_1_pa1mwi.jpg', NULL),
+(160, 'iPhone 6', 'Apple', 'phone', 'https://res.cloudinary.com/skincol-me/image/upload/v1566566082/Dispositivos/Phone/Apple/iphone6_k7dmq7.jpg', '1'),
+(161, 'iPhone 5S', 'Apple', 'phone', 'https://res.cloudinary.com/skincol-me/image/upload/v1566566082/Dispositivos/Phone/Apple/iphone_5s_1_pa1mwi.jpg', '2'),
 (162, 'iPhone 5C', 'Apple', 'phone', 'https://res.cloudinary.com/skincol-me/image/upload/v1566566081/Dispositivos/Phone/Apple/iphone5c_bdllkd.jpg', NULL),
-(163, 'iPhone 5', 'Apple', 'phone', 'https://res.cloudinary.com/skincol-me/image/upload/v1566566082/Dispositivos/Phone/Apple/iphone5_ugbyaa.jpg', NULL),
-(164, 'iPhone 4/4s', 'Apple', 'phone', 'https://res.cloudinary.com/skincol-me/image/upload/v1566566083/Dispositivos/Phone/Apple/iphone4_1_laepo1.jpg', NULL),
+(163, 'iPhone 5', 'Apple', 'phone', 'https://res.cloudinary.com/skincol-me/image/upload/v1566566082/Dispositivos/Phone/Apple/iphone5_ugbyaa.jpg', '3'),
+(164, 'iPhone 4/4s', 'Apple', 'phone', 'https://res.cloudinary.com/skincol-me/image/upload/v1566566083/Dispositivos/Phone/Apple/iphone4_1_laepo1.jpg', '4'),
 (165, 'Nintendo Switch Lite', 'Nintendo', 'Consolas', 'https://res.cloudinary.com/skincol-me/image/upload/v1567305964/Dispositivos/Gaming/Nintendo/switch-lite_1_zl6ado.jpg', NULL);
 
 -- --------------------------------------------------------
@@ -292,7 +292,7 @@ INSERT INTO `limitado` (`IdLimitado`, `Nombre`, `Imagen`, `Enlace`) VALUES
 (11, 'Sloth Series', 'https://res.cloudinary.com/skincol-me/image/upload/v1566554501/Limited/aLimited-Collections-Sloth.jpg.pagespeed.ic.pAg4Ray5_X_pkit5x.webp', '12'),
 (12, 'Shade ', 'https://res.cloudinary.com/skincol-me/image/upload/v1566554464/Limited/Shade_limited.jpg.pagespeed.ce.ImAXJpIJh4_j9uwfg.jpg', '13'),
 (13, 'Honey Comb ', 'https://res.cloudinary.com/skincol-me/image/upload/v1566554422/Limited/aLimited-Collections-Honeycomb.jpg.pagespeed.ic.sQ13-YYAvZ_anyan4.webp', '14'),
-(14, 'Aniversario', 'https://res.cloudinary.com/skincol-me/image/upload/v1566554411/Limited/aAnniversary-Limited-Banner.jpg.pagespeed.ic.LrasdiB7E8_wde9dy.webp', '15'),
+(14, 'Edición Aniversario', 'https://res.cloudinary.com/skincol-me/image/upload/v1566554411/Limited/aAnniversary-Limited-Banner.jpg.pagespeed.ic.LrasdiB7E8_wde9dy.webp', '15'),
 (15, 'Retro', 'https://res.cloudinary.com/skincol-me/image/upload/v1566554397/Limited/aLimited-Collections-Retro.jpg.pagespeed.ic.n_AvjPnR58_arj6uj.webp', '16'),
 (16, 'Retro Black', 'https://res.cloudinary.com/skincol-me/image/upload/v1566554377/Limited/aBlack_Apple_Retro_limited_banner.jpg.pagespeed.ic.QnCg1oZZJE_qiqx92.webp', '17'),
 (17, 'Dark Matter', 'https://res.cloudinary.com/skincol-me/image/upload/v1566554360/Limited/aDarkMatter_LimitedPage_03.jpg.pagespeed.ic.QJKDgCTgZ-_gosjjq.webp', '18'),
@@ -348,17 +348,124 @@ INSERT INTO `proveedor` (`IdProveedor`, `Nombre`, `NIT`, `Direccion`, `Correo`, 
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `Serie`
+--
+
+CREATE TABLE `Serie` (
+  `IdSerie` int(11) NOT NULL,
+  `Nombre` varchar(30) COLLATE utf8_spanish2_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+
+--
+-- Volcado de datos para la tabla `Serie`
+--
+
+INSERT INTO `Serie` (`IdSerie`, `Nombre`) VALUES
+(1, 'Carbon Series'),
+(2, 'Color Series'),
+(3, 'Camo Series'),
+(4, 'Glitz Series'),
+(5, 'Wood Series'),
+(6, 'Metal Series'),
+(7, 'Natural Series'),
+(8, 'Piel Series'),
+(9, 'Stone Series');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `skin`
 --
 
 CREATE TABLE `skin` (
   `IdSkin` int(11) NOT NULL,
+  `IdSerie` int(11) DEFAULT NULL,
   `IdLimitado` int(11) DEFAULT NULL,
-  `Imagen` longblob DEFAULT NULL,
-  `Disponible` tinyint(1) DEFAULT NULL,
-  `ImgUsuario` varchar(1000) COLLATE utf8_spanish2_ci DEFAULT NULL,
+  `IdDispositivo` int(11) NOT NULL,
+  `Nombre` varchar(40) COLLATE utf8_spanish2_ci NOT NULL,
+  `Imagen` varchar(250) COLLATE utf8_spanish2_ci DEFAULT NULL,
+  `Stock` int(11) DEFAULT 1,
   `CostoSkin` decimal(11,0) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+
+--
+-- Volcado de datos para la tabla `skin`
+--
+
+INSERT INTO `skin` (`IdSkin`, `IdSerie`, `IdLimitado`, `IdDispositivo`, `Nombre`, `Imagen`, `Stock`, `CostoSkin`) VALUES
+(3, 1, NULL, 160, 'Carbon Black', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571275/Series/iPhone/iPhone%206/Carbon%20Series/blackcarbon_1_hihhv8.jpg', 1, '78087'),
+(4, 2, NULL, 160, 'Color Skin Yellow', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571280/Series/iPhone/iPhone%206/Color%20Series/yellowfullbody_1_1_zrhcmk.jpg', 1, '78087'),
+(5, 1, NULL, 160, 'Carbon White', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571277/Series/iPhone/iPhone%206/Carbon%20Series/whitecarbon_1_1_qnj5ct.jpg', 1, '78087'),
+(6, 1, NULL, 160, 'Carbon Red', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571277/Series/iPhone/iPhone%206/Carbon%20Series/redcarbon_1_2_z2usrt.jpg', 1, '78087'),
+(7, 1, NULL, 160, 'Carbon Purple', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571277/Series/iPhone/iPhone%206/Carbon%20Series/purplecarbon_1_1_ab4tzb.jpg', 1, '78087'),
+(8, 1, NULL, 160, 'Carbon Pink ', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571277/Series/iPhone/iPhone%206/Carbon%20Series/pinkcarbon_1_1_bntko8.jpg', 1, '78087'),
+(9, 1, NULL, 160, 'Carbon Orange', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571277/Series/iPhone/iPhone%206/Carbon%20Series/orangecarbon_1_1_beodvx.jpg', 1, '78087'),
+(10, 1, NULL, 160, 'Carbon Metal', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571277/Series/iPhone/iPhone%206/Carbon%20Series/gunmetalcarbon_1_1_souxmz.jpg', 1, '78087'),
+(11, 1, NULL, 160, 'Carbon Grey', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571276/Series/iPhone/iPhone%206/Carbon%20Series/greycarbon_1_3_nypn4v.jpg', 1, '78087'),
+(12, 1, NULL, 160, 'Carbon Green', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571275/Series/iPhone/iPhone%206/Carbon%20Series/greencarbon_1_1_jlscud.jpg', 1, '78087'),
+(13, 1, NULL, 160, 'Carbon Blue', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571275/Series/iPhone/iPhone%206/Carbon%20Series/bluecarbon_1_1_oqi2ni.jpg', 1, '78087'),
+(14, 2, NULL, 160, 'Color Skin Blue', 'https://res.cloudinary.com/skincol-me/image/upload/v1567691413/Series/iPhone/iPhone%206/Color%20Series/bluefullbody_1_1_l9xabh.jpg', 1, '78087'),
+(15, 2, NULL, 160, 'Color Skin Matte White', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571280/Series/iPhone/iPhone%206/Color%20Series/whitefullbody_1_1_1_hv1gd9.jpg', 1, '78087'),
+(16, 2, NULL, 160, 'Color Skin White', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571280/Series/iPhone/iPhone%206/Color%20Series/whitefullbody_1_1_omfvam.jpg', 1, '78087'),
+(17, 1, NULL, 160, 'Color Skin Purple', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571278/Series/iPhone/iPhone%206/Color%20Series/purplefullbody_1_2_nhorf5.jpg', 1, '78087'),
+(18, 2, NULL, 160, 'Color Skin Orange', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571278/Series/iPhone/iPhone%206/Color%20Series/orangefullbody_1_1_hca70i.jpg', 1, '78087'),
+(19, 2, NULL, 160, 'Color Skin Pink', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571278/Series/iPhone/iPhone%206/Color%20Series/pinkfullbody_1_1_l0duna.jpg', 1, '78087'),
+(20, 2, NULL, 160, 'Color Skin Matte Black', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571278/Series/iPhone/iPhone%206/Color%20Series/blackfullbody_1_1_ihwqgd.jpg', 1, '78087'),
+(21, 2, NULL, 160, 'Color Skin Black', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571278/Series/iPhone/iPhone%206/Color%20Series/blackfullbody_1_1_1_jncm7k.jpg', 1, '78087'),
+(22, 2, NULL, 160, 'Color Skin Green', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571278/Series/iPhone/iPhone%206/Color%20Series/greenfullbody_1_1_nskwho.jpg', 1, '78087'),
+(23, 3, NULL, 160, 'Camo Tradicional', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571274/Series/iPhone/iPhone%206/Camo%20Series/iphone_6_trio_camo_camo6_1_2_dfyi2x.jpg', 1, '84892'),
+(24, 3, NULL, 160, 'Camo Ghost', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571274/Series/iPhone/iPhone%206/Camo%20Series/iphone_6_trio_camo_camo4_1_2_fgn70p.jpg', 1, '84892'),
+(25, 3, NULL, 160, 'Camo Orange', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571274/Series/iPhone/iPhone%206/Camo%20Series/iphone_6_trio_camo_camo1_1_2_fzu5o1.jpg', 1, '84892'),
+(26, 3, NULL, 160, 'Camo Pink ', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571274/Series/iPhone/iPhone%206/Camo%20Series/iphone_6_trio_camo_camo3_1_2_vusxch.jpg', 1, '84892'),
+(27, 3, NULL, 160, 'Camo Red', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571274/Series/iPhone/iPhone%206/Camo%20Series/iphone_6_trio_camo_camo2_1_2_ki3lbw.jpg', 1, '84892'),
+(28, 3, NULL, 160, 'Camo Red Green', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571275/Series/iPhone/iPhone%206/Camo%20Series/iphone_6_trio_camo_camo5_1_2_yejowo.jpg', 1, '84892'),
+(29, 3, NULL, 160, 'Camo Blue', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571274/Series/iPhone/iPhone%206/Camo%20Series/iphone_6_trio_camo_camo7_1_2_u4uspy.jpg', 1, '84892'),
+(30, 3, NULL, 160, 'Camo Urban Digital ', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571275/Series/iPhone/iPhone%206/Camo%20Series/iphone_6_trio_camo_camo8_1_2_h2xkm3.jpg', 1, '84892'),
+(31, 3, NULL, 160, 'Camo Ocean Digital ', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571273/Series/iPhone/iPhone%206/Camo%20Series/iphone_6_trio_camo_camo10_1_2_igopnz.jpg', 1, '84892'),
+(32, 3, NULL, 160, 'Camo Desert Digital ', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571275/Series/iPhone/iPhone%206/Camo%20Series/iphone_6_trio_camo_camo9_1_2_ypt13c.jpg', 1, '84892'),
+(33, 5, NULL, 160, 'Skin Arce', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571287/Series/iPhone/iPhone%206/Wood%20Series/maple_1_4_pz2bnp.jpg', 1, '78087'),
+(34, 5, NULL, 160, 'Skin Escama de Oro ', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571287/Series/iPhone/iPhone%206/Wood%20Series/goldflakeebony_1_1_ke6ngq.jpg', 1, '78087'),
+(35, 5, NULL, 160, 'Skin Caoba', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571287/Series/iPhone/iPhone%206/Wood%20Series/mahogany_1_1_mwkh5b.jpg', 1, '78087'),
+(36, 5, NULL, 160, 'Skin Teca', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571287/Series/iPhone/iPhone%206/Wood%20Series/teak_1_1_kxpvpa.jpg', 1, '78087'),
+(37, 5, NULL, 160, 'Skin Cebra', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571288/Series/iPhone/iPhone%206/Wood%20Series/zebra_1_1_npnlox.jpg', 1, '78087'),
+(38, 6, NULL, 160, 'Cobre Cepillado', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571283/Series/iPhone/iPhone%206/Metal%20Series/brushedcopper_1_1_1_llvjod.jpg', 1, '78087'),
+(39, 6, NULL, 160, 'Oro Cepillado ', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571283/Series/iPhone/iPhone%206/Metal%20Series/brushedgold_1_1_1_dsdrpy.jpg', 1, '78087'),
+(40, 6, NULL, 160, 'Onyx Pulido', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571283/Series/iPhone/iPhone%206/Metal%20Series/brushedonyx_1_1_1_prh7se.jpg', 1, '78087'),
+(41, 6, NULL, 160, 'Acero Pulido', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571283/Series/iPhone/iPhone%206/Metal%20Series/brushedsteel_1_1_q1usib.jpg', 1, '78087'),
+(42, 8, NULL, 160, 'Piel de Cocodrilo Negra', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571281/Series/iPhone/iPhone%206/Leather%20Series/blackalligator_1_1_g4ehsh.jpg', 1, '78087'),
+(43, 8, NULL, 160, 'Piel Negra', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571281/Series/iPhone/iPhone%206/Leather%20Series/blackleather_1_fy90mx.jpg', 1, '78087'),
+(44, 8, NULL, 160, 'Cuero Maron ', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571281/Series/iPhone/iPhone%206/Leather%20Series/brownleather_1_1_szfhlp.jpg', 1, '78087'),
+(45, 8, NULL, 160, 'Piel de Cocodrillo Blanca', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571282/Series/iPhone/iPhone%206/Leather%20Series/whitealligator_1_1_jehvlo.jpg', 1, '78087'),
+(46, 8, NULL, 160, 'Piel Naranja ', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571281/Series/iPhone/iPhone%206/Leather%20Series/orangeleather_1_1_ztqfw5.jpg', 1, '78087'),
+(47, 4, NULL, 160, 'Glitz Pink', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571280/Series/iPhone/iPhone%206/Glitz%20Series/glitterpink_1_2_wu9bu0.jpg', 1, '78087'),
+(48, 4, NULL, 160, 'Glitz Purple', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571280/Series/iPhone/iPhone%206/Glitz%20Series/glitterbyzantine_1_3_c7zoc2.jpg', 1, '78087'),
+(49, 4, NULL, 160, 'Glitz White', 'https://res.cloudinary.com/skincol-me/image/upload/v1567692985/Series/iPhone/iPhone%206/Glitz%20Series/glitterwhite_1_2_z9bmpj.jpg', 1, '78087'),
+(50, 4, NULL, 160, 'Glitz Blue', 'https://res.cloudinary.com/skincol-me/image/upload/v1567734664/Series/iPhone/iPhone%206/Glitz%20Series/glitterfjordblue_1_1_1_bvtdux.jpg', 1, '78087'),
+(51, 4, NULL, 160, 'Glitz Red', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571281/Series/iPhone/iPhone%206/Glitz%20Series/glitterred_1_2_o2kpkm.jpg', 1, '78087'),
+(52, 4, NULL, 160, 'Glitz Orange', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571280/Series/iPhone/iPhone%206/Glitz%20Series/glitterorange_1_2_urtlux.jpg', 1, '78087'),
+(53, 9, NULL, 160, 'Hormigon', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571286/Series/iPhone/iPhone%206/Stone%20Series/iphone_6_trio_concrete_1_swpdc3.jpg', 1, '84892'),
+(54, 9, NULL, 160, 'Marmol Blanco', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571286/Series/iPhone/iPhone%206/Stone%20Series/iphone_6_trio_marble_5_ebhpmm.jpg', 1, '84892'),
+(55, 9, NULL, 160, 'Marmol Negro', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571286/Series/iPhone/iPhone%206/Stone%20Series/iphone_6_trio_black-marble_5_mv9dxg.jpg', 1, '84892'),
+(56, NULL, 4, 160, 'Hemp Skin', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571281/Series/iPhone/iPhone%206/Hemp%20Series/iphone_6_trio_hemp_5_n2azrs.jpg', 1, '84892'),
+(57, NULL, 3, 160, 'Andy', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571270/Series/iPhone/iPhone%206/Alcantara%20Series/580x580xiphone6.natural.series.wraps.skins.alcantara.andy_2_elcsn9.jpg', 1, '98502'),
+(58, NULL, 3, 160, 'Antracita', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571270/Series/iPhone/iPhone%206/Alcantara%20Series/580x580xiphone6.natural.series.wraps.skins.alcantara.anthracite_1_i9ku4d.jpg', 1, '98502'),
+(59, NULL, 3, 160, 'Arancione Papaya', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571270/Series/iPhone/iPhone%206/Alcantara%20Series/580x580xiphone6.natural.series.wraps.skins.alcantara.arancione-papaya_1_ney59z.jpg', 1, '98502'),
+(60, NULL, 3, 160, 'Bon Bon', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571271/Series/iPhone/iPhone%206/Alcantara%20Series/580x580xiphone6.natural.series.wraps.skins.alcantara.bon-bon_1_a8buf7.jpg', 1, '98502'),
+(61, NULL, 3, 160, 'Hormigón ', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571271/Series/iPhone/iPhone%206/Alcantara%20Series/580x580xiphone6.natural.series.wraps.skins.alcantara.concrete_1_v3uxqx.jpg', 1, '98502'),
+(62, NULL, 3, 160, 'Goya', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571271/Series/iPhone/iPhone%206/Alcantara%20Series/580x580xiphone6.natural.series.wraps.skins.alcantara.goya_1_v4jytd.jpg', 1, '98502'),
+(63, NULL, 3, 160, 'Piscina', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571272/Series/iPhone/iPhone%206/Alcantara%20Series/580x580xiphone6.natural.series.wraps.skins.alcantara.pool_1_rvmkhh.jpg', 1, '98502'),
+(64, NULL, 3, 160, 'Grillo', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571271/Series/iPhone/iPhone%206/Alcantara%20Series/580x580xiphone6.natural.series.wraps.skins.alcantara.cricket_1_v9sg4b.jpg', 1, '98502'),
+(65, 7, NULL, 160, 'Bambú Real', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571283/Series/iPhone/iPhone%206/Natural%20Series/iphone6.natural.series.wraps.skins.bamboo.wood_3_ccthsc.jpg', 1, '91697'),
+(66, 7, NULL, 160, 'Cuero Negro ', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571283/Series/iPhone/iPhone%206/Natural%20Series/iphone6.natural.series.wraps.skins.black_3_ea2ki1.jpg', 1, '91697'),
+(67, 7, NULL, 160, 'Corcho Real', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571284/Series/iPhone/iPhone%206/Natural%20Series/iphone6.natural.series.wraps.skins.cork.wood_3_nldflm.jpg', 1, '91697'),
+(68, 7, NULL, 160, 'Marrón Oscuro ', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571284/Series/iPhone/iPhone%206/Natural%20Series/iphone6.natural.series.wraps.skins.dark.brown_1_2_jxmgci.jpg', 1, '91697'),
+(69, 7, NULL, 160, 'Arce Canadiense ', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571285/Series/iPhone/iPhone%206/Natural%20Series/iphone6.natural.series.wraps.skins.maple.wood_3_er1ugw.jpg', 1, '91697'),
+(70, 7, NULL, 160, 'Cuero Bronceado Desgastado ', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571285/Series/iPhone/iPhone%206/Natural%20Series/iphone6.natural.series.wraps.skins.tan_3_w1prsa.jpg', 1, '91697'),
+(71, 7, NULL, 160, 'Corona de Nogal Real', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571285/Series/iPhone/iPhone%206/Natural%20Series/iphone6.natural.series.wraps.skins.walnut.wood_3_rbawp9.jpg', 1, '91697'),
+(72, 7, NULL, 160, 'Madera de Cebrea Real', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571285/Series/iPhone/iPhone%206/Natural%20Series/iphone6.natural.series.wraps.skins.zebra.wood_3_veackc.jpg', 1, '91697'),
+(73, 7, NULL, 160, 'Caoba Real', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571285/Series/iPhone/iPhone%206/Natural%20Series/mahogany2_1_axaxbe.jpg', 1, '91697'),
+(74, NULL, 14, 160, 'Edición de Aniversario Apple Skin ', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571272/Series/iPhone/iPhone%206/Anniversaty%20Edition/anniversary-6_11_rexarn.jpg', 1, '84892'),
+(75, NULL, 15, 160, 'Apple Retro Skin', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571273/Series/iPhone/iPhone%206/Apple%20Retro/iphonex-v2-retro_zyegz1.jpg', 1, '67505');
 
 -- --------------------------------------------------------
 
@@ -372,7 +479,8 @@ CREATE TABLE `solicitudskin` (
   `IdDispositivo` int(11) NOT NULL,
   `IdUser` int(11) NOT NULL,
   `IdAdmin` int(11) NOT NULL,
-  `CostoPedido` decimal(11,0) NOT NULL
+  `CostoPedido` decimal(11,0) NOT NULL,
+  `Cantidad` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
 -- --------------------------------------------------------
@@ -469,11 +577,19 @@ ALTER TABLE `proveedor`
   ADD PRIMARY KEY (`IdProveedor`);
 
 --
+-- Indices de la tabla `Serie`
+--
+ALTER TABLE `Serie`
+  ADD PRIMARY KEY (`IdSerie`);
+
+--
 -- Indices de la tabla `skin`
 --
 ALTER TABLE `skin`
   ADD PRIMARY KEY (`IdSkin`),
-  ADD KEY `IdCategoria` (`IdLimitado`);
+  ADD KEY `IdCategoria` (`IdLimitado`),
+  ADD KEY `IdDispositivo` (`IdDispositivo`),
+  ADD KEY `IdSerie` (`IdSerie`);
 
 --
 -- Indices de la tabla `solicitudskin`
@@ -551,10 +667,16 @@ ALTER TABLE `proveedor`
   MODIFY `IdProveedor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT de la tabla `Serie`
+--
+ALTER TABLE `Serie`
+  MODIFY `IdSerie` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
 -- AUTO_INCREMENT de la tabla `skin`
 --
 ALTER TABLE `skin`
-  MODIFY `IdSkin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `IdSkin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
 
 --
 -- AUTO_INCREMENT de la tabla `solicitudskin`
@@ -603,7 +725,9 @@ ALTER TABLE `facturainsumos`
 -- Filtros para la tabla `skin`
 --
 ALTER TABLE `skin`
-  ADD CONSTRAINT `skin_ibfk_1` FOREIGN KEY (`IdLimitado`) REFERENCES `limitado` (`IdLimitado`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `skin_ibfk_1` FOREIGN KEY (`IdLimitado`) REFERENCES `limitado` (`IdLimitado`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `skin_ibfk_2` FOREIGN KEY (`IdDispositivo`) REFERENCES `dispositivo` (`IdDispositivo`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `skin_ibfk_3` FOREIGN KEY (`IdSerie`) REFERENCES `Serie` (`IdSerie`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `solicitudskin`
