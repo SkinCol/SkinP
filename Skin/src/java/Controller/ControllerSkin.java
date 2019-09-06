@@ -5,6 +5,9 @@
  */
 package Controller;
 
+import Model.Carrito;
+import Model.Dispositivo;
+import Model.DispositivoDAO;
 import Model.Skin;
 import Model.SkinDAO;
 import java.io.IOException;
@@ -31,7 +34,11 @@ public class ControllerSkin extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
+    DispositivoDAO ddao = new DispositivoDAO();
+    List<Dispositivo> phone = new ArrayList();
+
     SkinDAO sdao = new SkinDAO();
+    Skin s = new Skin();
     List<Skin> carbon = new ArrayList();
     List<Skin> camo = new ArrayList();
     List<Skin> color = new ArrayList();
@@ -45,10 +52,17 @@ public class ControllerSkin extends HttpServlet {
     List<Skin> aniversario = new ArrayList();
     List<Skin> retro = new ArrayList();
     List<Skin> hemp = new ArrayList();
+    
+    List<Carrito> listaCarrito = new ArrayList();
+    int item;
+    double totalPagar=0.0;
+    int cantidad = 1;
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String accion = request.getParameter("accion");
+
+        phone = ddao.ListarPhones();
 
         carbon = sdao.ListarCarbonSeries();
         camo = sdao.ListarCamoSeries();
@@ -80,6 +94,34 @@ public class ControllerSkin extends HttpServlet {
                 request.setAttribute("retro", retro);
                 request.setAttribute("hemp", hemp);
                 request.getRequestDispatcher("Skins/iPhone6Skins.jsp").forward(request, response);
+                break;
+            case "carbon":
+                request.setAttribute("carbon", carbon);
+                request.setAttribute("phone", phone);
+                request.getRequestDispatcher("Skins/carbon-fiber-skins-for-iphone-6.jsp").forward(request, response);
+                break;
+                
+            case "AgregarCarrito":
+                int idskin = Integer.parseInt(request.getParameter("IdSkin"));
+                s = sdao.listarId(idskin);
+                item = item+1;
+                Carrito car = new Carrito();
+                car.setItem(item);
+                car.setIdSkin(s.getIdSkin());
+                car.setNombre(s.getNombre());
+                car.setPrecioCompra(s.getCostoSkin());
+                car.setCantidad(cantidad);
+                car.setSubTotal(cantidad*s.getCostoSkin());
+                
+                listaCarrito.add(car);
+                request.setAttribute("contador", listaCarrito.size());
+                request.getRequestDispatcher("ControllerSkin?accion=carbon").forward(request, response);
+                request.getRequestDispatcher("ControllerSkin?accion=1").forward(request, response);
+                break;
+            case "Carrito":
+                totalPagar=0;
+                request.setAttribute("carrito", listaCarrito);
+                request.getRequestDispatcher("Checkout/Cart.jsp").forward(request, response);
                 break;
         }
 

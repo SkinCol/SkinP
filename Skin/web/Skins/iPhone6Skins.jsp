@@ -111,6 +111,11 @@
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a href="ControllerSkin?accion=Carrito" class="nav-link" target="_blank">
+                                <i class="fas fa-shopping-cart"></i><span class="badge badge-pill badge-light">${contador}</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a href="IncioSesion.html" class="nav-link border border-light rounded waves-effect waves-light" target="_blank">
                                 <i class="fas fa-user"></i> Iniciar Sesión
                             </a>
@@ -161,7 +166,7 @@
                                 <ul class="rslides" id="slider3">
                                     <c:forEach var="car" items="${carbon}">
                                         <li>
-                                            <a>
+                                            <a href="ControllerSkin?accion=carbon">
                                                 <img style="width: 300px; height: 300px;" src="${car.getImagen()}" alt="${car.getNombre()}">
                                             </a>
                                         </li>

@@ -22,6 +22,29 @@ public class SkinDAO {
     Conexion cn = new Conexion();
     PreparedStatement ps;
     ResultSet rs;
+    
+    public Skin listarId(int IdSkin){
+        String sql ="Select * From Skin where IdSkin ="+IdSkin;
+        Skin s = new Skin();
+        try {
+            con = cn.getConnection();
+            ps = con.prepareStatement(sql);
+            rs = ps.executeQuery();
+            while (rs.next()){
+                s.setIdSkin(rs.getInt(1));
+                s.setIdSerie(rs.getInt(2));
+                s.setIdLimitado(rs.getInt(3));
+                s.setIdDispositivo(rs.getInt(4));
+                s.setNombre(rs.getString(5));
+                s.setImagen(rs.getString(6));
+                s.setStock(rs.getInt(7));
+                s.setCostoSkin(rs.getDouble(8));
+            }
+        } catch (Exception e) {
+        }
+        
+        return s;
+    }
 
     public List ListarCarbonSeries() {
         List<Skin> Carbon = new ArrayList();

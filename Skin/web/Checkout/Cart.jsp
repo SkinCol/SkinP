@@ -1,9 +1,10 @@
 <%-- 
-    Document   : Dispositivos
-    Created on : 28/08/2019, 11:55:26 AM
+    Document   : Cart
+    Created on : 6/09/2019, 05:49:24 AM
     Author     : alejandro
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -14,11 +15,61 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <script src="https://kit.fontawesome.com/960e8817a0.js"></script>
         <link href="css/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link href="css/css/mdb.min.css" rel="stylesheet" type="text/css"/>
         <link href="css/css/style.min.css" rel="stylesheet" type="text/css"/>
-        <link href="css/css/estilos.css" rel="stylesheet" type="text/css"/>
+        <link href="css/css/estilos.css" rel="stylesheet" type="text/css" />
         <link rel="shortcut icon" type="image/x-ico" href="favicon.ico" />
-        <title>Dispositivos</title>
+        <title>iPhone 6 - Carbon Series | SkinCol</title>
+        <style tipy="text/css">
+            .my-custom-scrollbar {
+                position: relative;
+                width: 100%;
+                height: 400px;
+                overflow: auto;
+            }
+        </style>
+        <script type="text/javascript">
+            // You can also use "$(window).load(function() {"
+            $(function () {
+
+                // Slideshow 1
+                $("#slider1").responsiveSlides({
+                    maxwidth: 800,
+                    speed: 800
+                });
+
+                // Slideshow 2
+                $("#slider2").responsiveSlides({
+                    auto: false,
+                    pager: true,
+                    speed: 300,
+                    maxwidth: 540
+                });
+
+                // Slideshow 3
+                $("#slider3").responsiveSlides({
+                    manualControls: '#slider3-pager',
+                    maxwidth: 540
+                });
+
+                // Slideshow 4
+                $("#slider4").responsiveSlides({
+                    auto: false,
+                    pager: false,
+                    nav: true,
+                    speed: 500,
+                    namespace: "callbacks",
+                    before: function () {
+                        $('.events').append("<li>before event fired.</li>");
+                    },
+                    after: function () {
+                        $('.events').append("<li>after event fired.</li>");
+                    }
+                });
+
+            });
+        </script>
     </head>
     <body>
         <!-- Navbar -->
@@ -79,116 +130,16 @@
 
             </div>
         </nav>
-
+        <!-- Navbar -->
+        <br>
+        <br>
         <!--Main layout-->
         <main class="mt-5 pt-4">
-            <div class="container">
-
-                <h1 class="my-5 display-4 text-center">Dispositivos</h1>
-
-                <!--Grid row-->
-                <div class="row text-center wow fadeIn">
-
-                    <!--Grid column 1-->
-                    <div class="col-lg-3 col-md-6 mb-4">
-
-                        <!--Card-->
-                        <div class="card">
-
-                            <!--Card content-->
-                            <div class="card-body">
-
-                                <a href="ControllerDispositivo?accion=telefonos">
-                                    <img src="css/img/apple-iphone8plus-gold-1-3x.jpg" style="height: 200px;" alt="Foto iPhone" class="mb-2">
-                                    <h4 class="entry-title p-1">
-                                        <a>Telefonos</a>
-                                    </h4>
-                                </a>
-
-                            </div>
-
-                        </div>
-                        <!--/.Card-->
-
-                    </div>
-                    <!--Grid column 1-->
-
-                    <!--Grid column 2-->
-                    <div class="col-lg-3 col-md-6 mb-4">
-
-                        <!--Card-->
-                        <div class="card">
-
-                            <!--Card content-->
-                            <div class="card-body">
-                                <a href="ControllerDispositivo?accion=tabletas">
-                                    <img src="css/img/apple_mk9n2ll_a_128gb_ipad_mini_4_1185478.jpg" style="height: 200px;" alt="Foto ipad" class="mb-2">
-                                    <h4 class="entry-title p-1">
-                                        <a>Tabletas</a>
-                                    </h4>
-                                </a>
-                            </div>
-
-                        </div>
-                        <!--/.Card-->
-
-                    </div>
-                    <!--Grid column 2-->
-
-                    <!--Grid column 3-->
-                    <div class="col-lg-3 col-md-6 mb-4">
-
-                        <!--Card-->
-                        <div class="card">
-
-                            <!--Card content-->
-                            <div class="card-body">
-                                <a href="ControllerDispositivo?accion=portatiles">
-                                    <img src="css/img/macbookproret13.png" style="height: 200px;" alt="Foto mackbook" class="mb-2">
-                                    <h4 class="entry-title p-1">
-                                        <a>Portatiles</a>
-                                    </h4>
-                                </a>
-                            </div>
-
-                        </div>
-                        <!--/.Card-->
-
-                    </div>
-                    <!--Grid column 3-->
-
-                    <!--Grid column 4-->
-                    <div class="col-lg-3 col-md-6 mb-4">
-
-                        <!--Card-->
-                        <div class="card">
-
-                            <!--Card content-->
-                            <div class="card-body">
-                                <a href="ControllerDispositivo?accion=consolas">
-                                    <img src="css/img/11558330.jpg" style="height: 200px;" alt="Foto XboxOne" class="mb-2">
-                                    <h4 class="entry-title p-1">
-                                        <a>Consolas</a>
-                                    </h4>
-                                </a>
-                            </div>
-
-                        </div>
-                        <!--/.Card-->
-
-                    </div>
-                    <!--Grid column 4-->
-
-                </div>
-                <!--Grid row-->
-
+            <div class="container-fluid pl-5 pr-5">
+                
             </div>
         </main>
         <!--Main layout-->
-
-
-
-        <!--Footer-->
         <footer class="page-footer font-small unique-color-dark pt-4">
 
             <!-- Footer Elementos -->
@@ -220,6 +171,7 @@
 
         </footer>
         <!--/.Footer-->
+
         <!-- SCRIPTS -->
         <!-- JQuery -->
         <script src="css/js/jquery-3.3.1.min.js" type="text/javascript"></script>
@@ -229,11 +181,11 @@
         <script src="css/js/bootstrap.min.js" type="text/javascript"></script>
         <!-- MDB core JavaScript -->
         <script src="css/js/mdb.min.js" type="text/javascript"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <!-- Initializations -->
         <script type="text/javascript">
             // Animations initialization
             new WOW().init();
         </script>
-
     </body>
 </html>
