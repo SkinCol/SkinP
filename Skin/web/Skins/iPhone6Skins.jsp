@@ -193,7 +193,7 @@
                                 <ul class="rslides" id="slider3">
                                     <c:forEach var="w" items="${wood}">
                                         <li>
-                                            <a>
+                                            <a href="ControllerSkin?accion=wood">
                                                 <img style="width: 300px; height: 300px;" src="${w.getImagen()}" alt="${w.getNombre()}">
                                             </a>
                                         </li>
@@ -274,7 +274,7 @@
                                 <ul class="rslides" id="slider3">
                                     <c:forEach var="co" items="${color}">
                                         <li>
-                                            <a>
+                                            <a href="ControllerSkin?accion=color">
                                                 <img style="width: 300px; height: 300px;" src="${co.getImagen()}" alt="${co.getNombre()}">
                                             </a>
                                         </li>

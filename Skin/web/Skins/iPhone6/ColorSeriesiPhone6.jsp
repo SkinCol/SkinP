@@ -1,6 +1,6 @@
 <%-- 
-    Document   : Cart
-    Created on : 6/09/2019, 05:49:24 AM
+    Document   : ColorSeriesiPhone6
+    Created on : 6/09/2019, 08:55:10 AM
     Author     : alejandro
 --%>
 
@@ -20,7 +20,7 @@
         <link href="css/css/style.min.css" rel="stylesheet" type="text/css"/>
         <link href="css/css/estilos.css" rel="stylesheet" type="text/css" />
         <link rel="shortcut icon" type="image/x-ico" href="favicon.ico" />
-        <title>iPhone 6 - Carbon Series | SkinCol</title>
+        <title>iPhone 6 - Color Series | SkinCol</title>
         <style tipy="text/css">
             .my-custom-scrollbar {
                 position: relative;
@@ -136,25 +136,77 @@
         <!--Main layout-->
         <main class="mt-5 pt-4">
             <div class="container-fluid pl-5 pr-5">
-                <table>
-                    <tbody>
-                        <c:forEach var="cart" items="${carrito}">
-                            <tr>
-                            <td>${cart.getItem()}</td>
-                            <td>${cart.getIdSkin()}
-                                <img src="${cart.getImagen()}" width="100" height="100"></td>
-                            <td>${cart.getNombre()}</td>
-                            <td>${cart.getPrecioCompra()}</td>
-                            <td>${cart.getCantidad()}</td>
-                            <td>${cart.getSubTotal()}</td>
-                            <td>
-                                <a href="#">Eliminar</a>
-                                <a href="#">Actualizar</a>
-                            </td>
-                        </tr>
+                <h1 class="display-3 text-left ml">iPhone 6</h1>
+                <hr>
+                <!--Content-->
+                <div class="p-4">
+                    <h1 class="h1-responsive font-weight-bold">CARBON FIBER WRAPS/SKINS FOR IPHONE 6</h1>
+                    <ul>
+                        <li>Se adapta a: Apple iPhone 6 (4.7 ") </li>
+                        <li>Profunda textura y profundidad de carbono: protege de pequeños arañazos y pequeñas gotas</li>
+                        <li>Incluye un fondo de pantalla descargable a juego </li>
+                        <li>Instalación fácil, sin burbujas y eliminación sin manchas </li>
+                        <li>Hecho en Colombia!</li>
+                    </ul>
+                </div>
+                <!--Content-->
+                <main>
+                    <div class="row text-center wow fadeIn">
+                        <c:forEach var="co" items="${color}">
+                            <div class="col-lg-4 col-md-12">
+                                <!--Card-->
+                                <div class="card card-cascade wider mb-3">
+
+                                    <!--Card image-->
+                                    <div class="view view-cascade">
+                                        <img src="${co.getImagen()}" class="card-img-top">
+                                        <a href="#!">
+                                            <div class="mask rgba-white-slight"></div>
+                                        </a>
+                                    </div>
+                                    <!--/Card image-->
+
+                                    <!--Card content-->
+                                    <div class="card-body card-body-cascade text-center">
+                                        <!--Title-->
+                                        <h4 class="card-title"><strong>${co.getNombre()}</strong></h4>
+                                        <hr>
+                                        <p class="lead">
+                                            <span class="mr-1">
+                                                $ ${co.getCostoSkin()}
+                                            </span>
+                                        </p>
+                                        <a href="ControllerSkin?accion=AgregarCarrito&IdSkin=${co.getIdSkin()}" class="btn btn-light-green">
+                                            <i class="fas fa-cart-arrow-down"></i> Añadir al carrito
+                                        </a>
+                                    </div>
+                                    <!--/.Card content-->
+
+                                </div>
+                                <!--/.Card-->
+                            </div>
                         </c:forEach>
-                    </tbody>
-                </table>
+                    </div>
+                </main>
+                <hr>
+                <!--Grid row-->
+                <div class="row d-flex justify-content-center wow fadeIn">
+                    <!--Grid column-->
+                    <div class="col-md-12 text-center">
+                        <h4 class="my-4 h4">Descripción</h4>
+                        <p class="text-justify">
+                            Con la marca y el diseño superiores del nuevo iPhone 6, la protección y la durabilidad son clave. ¿Y qué dice más duradero que la fibra de carbono? Las envolturas de cuerpo completo de la serie Carbon Fiber para el iPhone 6 son la combinación perfecta de durabilidad y versatilidad. Estas envolturas tienen la misma gran apariencia de fibra de carbono real, con la usabilidad del vinilo. Hecho de material y adhesivo de última generación, las envolturas son removibles y reutilizables, lo que le permite cambiar el estilo cuando lo desee, ¡y le proporcionará a su teléfono la protección de 360 ​​grados que se merece!
+                        </p>
+                        <p class="text-justify">    
+                            Entendemos que los accidentes suceden todo el tiempo. En SkinCol, nos preocupamos por su teléfono tanto como usted. ¡Es por eso que tenemos una política GOOF! Arruinar la instalación, no hay problema! Solo contáctenos dentro de los 30 días para un reemplazo.
+                        </p>   
+                        <p class="text-justify">
+                            Con nuestro diseño y diseño de precisión láser, nuestras máscaras SkinCol han logrado lo que ninguna marca puede rivalizar. Nuestras envolturas ofrecen la mejor sensación de agarre en el mercado al tiempo que ofrecen protección y estilo generales para su iPhone 6. Además, a diferencia de las máscaras del mercado, nuestras envolturas de diseño exclusivo le permiten instalar en su iPhone 6 sin preocupaciones.
+                        </p>
+                    </div>
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
             </div>
         </main>
         <!--Main layout-->

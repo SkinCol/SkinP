@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 06-09-2019 a las 05:47:06
+-- Tiempo de generación: 06-09-2019 a las 19:27:12
 -- Versión del servidor: 10.4.6-MariaDB
 -- Versión de PHP: 7.1.32
 
@@ -407,7 +407,7 @@ INSERT INTO `skin` (`IdSkin`, `IdSerie`, `IdLimitado`, `IdDispositivo`, `Nombre`
 (14, 2, NULL, 160, 'Color Skin Blue', 'https://res.cloudinary.com/skincol-me/image/upload/v1567691413/Series/iPhone/iPhone%206/Color%20Series/bluefullbody_1_1_l9xabh.jpg', 1, '78087'),
 (15, 2, NULL, 160, 'Color Skin Matte White', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571280/Series/iPhone/iPhone%206/Color%20Series/whitefullbody_1_1_1_hv1gd9.jpg', 1, '78087'),
 (16, 2, NULL, 160, 'Color Skin White', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571280/Series/iPhone/iPhone%206/Color%20Series/whitefullbody_1_1_omfvam.jpg', 1, '78087'),
-(17, 1, NULL, 160, 'Color Skin Purple', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571278/Series/iPhone/iPhone%206/Color%20Series/purplefullbody_1_2_nhorf5.jpg', 1, '78087'),
+(17, 2, NULL, 160, 'Color Skin Purple', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571278/Series/iPhone/iPhone%206/Color%20Series/purplefullbody_1_2_nhorf5.jpg', 1, '78087'),
 (18, 2, NULL, 160, 'Color Skin Orange', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571278/Series/iPhone/iPhone%206/Color%20Series/orangefullbody_1_1_hca70i.jpg', 1, '78087'),
 (19, 2, NULL, 160, 'Color Skin Pink', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571278/Series/iPhone/iPhone%206/Color%20Series/pinkfullbody_1_1_l0duna.jpg', 1, '78087'),
 (20, 2, NULL, 160, 'Color Skin Matte Black', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571278/Series/iPhone/iPhone%206/Color%20Series/blackfullbody_1_1_ihwqgd.jpg', 1, '78087'),
@@ -434,7 +434,7 @@ INSERT INTO `skin` (`IdSkin`, `IdSerie`, `IdLimitado`, `IdDispositivo`, `Nombre`
 (41, 6, NULL, 160, 'Acero Pulido', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571283/Series/iPhone/iPhone%206/Metal%20Series/brushedsteel_1_1_q1usib.jpg', 1, '78087'),
 (42, 8, NULL, 160, 'Piel de Cocodrilo Negra', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571281/Series/iPhone/iPhone%206/Leather%20Series/blackalligator_1_1_g4ehsh.jpg', 1, '78087'),
 (43, 8, NULL, 160, 'Piel Negra', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571281/Series/iPhone/iPhone%206/Leather%20Series/blackleather_1_fy90mx.jpg', 1, '78087'),
-(44, 8, NULL, 160, 'Cuero Maron ', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571281/Series/iPhone/iPhone%206/Leather%20Series/brownleather_1_1_szfhlp.jpg', 1, '78087'),
+(44, 8, NULL, 160, 'Cuero Marron ', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571281/Series/iPhone/iPhone%206/Leather%20Series/brownleather_1_1_szfhlp.jpg', 1, '78087'),
 (45, 8, NULL, 160, 'Piel de Cocodrillo Blanca', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571282/Series/iPhone/iPhone%206/Leather%20Series/whitealligator_1_1_jehvlo.jpg', 1, '78087'),
 (46, 8, NULL, 160, 'Piel Naranja ', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571281/Series/iPhone/iPhone%206/Leather%20Series/orangeleather_1_1_ztqfw5.jpg', 1, '78087'),
 (47, 4, NULL, 160, 'Glitz Pink', 'https://res.cloudinary.com/skincol-me/image/upload/v1567571280/Series/iPhone/iPhone%206/Glitz%20Series/glitterpink_1_2_wu9bu0.jpg', 1, '78087'),
@@ -480,7 +480,8 @@ CREATE TABLE `solicitudskin` (
   `IdUser` int(11) NOT NULL,
   `IdAdmin` int(11) NOT NULL,
   `CostoPedido` decimal(11,0) NOT NULL,
-  `Cantidad` int(11) NOT NULL
+  `Cantidad` int(11) NOT NULL,
+  `SubTotal` decimal(11,0) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
 -- --------------------------------------------------------

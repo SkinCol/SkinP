@@ -1,6 +1,6 @@
 <%-- 
-    Document   : carbon-fiber-skins-for-iphone-6
-    Created on : 6/09/2019, 01:36:33 AM
+    Document   : WoodSeriesiPhone
+    Created on : 6/09/2019, 09:04:34 AM
     Author     : alejandro
 --%>
 
@@ -20,7 +20,7 @@
         <link href="css/css/style.min.css" rel="stylesheet" type="text/css"/>
         <link href="css/css/estilos.css" rel="stylesheet" type="text/css" />
         <link rel="shortcut icon" type="image/x-ico" href="favicon.ico" />
-        <title>iPhone 6 - Carbon Series | SkinCol</title>
+        <title>iPhone 6 - Metal Series | SkinCol</title>
         <style tipy="text/css">
             .my-custom-scrollbar {
                 position: relative;
@@ -152,14 +152,14 @@
                 <!--Content-->
                 <main>
                     <div class="row text-center wow fadeIn">
-                        <c:forEach var="car" items="${carbon}">
+                        <c:forEach var="me" items="${metal}">
                             <div class="col-lg-4 col-md-12">
                                 <!--Card-->
                                 <div class="card card-cascade wider mb-3">
 
                                     <!--Card image-->
                                     <div class="view view-cascade">
-                                        <img src="${car.getImagen()}" class="card-img-top">
+                                        <img src="${me.getImagen()}" class="card-img-top">
                                         <a href="#!">
                                             <div class="mask rgba-white-slight"></div>
                                         </a>
@@ -169,14 +169,14 @@
                                     <!--Card content-->
                                     <div class="card-body card-body-cascade text-center">
                                         <!--Title-->
-                                        <h4 class="card-title"><strong>${car.getNombre()}</strong></h4>
+                                        <h4 class="card-title"><strong>${me.getNombre()}</strong></h4>
                                         <hr>
                                         <p class="lead">
                                             <span class="mr-1">
-                                                $ ${car.getCostoSkin()}
+                                                $ ${me.getCostoSkin()}
                                             </span>
                                         </p>
-                                        <a href="ControllerSkin?accion=AgregarCarrito&IdSkin=${car.getIdSkin()}" class="btn btn-light-green">
+                                        <a href="ControllerSkin?accion=AgregarCarrito&IdSkin=${me.getIdSkin()}" class="btn btn-light-green">
                                             <i class="fas fa-cart-arrow-down"></i> Añadir al carrito
                                         </a>
                                     </div>
