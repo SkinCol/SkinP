@@ -98,7 +98,7 @@
 
                                 <!--Card content-->
                                 <div class="card-body">
-                                    <a href="ControllerDispositivo?accion=${i.getEnlace()}">
+                                    <a href="ControllerSkin?accion=${i.getEnlace()}">
                                         <div class="mask rgba-white-slight">
                                             <img src="${i.getImagen()}" style="height: 200px; width: 200px;" class="mb-2">
                                         </div>

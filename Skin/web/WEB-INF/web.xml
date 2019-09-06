@@ -8,6 +8,10 @@
         <servlet-name>ControllerLimitado</servlet-name>
         <servlet-class>Controller.ControllerLimitado</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ControllerSkin</servlet-name>
+        <servlet-class>Controller.ControllerSkin</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ControllerDispositivo</servlet-name>
         <url-pattern>/ControllerDispositivo</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>ControllerLimitado</servlet-name>
         <url-pattern>/ControllerLimitado</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControllerSkin</servlet-name>
+        <url-pattern>/ControllerSkin</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
