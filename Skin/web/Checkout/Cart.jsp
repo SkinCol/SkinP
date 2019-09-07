@@ -20,56 +20,7 @@
         <link href="css/css/style.min.css" rel="stylesheet" type="text/css"/>
         <link href="css/css/estilos.css" rel="stylesheet" type="text/css" />
         <link rel="shortcut icon" type="image/x-ico" href="favicon.ico" />
-        <title>iPhone 6 - Carbon Series | SkinCol</title>
-        <style tipy="text/css">
-            .my-custom-scrollbar {
-                position: relative;
-                width: 100%;
-                height: 400px;
-                overflow: auto;
-            }
-        </style>
-        <script type="text/javascript">
-            // You can also use "$(window).load(function() {"
-            $(function () {
-
-                // Slideshow 1
-                $("#slider1").responsiveSlides({
-                    maxwidth: 800,
-                    speed: 800
-                });
-
-                // Slideshow 2
-                $("#slider2").responsiveSlides({
-                    auto: false,
-                    pager: true,
-                    speed: 300,
-                    maxwidth: 540
-                });
-
-                // Slideshow 3
-                $("#slider3").responsiveSlides({
-                    manualControls: '#slider3-pager',
-                    maxwidth: 540
-                });
-
-                // Slideshow 4
-                $("#slider4").responsiveSlides({
-                    auto: false,
-                    pager: false,
-                    nav: true,
-                    speed: 500,
-                    namespace: "callbacks",
-                    before: function () {
-                        $('.events').append("<li>before event fired.</li>");
-                    },
-                    after: function () {
-                        $('.events').append("<li>after event fired.</li>");
-                    }
-                });
-
-            });
-        </script>
+        <title>Carrito de Compras</title>
     </head>
     <body>
         <!-- Navbar -->
@@ -115,12 +66,12 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="ControllerSkin?accion=Carrito" class="nav-link" target="_blank">
-                                <i class="fas fa-shopping-cart"></i><span class="badge badge-pill badge-light">${contador}</span>
+                            <a href="index.jsp" class="nav-link" target="_blank">
+                                <i class="fas fa-cart-plus"></i>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="IncioSesion.html" class="nav-link border border-light rounded waves-effect waves-light" target="_blank">
+                            <a href="IncioSesion.html" class="nav-link border border-light rounded waves-effect waves-light">
                                 <i class="fas fa-user"></i> Iniciar Sesión
                             </a>
                         </li>
@@ -136,25 +87,84 @@
         <!--Main layout-->
         <main class="mt-5 pt-4">
             <div class="container-fluid pl-5 pr-5">
-                <table>
-                    <tbody>
-                        <c:forEach var="cart" items="${carrito}">
-                            <tr>
-                            <td>${cart.getItem()}</td>
-                            <td>${cart.getIdSkin()}
-                                <img src="${cart.getImagen()}" width="100" height="100"></td>
-                            <td>${cart.getNombre()}</td>
-                            <td>${cart.getPrecioCompra()}</td>
-                            <td>${cart.getCantidad()}</td>
-                            <td>${cart.getSubTotal()}</td>
-                            <td>
-                                <a href="#">Eliminar</a>
-                                <a href="#">Actualizar</a>
-                            </td>
-                        </tr>
-                        </c:forEach>
-                    </tbody>
-                </table>
+                <div class="row">
+                    <div class="col-9">
+                        <!-- Editable table -->
+                        <div class="card">
+                            <h3 class="card-header text-center font-weight-bold text-uppercase py-4">Tu Carrito</h3>
+                            <div class="card-body">
+                                <div id="table" class="table-editable">
+                                    <table class="table table-bordered table-responsive-md table-striped text-center">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-center">Item</th>
+                                                <th class="text-center">Imagen</th>
+                                                <th class="text-center">Producto</th>
+                                                <th class="text-center">Precio</th>
+                                                <th class="text-center">Cantidad</th>
+                                                <th class="text-center">SubTotal</th>
+                                                <th class="text-center"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <c:forEach var="cart" items="${carrito}">
+                                                <tr>
+                                                    <td class="pt-3-half" >${cart.getItem()}</td>
+                                                    <td class="pt-3-half" ><img src="${cart.getImagen()}" width="100" height="100"></td>
+                                                    <td class="pt-3-half" >${cart.getNombre()}</td>
+                                                    <td class="pt-3-half" >${cart.getPrecioCompra()}</td>
+                                                    <td class="pt-3-half" >${cart.getCantidad()}</td>
+                                                    <td class="pt-3-half" >${cart.getSubTotal()}</td>
+                                                    <td>
+                                                        <a class="btn btn-info btn-sm">Actualizar</a>
+                                                        <br>
+                                                        <hr>
+                                                        <a class="btn btn-danger btn-sm">Eliminar</a>
+                                                    </td>
+                                                </tr>
+                                            </c:forEach>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Editable table -->
+                    </div>
+                    <div class="col-3">
+                        <!-- Card -->
+                        <div class="card">
+                            <div class="card-header">
+                                  <h4><a>Generar Comprar</a></h4>
+                            </div>
+
+                            <!-- Card image -->
+                            <!-- <img class="card-img-top" src="https://res.cloudinary.com/skincol-me/image/upload/v1566554303/Limited/aStickerBomb_LimitedPage.jpg.pagespeed.ic.W-EDgX1GtZ_b9ekia.webp" alt="Card image cap">
+
+                            <!-- Card content -->
+                            <div class="card-body">
+
+                                <!-- Title -->
+                              
+                                <!-- Text -->
+                                <label>Subtotal:</label>
+                                <input type="text" value="${totalPagar}" readonly="" class="form-control">
+                                <label>Total a Pagar:</label>
+                                <input type="text" value="${totalPagar}" readonly="" class="form-control">
+                                <br>
+                                
+                                <!-- Button -->
+                                <a href="#" class="btn btn-primary btn-sm btn-block">PASAR POR LA CAJA</a>
+                                <hr>
+                                <a href="#" class="btn btn-light btn-sm btn-block">GENERAR COMPRA</a>
+                            </div>
+
+                        </div>
+                        <!-- Card -->
+                    </div>
+
+
+                </div>
+
             </div>
         </main>
         <!--Main layout-->

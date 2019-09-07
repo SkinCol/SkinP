@@ -178,6 +178,7 @@ public class ControllerSkin extends HttpServlet {
                 for(int i = 0; i < listaCarrito.size(); i++){
                     totalPagar = totalPagar + listaCarrito.get(i).getSubTotal();
                 }
+                request.setAttribute("totalPagar", totalPagar);
                 request.getRequestDispatcher("Checkout/Cart.jsp").forward(request, response);
                 break;
         }
