@@ -30,8 +30,7 @@
                 </a>
 
                 <!-- Collapse -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -41,13 +40,13 @@
                     <!-- Left -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="Dispositivos.jsp">Dispositivos</a>
+                            <a class="nav-link" href="Dispositivos.jsp"><i class="fas fa-mobile-alt"></i> Dispositivos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="ControllerLimitado?accion=1">Limitado</a>
+                            <a class="nav-link" href="ControllerLimitado?accion=1"><i class="fab fa-artstation"></i> Limitado</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Personalizador</a>
+                            <a class="nav-link" href="#"><i class="fas fa-bezier-curve"></i> Personalizador</a>
                         </li>
                     </ul>
 
@@ -61,6 +60,11 @@
                         <li class="nav-item">
                             <a href="https://twitter.com" class="nav-link" target="_blank">
                                 <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="ControllerSkin?accion=Carrito" class="nav-link" target="_blank">
+                                <i class="fas fa-shopping-cart"></i><span class="badge badge-pill badge-light">${contador}</span>
                             </a>
                         </li>
                         <li class="nav-item">

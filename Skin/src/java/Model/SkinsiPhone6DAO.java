@@ -16,14 +16,37 @@ import java.util.List;
  *
  * @author alejandro
  */
-public class SkinDAO {
-
+public class SkinsiPhone6DAO {
+    
     Connection con;
     Conexion cn = new Conexion();
     PreparedStatement ps;
     ResultSet rs;
+    
+    public Skin listarId(int Id){
+        String sql ="SELECT * FROM skin WHERE IdSkin = "+Id;
+        Skin s = new Skin();
+        try {
+            con = cn.getConnection();
+            ps = con.prepareStatement(sql);
+            rs = ps.executeQuery();
+            while (rs.next()){
+                s.setIdSkin(rs.getInt(1));
+                s.setIdSerie(rs.getInt(2));
+                s.setIdLimitado(rs.getInt(3));
+                s.setIdDispositivo(rs.getInt(4));
+                s.setNombre(rs.getString(5));
+                s.setImagen(rs.getString(6));
+                s.setStock(rs.getInt(7));
+                s.setCostoSkin(rs.getDouble(8));
+            }
+        } catch (Exception e) {
+        }
+        
+        return s;
+    }
 
-    public List ListarCarbonSeries() {
+    public List CarbonSeriesiPhone6() {
         List<Skin> Carbon = new ArrayList();
         String sql = "SELECT * FROM skin WHERE IdSerie = 1 and IdDispositivo = 160";
         try {
@@ -52,7 +75,7 @@ public class SkinDAO {
         return Carbon;
     }
 
-    public List ListarCamoSeries() {
+    public List CamoSeriesiPhone6() {
         List<Skin> Camo = new ArrayList();
         String sql = "SELECT * FROM skin WHERE IdSerie = 3 and IdDispositivo = 160";
         try {
@@ -81,7 +104,7 @@ public class SkinDAO {
         return Camo;
     }
 
-    public List ListarColorSeries() {
+    public List ColorSeriesiPhone6() {
         List<Skin> Color = new ArrayList();
         String sql = "SELECT * FROM skin WHERE IdSerie = 2 and IdDispositivo = 160";
         try {
@@ -110,13 +133,14 @@ public class SkinDAO {
         return Color;
     }
 
-    public List ListarWoodSeries() {
+    public List WoodSeriesiPhone6() {
         List<Skin> Wood = new ArrayList();
         String sql = "SELECT * FROM skin WHERE IdSerie = 5 and IdDispositivo = 160";
         try {
             con = cn.getConnection();
             ps = con.prepareStatement(sql);
             rs = ps.executeQuery();
+            
             while (rs.next()) {
                 Skin w = new Skin();
                 w.setIdSkin(rs.getInt(1));
@@ -138,7 +162,7 @@ public class SkinDAO {
         return Wood;
     }
 
-    public List ListarMetalSeries() {
+    public List MetalSeriesiPhone6() {
         List<Skin> Metal = new ArrayList();
         String sql = "SELECT * FROM skin WHERE IdSerie = 6 and IdDispositivo = 160";
         try {
@@ -167,7 +191,7 @@ public class SkinDAO {
         return Metal;
     }
 
-    public List ListarLeatherSeries() {
+    public List LeatherSeriesiPhone6() {
         List<Skin> Leather = new ArrayList();
         String sql = "SELECT * FROM skin WHERE IdSerie = 8 and IdDispositivo = 160";
         try {
@@ -196,7 +220,7 @@ public class SkinDAO {
         return Leather;
     }
 
-    public List ListarGlitzSeries() {
+    public List GlitzSeriesiPhone6() {
         List<Skin> Glitz = new ArrayList();
         String sql = "SELECT * FROM skin WHERE IdSerie = 4 and IdDispositivo = 160";
         try {
@@ -225,7 +249,7 @@ public class SkinDAO {
         return Glitz;
     }
 
-    public List ListarStoneSeries() {
+    public List StoneSeriesiPhone6() {
         List<Skin> Stone = new ArrayList();
         String sql = "SELECT * FROM skin WHERE IdSerie = 9 and IdDispositivo = 160";
         try {
@@ -254,7 +278,7 @@ public class SkinDAO {
         return Stone;
     }
 
-    public List ListarAlcantaraSeries() {
+    public List AlcantaraSeriesiPhone6() {
         List<Skin> Alcantara = new ArrayList();
         String sql = "SELECT * FROM skin WHERE IdLimitado = 3 and IdDispositivo = 160";
         try {
@@ -283,7 +307,7 @@ public class SkinDAO {
         return Alcantara;
     }
 
-    public List ListarNaturalSeries() {
+    public List NaturalSeriesiPhone6() {
         List<Skin> Natural = new ArrayList();
         String sql = "SELECT * FROM skin WHERE IdSerie = 7 and IdDispositivo = 160";
         try {
@@ -312,7 +336,7 @@ public class SkinDAO {
         return Natural;
     }
 
-    public List ListarAniversarioSeries() {
+    public List EdicionAniversarioiPhone6() {
         List<Skin> Aniversario = new ArrayList();
         String sql = "SELECT * FROM skin WHERE IdLimitado = 14 and IdDispositivo = 160";
         try {
@@ -341,7 +365,7 @@ public class SkinDAO {
         return Aniversario;
     }
 
-    public List ListarRetroSeries() {
+    public List RetroAppleiPhone6() {
         List<Skin> Retro = new ArrayList();
         String sql = "SELECT * FROM skin WHERE IdLimitado = 15 and IdDispositivo = 160";
         try {
@@ -370,7 +394,7 @@ public class SkinDAO {
         return Retro;
     }
 
-    public List ListarHempSeries() {
+    public List HempSeriesiPhone6() {
         List<Skin> Hemp = new ArrayList();
         String sql = "SELECT * FROM skin WHERE IdLimitado = 4 and IdDispositivo = 160";
         try {

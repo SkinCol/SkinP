@@ -1,9 +1,10 @@
 <%-- 
-    Document   : Dispositivos
-    Created on : 28/08/2019, 11:55:26 AM
+    Document   : Cart
+    Created on : 6/09/2019, 05:49:24 AM
     Author     : alejandro
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -14,11 +15,12 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <script src="https://kit.fontawesome.com/960e8817a0.js"></script>
         <link href="css/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link href="css/css/mdb.min.css" rel="stylesheet" type="text/css"/>
         <link href="css/css/style.min.css" rel="stylesheet" type="text/css"/>
-        <link href="css/css/estilos.css" rel="stylesheet" type="text/css"/>
+        <link href="css/css/estilos.css" rel="stylesheet" type="text/css" />
         <link rel="shortcut icon" type="image/x-ico" href="favicon.ico" />
-        <title>Dispositivos</title>
+        <title>Carrito de Compras</title>
     </head>
     <body>
         <!-- Navbar -->
@@ -64,12 +66,12 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="ControllerSkin?accion=Carrito" class="nav-link" target="_blank">
-                                <i class="fas fa-shopping-cart"></i><span class="badge badge-pill badge-light">${contador}</span>
+                            <a href="index.jsp" class="nav-link" target="_blank">
+                                <i class="fas fa-cart-plus"></i>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="IncioSesion.html" class="nav-link border border-light rounded waves-effect waves-light" target="_blank">
+                            <a href="IncioSesion.html" class="nav-link border border-light rounded waves-effect waves-light">
                                 <i class="fas fa-user"></i> Iniciar Sesión
                             </a>
                         </li>
@@ -79,116 +81,94 @@
 
             </div>
         </nav>
-
+        <!-- Navbar -->
+        <br>
+        <br>
         <!--Main layout-->
         <main class="mt-5 pt-4">
-            <div class="container">
-
-                <h1 class="my-5 display-4 text-center">Dispositivos</h1>
-
-                <!--Grid row-->
-                <div class="row text-center wow fadeIn">
-
-                    <!--Grid column 1-->
-                    <div class="col-lg-3 col-md-6 mb-4">
-
-                        <!--Card-->
+            <div class="container-fluid pl-5 pr-5">
+                <div class="row">
+                    <div class="col-9">
+                        <!-- Editable table -->
                         <div class="card">
+                            <h3 class="card-header text-center font-weight-bold text-uppercase py-4">Tu Carrito</h3>
+                            <div class="card-body">
+                                <div id="table" class="table-editable">
+                                    <table class="table table-bordered table-responsive-md table-striped text-center">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-center">Item</th>
+                                                <th class="text-center">Imagen</th>
+                                                <th class="text-center">Producto</th>
+                                                <th class="text-center">Precio</th>
+                                                <th class="text-center">Cantidad</th>
+                                                <th class="text-center">SubTotal</th>
+                                                <th class="text-center"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <c:forEach var="cart" items="${carrito}">
+                                                <tr>
+                                                    <td class="pt-3-half" >${cart.getItem()}</td>
+                                                    <td class="pt-3-half" ><img src="${cart.getImagen()}" width="100" height="100"></td>
+                                                    <td class="pt-3-half" >${cart.getNombre()}</td>
+                                                    <td class="pt-3-half" >${cart.getPrecioCompra()}</td>
+                                                    <td class="pt-3-half" >${cart.getCantidad()}</td>
+                                                    <td class="pt-3-half" >${cart.getSubTotal()}</td>
+                                                    <td>
+                                                        <a class="btn btn-info btn-sm">Actualizar</a>
+                                                        <br>
+                                                        <hr>
+                                                        <input type="hidden" id="ids" value="${cart.getIdSkin()}">
+                                                        <a class="btn btn-danger btn-sm" id="btnDelete">Eliminar</a>
+                                                    </td>
+                                                </tr>
+                                            </c:forEach>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Editable table -->
+                    </div>
+                    <div class="col-3">
+                        <!-- Card -->
+                        <div class="card">
+                            <div class="card-header">
+                                  <h4><a>Generar Comprar</a></h4>
+                            </div>
 
-                            <!--Card content-->
+                            <!-- Card image -->
+                            <!-- <img class="card-img-top" src="https://res.cloudinary.com/skincol-me/image/upload/v1566554303/Limited/aStickerBomb_LimitedPage.jpg.pagespeed.ic.W-EDgX1GtZ_b9ekia.webp" alt="Card image cap">
+
+                            <!-- Card content -->
                             <div class="card-body">
 
-                                <a href="ControllerDispositivo?accion=telefonos">
-                                    <img src="css/img/apple-iphone8plus-gold-1-3x.jpg" style="height: 200px;" alt="Foto iPhone" class="mb-2">
-                                    <h4 class="entry-title p-1">
-                                        <a>Telefonos</a>
-                                    </h4>
-                                </a>
-
+                                <!-- Title -->
+                              
+                                <!-- Text -->
+                                <label>Subtotal:</label>
+                                <input type="text" value="${totalPagar}" readonly="" class="form-control">
+                                <label>Total a Pagar:</label>
+                                <input type="text" value="${totalPagar}" readonly="" class="form-control">
+                                <br>
+                                
+                                <!-- Button -->
+                                <a href="#" class="btn btn-primary btn-sm btn-block">PASAR POR LA CAJA</a>
+                                <hr>
+                                <a href="#" class="btn btn-light btn-sm btn-block">GENERAR COMPRA</a>
                             </div>
 
                         </div>
-                        <!--/.Card-->
-
+                        <!-- Card -->
                     </div>
-                    <!--Grid column 1-->
 
-                    <!--Grid column 2-->
-                    <div class="col-lg-3 col-md-6 mb-4">
-
-                        <!--Card-->
-                        <div class="card">
-
-                            <!--Card content-->
-                            <div class="card-body">
-                                <a href="ControllerDispositivo?accion=tabletas">
-                                    <img src="css/img/apple_mk9n2ll_a_128gb_ipad_mini_4_1185478.jpg" style="height: 200px;" alt="Foto ipad" class="mb-2">
-                                    <h4 class="entry-title p-1">
-                                        <a>Tabletas</a>
-                                    </h4>
-                                </a>
-                            </div>
-
-                        </div>
-                        <!--/.Card-->
-
-                    </div>
-                    <!--Grid column 2-->
-
-                    <!--Grid column 3-->
-                    <div class="col-lg-3 col-md-6 mb-4">
-
-                        <!--Card-->
-                        <div class="card">
-
-                            <!--Card content-->
-                            <div class="card-body">
-                                <a href="ControllerDispositivo?accion=portatiles">
-                                    <img src="css/img/macbookproret13.png" style="height: 200px;" alt="Foto mackbook" class="mb-2">
-                                    <h4 class="entry-title p-1">
-                                        <a>Portatiles</a>
-                                    </h4>
-                                </a>
-                            </div>
-
-                        </div>
-                        <!--/.Card-->
-
-                    </div>
-                    <!--Grid column 3-->
-
-                    <!--Grid column 4-->
-                    <div class="col-lg-3 col-md-6 mb-4">
-
-                        <!--Card-->
-                        <div class="card">
-
-                            <!--Card content-->
-                            <div class="card-body">
-                                <a href="ControllerDispositivo?accion=consolas">
-                                    <img src="css/img/11558330.jpg" style="height: 200px;" alt="Foto XboxOne" class="mb-2">
-                                    <h4 class="entry-title p-1">
-                                        <a>Consolas</a>
-                                    </h4>
-                                </a>
-                            </div>
-
-                        </div>
-                        <!--/.Card-->
-
-                    </div>
-                    <!--Grid column 4-->
 
                 </div>
-                <!--Grid row-->
 
             </div>
         </main>
         <!--Main layout-->
-
-
-
-        <!--Footer-->
         <footer class="page-footer font-small unique-color-dark pt-4">
 
             <!-- Footer Elementos -->
@@ -220,20 +200,25 @@
 
         </footer>
         <!--/.Footer-->
+
         <!-- SCRIPTS -->
         <!-- JQuery -->
         <script src="css/js/jquery-3.3.1.min.js" type="text/javascript"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <!-- Bootstrap tooltips -->
         <script src="css/js/popper.min.js" type="text/javascript"></script>
         <!-- Bootstrap core JavaScript -->
         <script src="css/js/bootstrap.min.js" type="text/javascript"></script>
         <!-- MDB core JavaScript -->
         <script src="css/js/mdb.min.js" type="text/javascript"></script>
+        <!-- Functions -->
+        <script src="css/js/Alert.js" type="text/javascript"></script>
+        <!-- SweetAlert2-->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
         <!-- Initializations -->
         <script type="text/javascript">
             // Animations initialization
             new WOW().init();
         </script>
-
     </body>
 </html>

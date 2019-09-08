@@ -33,8 +33,7 @@
                 </a>
 
                 <!-- Collapse -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -44,13 +43,13 @@
                     <!-- Left -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="Dispositivos.jsp">Dispositivos</a>
+                            <a class="nav-link" href="Dispositivos.jsp"><i class="fas fa-mobile-alt"></i> Dispositivos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="ControllerLimitado?accion=1">Limitado</a>
+                            <a class="nav-link" href="ControllerLimitado?accion=1"><i class="fab fa-artstation"></i> Limitado</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Personalizador</a>
+                            <a class="nav-link" href="#"><i class="fas fa-bezier-curve"></i> Personalizador</a>
                         </li>
                     </ul>
 
@@ -67,8 +66,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="IncioSesion.html" class="nav-link border border-light rounded waves-effect waves-light"
-                               target="_blank">
+                            <a href="IncioSesion.html" class="nav-link border border-light rounded waves-effect waves-light" target="_blank">
                                 <i class="fas fa-user"></i> Iniciar Sesión
                             </a>
                         </li>
