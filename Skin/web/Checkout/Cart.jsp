@@ -66,11 +66,6 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="index.jsp" class="nav-link" target="_blank">
-                                <i class="fas fa-cart-plus"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item">
                             <a href="IncioSesion.html" class="nav-link border border-light rounded waves-effect waves-light">
                                 <i class="fas fa-user"></i> Iniciar Sesión
                             </a>
@@ -91,7 +86,9 @@
                     <div class="col-9">
                         <!-- Editable table -->
                         <div class="card">
-                            <h3 class="card-header text-center font-weight-bold text-uppercase py-4">Tu Carrito</h3>
+                            <h3 class="card-header text-center font-weight-bold text-uppercase py-4">Tu Carrito  <a class="btn btn-success btn-sm" href="Dispositivos.jsp">
+                                    <i class="fas fa-cart-plus"></i> <span>Seguir Comprando</span>
+                                </a></h3> 
                             <div class="card-body">
                                 <div id="table" class="table-editable">
                                     <table class="table table-bordered table-responsive-md table-striped text-center">
@@ -109,18 +106,15 @@
                                         <tbody>
                                             <c:forEach var="cart" items="${carrito}">
                                                 <tr>
-                                                    <td class="pt-3-half" >${cart.getItem()}</td>
+                                                    <td class="pt-3-half pt-5" >${cart.getItem()}</td>
                                                     <td class="pt-3-half" ><img src="${cart.getImagen()}" width="100" height="100"></td>
-                                                    <td class="pt-3-half" >${cart.getNombre()}</td>
-                                                    <td class="pt-3-half" >${cart.getPrecioCompra()}</td>
-                                                    <td class="pt-3-half" >${cart.getCantidad()}</td>
-                                                    <td class="pt-3-half" >${cart.getSubTotal()}</td>
-                                                    <td>
-                                                        <a class="btn btn-info btn-sm">Actualizar</a>
-                                                        <br>
-                                                        <hr>
-                                                        <input type="hidden" id="ids" value="${cart.getIdSkin()}">
-                                                        <a class="btn btn-danger btn-sm" id="btnDelete">Eliminar</a>
+                                                    <td class="pt-3-half pt-5" >${cart.getNombre()}</td>
+                                                    <td class="pt-3-half pt-5" >${cart.getPrecioCompra()}</td>
+                                                    <td class="pt-3-half pt-5" >${cart.getCantidad()}</td>
+                                                    <td class="pt-3-half pt-5" >${cart.getSubTotal()}</td>
+                                                    <td class="pt-3-half pt-5" >
+                                                        <span id="idskin" style="display: none;">${cart.getIdSkin()}</span>
+                                                        <a class="text-danger h4" id="btnDelete"><i class="far fa-trash-alt"></i></a>
                                                     </td>
                                                 </tr>
                                             </c:forEach>
@@ -135,7 +129,7 @@
                         <!-- Card -->
                         <div class="card">
                             <div class="card-header">
-                                  <h4><a>Generar Comprar</a></h4>
+                                <h4><a>Generar Comprar</a></h4>
                             </div>
 
                             <!-- Card image -->
@@ -145,14 +139,14 @@
                             <div class="card-body">
 
                                 <!-- Title -->
-                              
+
                                 <!-- Text -->
                                 <label>Subtotal:</label>
                                 <input type="text" value="${totalPagar}" readonly="" class="form-control">
                                 <label>Total a Pagar:</label>
                                 <input type="text" value="${totalPagar}" readonly="" class="form-control">
                                 <br>
-                                
+
                                 <!-- Button -->
                                 <a href="#" class="btn btn-primary btn-sm btn-block">PASAR POR LA CAJA</a>
                                 <hr>
@@ -214,7 +208,7 @@
         <!-- Functions -->
         <script src="css/js/Alert.js" type="text/javascript"></script>
         <!-- SweetAlert2-->
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <!-- Initializations -->
         <script type="text/javascript">
             // Animations initialization
