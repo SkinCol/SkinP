@@ -100,54 +100,67 @@ public class ControllerSkin extends HttpServlet {
                 request.setAttribute("hemp", hemp);
                 request.getRequestDispatcher("Skins/iPhone6Skins.jsp").forward(request, response);
                 break;
+
             case "color":
                 request.setAttribute("color", color);
                 request.getRequestDispatcher("Skins/iPhone6/ColorSeriesiPhone6.jsp").forward(request, response);
                 break;
+
             case "carbon":
                 request.setAttribute("carbon", carbon);
                 request.getRequestDispatcher("Skins/iPhone6/CarbonSeriesiPhone6.jsp").forward(request, response);
                 break;
+
             case "wood":
                 request.setAttribute("wood", wood);
                 request.getRequestDispatcher("Skins/iPhone6/WoodSeriesiPhone6.jsp").forward(request, response);
                 break;
+
             case "metal":
                 request.setAttribute("metal", metal);
                 request.getRequestDispatcher("Skins/iPhone6/MetalSeriesiPhone6.jsp").forward(request, response);
-                break;    
+                break;
+
             case "camo":
                 request.setAttribute("camo", camo);
                 request.getRequestDispatcher("Skins/iPhone6/CamoSeriesiPhone6.jsp").forward(request, response);
-                break;    
+                break; 
+
             case "leather":
                 request.setAttribute("leather", leather);
                 request.getRequestDispatcher("Skins/iPhone6/LeatherSeriesiPhone6.jsp").forward(request, response);
-                break;    
+                break; 
+
             case "glitz":
                 request.setAttribute("glitz", glitz);
                 request.getRequestDispatcher("Skins/iPhone6/GlitzSeriesiPhone6.jsp").forward(request, response);
-                break;    
+                break;  
+
             case "stone":
                 request.setAttribute("stone", stone);
                 request.getRequestDispatcher("Skins/iPhone6/StoneSeriesiPhone6.jsp").forward(request, response);
-                break;    
+                break;   
+
             case "alcantara":
                 request.setAttribute("alcantara", alcantara);
                 request.getRequestDispatcher("Skins/iPhone6/AlcantaraSeriesiPhone6.jsp").forward(request, response);
-                break;    
+                break;  
+
             case "natural":
                 request.setAttribute("natural", natural);
                 request.getRequestDispatcher("Skins/iPhone6/NaturalSeriesiPhone6.jsp").forward(request, response);
-                break;    
+                break;  
+
             case "aniversario":
                 request.setAttribute("aniversario", aniversario);
                 request.getRequestDispatcher("Skins/iPhone6/EdicionAniversarioiPhone6.jsp").forward(request, response);
-                break;    
+                break; 
+
             case "retro":
                 request.setAttribute("retro", retro);
                 request.getRequestDispatcher("Skins/iPhone6/AppleRetroiPhone6.jsp").forward(request, response);
-                break;    
+                break;
+
             case "hemp":
                 request.setAttribute("hemp", hemp);
                 request.getRequestDispatcher("Skins/iPhone6/HempSeriesiPhone6.jsp").forward(request, response);
@@ -169,9 +182,17 @@ public class ControllerSkin extends HttpServlet {
                 listaCarrito.add(cart);
                 request.setAttribute("contador", listaCarrito.size());
                 request.getRequestDispatcher("ControllerSkin?accion=carbon").forward(request, response);
-                
-                
                 break;
+
+            case "Delete":
+                int Id = Integer.parseInt(request.getParameter("IdSkin"));
+                for(int i = 0; i <listaCarrito.size(); i++){
+                    if (listaCarrito.get(i).getIdSkin()== Id) {
+                        listaCarrito.remove(i);
+                    }
+                }
+                break;
+
             case "Carrito":
                 totalPagar = 0.0;
                 request.setAttribute("carrito", listaCarrito);

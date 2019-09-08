@@ -119,7 +119,8 @@
                                                         <a class="btn btn-info btn-sm">Actualizar</a>
                                                         <br>
                                                         <hr>
-                                                        <a class="btn btn-danger btn-sm">Eliminar</a>
+                                                        <input type="hidden" id="ids" value="${cart.getIdSkin()}">
+                                                        <a class="btn btn-danger btn-sm" id="btnDelete">Eliminar</a>
                                                     </td>
                                                 </tr>
                                             </c:forEach>
@@ -203,13 +204,17 @@
         <!-- SCRIPTS -->
         <!-- JQuery -->
         <script src="css/js/jquery-3.3.1.min.js" type="text/javascript"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <!-- Bootstrap tooltips -->
         <script src="css/js/popper.min.js" type="text/javascript"></script>
         <!-- Bootstrap core JavaScript -->
         <script src="css/js/bootstrap.min.js" type="text/javascript"></script>
         <!-- MDB core JavaScript -->
         <script src="css/js/mdb.min.js" type="text/javascript"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <!-- Functions -->
+        <script src="css/js/Alert.js" type="text/javascript"></script>
+        <!-- SweetAlert2-->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
         <!-- Initializations -->
         <script type="text/javascript">
             // Animations initialization
