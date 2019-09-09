@@ -1,0 +1,76 @@
+
+
+button, h1, h2 {
+	margin: 0;
+	padding: 0;
+}
+
+
+
+.preload {
+	padding-top: 20px;
+	text-align: center;
+	display: none;
+}
+
+.activate-preload {
+	display: block;
+}
+
+#container-input {
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+}
+
+.file  {
+	width: 36px;
+	height: 36px;
+	background: url('upload-icon.jpg') no-repeat;
+	cursor: pointer;
+	position: absolute;
+	top: 8px;
+	left: 8px;
+}
+#container-input .wrap-file .content-icon-camera #file {
+	padding: 15px;
+	opacity: 0;
+	position: relative;
+	cursor: pointer;
+	left: -120px;
+	z-index: 1;
+}
+
+#container-input .wrap-file #preview-images .thumbnail {
+	width: 120px;
+	height: 120px;
+	display: inline-block;
+	vertical-align: middle;
+	border: solid 2px #CCC;
+	background-size: cover;
+	position: relative;
+}
+
+#container-input .wrap-file #preview-images .thumbnail:not(:last-child) {
+	margin-right: 5px;
+}
+
+#container-input .wrap-file #preview-images .thumbnail .close-button {
+	width: 20px;
+	height: 20px;
+	background-color: black;
+	color: white;
+	text-align: center;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	border-radius: 100px;
+	cursor: pointer;
+}
+
+
+.file-field.medium .file-path-wrapper .file-path {
+    height: 2.8rem; }
+
+      
+      

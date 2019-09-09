@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Clayfy: Demos resizable</title>
+        <meta name="description" content="Clayfy JQuery plugin. Make elements resizable with less effort.">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../libs/jquery.js"></script>
+        <script src="../dist/clayfy.min.js"></script>
+        <link rel="stylesheet" href="../dist/clayfy.min.css" type="text/css">
+        <style>
+             
+                p{
+                    margin: 0
+                }
+                pre{
+                    margin: 0;
+                    color : #555;
+                }
+                .rect {
+                    height: 100px;
+                    width : 150px;
+                    background : #ccc;
+                    position: absolute;
+                    top: 10px;
+                    left: 10px;
+    
+                }
+                .container{
+                    margin-bottom: 20px;
+                    height: 110px;
+                    max-width: 500px;
+                    position: relative;
+                }
+                
+                .custom-handlers.clayfy-top:after,
+                .custom-handlers.clayfy-bottom:after,
+                .custom-handlers.clayfy-left:after,
+                .custom-handlers.clayfy-right:after
+                {
+                    content: '';
+                    position: absolute;
+                    height: 0.5px;
+                    top:0;left:0;
+                    width:100%;
+                    background: gray;
+                }
+                .custom-handlers.clayfy-bottom:after{
+                    top:auto; bottom: 0;
+                }
+                .custom-handlers.clayfy-left:after{
+                    width:2px; height:100%;
+                }
+                .custom-handlers.clayfy-right:after{
+                    width:2px; height:100%;
+                    right: 0; left:auto;
+                }
+                .custom-handlers.right:after,
+                .custom-handlers.left:after
+                {
+                    height: 100%;
+                }
+    
+                
+                #demo-5{
+                    border: 4px solid #38c429;
+                    overflow:scroll
+                }
+                #demo-6{
+                    padding: 10px;
+                }
+      
+                
+            </style>
+            
+    </head>
+    <body>
+      
+        
+        
+        <!--Demo start-->
+        <div class="demo">   
+        <div class="container" id="container-6" style="height: 600px; ">
+            <div id="demo-6" class="rect"></div>
+        </div>
+        <script>
+            var $demo6 = $('#demo-6');
+            $demo6.clayfy({
+                type : 'resizable',
+                container : '#container-6',        
+                className : 'custom-handlers',
+                
+            });
+           
+        </script>
+        </div>
+        <!--Demo ends-->
+        
+    </body>
+</html>

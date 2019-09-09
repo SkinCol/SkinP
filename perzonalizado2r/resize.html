@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Example</title>
+	<script src="resize.js"></script>
+	<link rel="stylesheet" href="resize.css">
+	
+	<script>		
+        
+        window.addEventListener("load", init);
+        
+        function init(){
+            ResizeJs.apply('.resizeMe', document.body);
+            ResizeJs.apply('#div-3', document.body);
+        }
+
+        
+	</script>
+	
+	<style>
+        .resizeMe, #div-3{
+            position: absolute;
+            width:100px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            font-family: sans-serif;
+        }
+        
+        #div-3{
+            
+            background-color: forestgreen;
+            left: 50px;
+            top: 50px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div style="background-color: black; width:400px;height: 400px; ">
+    <div id="div-3" class="resizeMe"></div>
+</div>
+</body>
+</html>

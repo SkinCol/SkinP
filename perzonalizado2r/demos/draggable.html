@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Clayfy: Demos draggable</title>
+    <meta
+      name="description"
+      content="Clayfy JQuery plugin. Make elements draggable with less effort."
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../libs/jquery.js"></script>
+    <script src="../dist/clayfy.min.js"></script>
+    <link rel="stylesheet" href="../dist/clayfy.min.css" type="text/css" />
+    <style>
+      h3 {
+        margin: 30px 0 0 0;
+      }
+      p {
+        margin: 0;
+      }
+      pre {
+        margin: 0;
+        color: #555;
+      }
+      .rect {
+        height: 100px;
+        width: 150px;
+        background: #ccc;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 1000;
+      }
+      .container {
+        margin-bottom: 20px;
+        height: 110px;
+        max-width: 500px;
+        position: relative;
+      }
+      .scrollable {
+        overflow: auto;
+        width: 0;
+        height: 0;
+        display: inline-block;
+        margin-right: 50px;
+        border: 2px solid #bbb;
+      }
+      .droppable {
+        height: 200px;
+        width: 200px;
+        border: 2px solid transparent;
+        background: #d0e9e1;
+        display: inline-block;
+        margin-right: 50px;
+      }
+
+      #container-2 {
+        border: 2px solid #bbb;
+        height: 200px;
+      }
+      #container-4 {
+        border: 2px solid #bbb;
+        height: 200px;
+      }
+      #container-5 {
+        border: 2px solid #bbb;
+        height: 200px;
+        overflow: auto;
+      }
+      #container-8 {
+        border: 2px solid #bbb;
+        height: 200px;
+      }
+      #droppable-10.clayfy-dragenter {
+        border-color: #38c429;
+      }
+      #droppable-10.clayfy-dropinside-demo-10 {
+        border-color: #5a6de3;
+      }
+      #droppable-10.clayfy-dropinside-demo-11 {
+        border-color: #990000;
+      }
+      #demo-10.clayfy-dragenter {
+        background: #38c429;
+      }
+      #demo-10.clayfy-dropinside {
+        background: #5a6de3;
+      }
+      .scrollable-inner {
+        height: 1500px;
+        width: 1500px;
+        background: rgba(237, 251, 255, 1);
+        background: -moz-linear-gradient(
+          top,
+          rgba(237, 251, 255, 1) 0%,
+          rgba(0, 78, 99, 1) 100%
+        );
+        background: -webkit-gradient(
+          left top,
+          left bottom,
+          color-stop(0%, rgba(237, 251, 255, 1)),
+          color-stop(100%, rgba(0, 78, 99, 1))
+        );
+        background: -webkit-linear-gradient(
+          top,
+          rgba(237, 251, 255, 1) 0%,
+          rgba(0, 78, 99, 1) 100%
+        );
+        background: -o-linear-gradient(
+          top,
+          rgba(237, 251, 255, 1) 0%,
+          rgba(0, 78, 99, 1) 100%
+        );
+        background: -ms-linear-gradient(
+          top,
+          rgba(237, 251, 255, 1) 0%,
+          rgba(0, 78, 99, 1) 100%
+        );
+        background: linear-gradient(
+          to bottom,
+          rgba(237, 251, 255, 1) 0%,
+          rgba(0, 78, 99, 1) 100%
+        );
+      }
+
+      #demo-4 {
+        cursor: w-resize;
+      }
+      #demo-6 {
+        z-index: 10000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="demo">
+      <div class="container">
+        <div id="demo-3" class="rect"></div>
+      </div>
+      <script>
+        $("#demo-3").clayfy({
+          container: [0, 300, 300, 5]
+        });
+      </script>
+    </div>
+
+
+  </body>
+</html>
+
+
+
+
+
