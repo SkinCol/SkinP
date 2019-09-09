@@ -12,6 +12,42 @@
         <servlet-name>ControllerSkin</servlet-name>
         <servlet-class>Controller.ControllerSkin</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Controller</servlet-name>
+        <servlet-class>ControllerCRUD.Controller</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DepartamentoController</servlet-name>
+        <servlet-class>ControllerCRUD.DepartamentoController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ControllerValidacion</servlet-name>
+        <servlet-class>ControllerCRUD.ControllerValidacion</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DispositivoController</servlet-name>
+        <servlet-class>ControllerCRUD.DispositivoController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>FacInsumoController</servlet-name>
+        <servlet-class>ControllerCRUD.FacInsumoController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LimitadoController</servlet-name>
+        <servlet-class>ControllerCRUD.LimitadoController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MaterialController</servlet-name>
+        <servlet-class>ControllerCRUD.MaterialController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SkinController</servlet-name>
+        <servlet-class>ControllerCRUD.SkinController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ProveedorController</servlet-name>
+        <servlet-class>ControllerCRUD.ProveedorController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ControllerDispositivo</servlet-name>
         <url-pattern>/ControllerDispositivo</url-pattern>
@@ -23,6 +59,42 @@
     <servlet-mapping>
         <servlet-name>ControllerSkin</servlet-name>
         <url-pattern>/ControllerSkin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Controller</servlet-name>
+        <url-pattern>/Controller</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DepartamentoController</servlet-name>
+        <url-pattern>/DepartamentoController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControllerValidacion</servlet-name>
+        <url-pattern>/ControllerValidacion</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DispositivoController</servlet-name>
+        <url-pattern>/DispositivoController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FacInsumoController</servlet-name>
+        <url-pattern>/FacInsumoController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LimitadoController</servlet-name>
+        <url-pattern>/LimitadoController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MaterialController</servlet-name>
+        <url-pattern>/MaterialController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SkinController</servlet-name>
+        <url-pattern>/SkinController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProveedorController</servlet-name>
+        <url-pattern>/ProveedorController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -19,8 +19,9 @@ import java.util.List;
  * @author alejandro
  */
 public class DispositivoDAO implements DispositivoCRUD {
+
     Conexion cn = new Conexion();
-    Connection con; 
+    Connection con;
     PreparedStatement ps;
     ResultSet rs;
     Dispositivo di = new Dispositivo();
@@ -33,10 +34,14 @@ public class DispositivoDAO implements DispositivoCRUD {
             con = cn.getConnection();
             ps = con.prepareStatement(sql);
             rs = ps.executeQuery();
-            while(rs.next()){
+            while (rs.next()) {
+                Dispositivo di = new Dispositivo();
                 di.setIdDispositivo(rs.getInt(1));
-                
-                
+                di.setModelo(rs.getString(2));
+                di.setMarca(rs.getString(3));
+                di.setTipo(rs.getString(4));
+                di.setImagen(rs.getString(5));
+                Dispositivo.add(di);
             }
         } catch (Exception e) {
         }
@@ -45,22 +50,57 @@ public class DispositivoDAO implements DispositivoCRUD {
 
     @Override
     public Dispositivo List(int IdDispositivo) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String sql = "select * from dispositivo where IdDispositivo=" + IdDispositivo;
+        try {
+            con = cn.getConnection();
+            ps = con.prepareStatement(sql);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                di.setIdDispositivo(rs.getInt(1));
+                di.setModelo(rs.getString(2));
+                di.setMarca(rs.getString(3));
+                di.setTipo(rs.getString(4));
+                di.setImagen(rs.getString(5));
+            }
+        } catch (Exception e) {
+        }
+        return di;
     }
 
     @Override
-    public boolean Add(Dispositivo di) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public boolean Add(Dispositivo dis) {
+        String sql = "insert into dispositivo (Modelo, Marca, Tipo, Imagen) values ('" + dis.getModelo() + "','" + dis.getMarca() + "','" + dis.getTipo() + "','" + dis.getImagen() + "')";
+        try {
+            con = cn.getConnection();
+            ps = con.prepareStatement(sql);
+            ps.executeUpdate();
+        } catch (Exception e) {
+        }
+        return false;
     }
 
     @Override
-    public boolean Edit(Dispositivo di) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public boolean Edit(Dispositivo dis) {
+        String sql = "update dispositivo set Modelo='" + dis.getModelo() + "',Marca='" + dis.getMarca() + "',Tipo='" + dis.getTipo() + "',Imagen='" + dis.getImagen() + "' where IdDispositivo=" + dis.getIdDispositivo();
+        try {
+            con = cn.getConnection();
+            ps = con.prepareStatement(sql);
+            ps.executeUpdate();
+        } catch (Exception e) {
+        }
+        return false;
     }
 
     @Override
-    public boolean Delete(int Dispositivo) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public boolean Delete(int IdDispositivo) {
+        String sql = "delete from dispositivo where IdDispositivo =" + IdDispositivo;
+        try {
+            con = cn.getConnection();
+            ps = con.prepareStatement(sql);
+            ps.executeUpdate();
+        } catch (Exception e) {
+        }
+        return false;
     }
-    
+
 }

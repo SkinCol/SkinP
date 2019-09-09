@@ -6,12 +6,11 @@
 package ModelCRUD;
 
 import Config.Conexion;
-import Interface.DepartamentoCRUD;
-import ModelCRUD.Departamento;
+import Interface.MaterialCRUD;
+import ModelCRUD.Material;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,77 +18,80 @@ import java.util.List;
  *
  * @author alejandro
  */
-public class DepartamentoDAO implements DepartamentoCRUD {
+public class MaterialDAO implements MaterialCRUD {
 
     Conexion cn = new Conexion();
     Connection con;
-    ResultSet rs;
     PreparedStatement ps;
-    Departamento de = new Departamento();
+    ResultSet rs;
+    Material m = new Material();
 
     @Override
-    public List Listar() {
-        List<Departamento> Departamento = new ArrayList();
-        String sql = "Select + From departamento";
-        try {
-            con = cn.getConnection();
-            ps = con.prepareStatement(sql);
-            rs = ps.executeQuery();
-
-            while (rs.next()) {
-                Departamento de = new Departamento();
-                de.setIdDepartamento(rs.getInt(1));
-                de.setNombre(rs.getString(2));
-                Departamento.add(de);
-            }
-        } catch (Exception e) {
-        }
-        return Departamento;
-    }
-
-    @Override
-    public Departamento List(int IdDepartamento) {
-        String sql = "Select * from departamento where IdDepartamento = " + IdDepartamento;
+    public java.util.List Listar() {
+        List<Material> Material = new ArrayList();
+        String sql = "select * from material";
         try {
             con = cn.getConnection();
             ps = con.prepareStatement(sql);
             rs = ps.executeQuery();
             while (rs.next()) {
-                de.setIdDepartamento(rs.getInt(1));
-                de.setNombre(rs.getString(2));
+                Material m = new Material();
+                m.setIdMaterial(rs.getInt(1));
+                m.setNombre(rs.getString(2));
+                m.setDescripcionn(rs.getString(3));
+                Material.add(m);
+
             }
         } catch (Exception e) {
         }
-        return de;
+        return Material;
     }
 
     @Override
-    public boolean Add(Departamento de) {
-        String sql = "insert into departamento (Nombre) values ('" + de.getNombre() + "')";
+    public Material List(int IdMaterial) {
+        String sql = "select * from proveedor where IdMaterial=" + IdMaterial;
         try {
             con = cn.getConnection();
             ps = con.prepareStatement(sql);
-            ps.executeQuery();
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                m.setIdMaterial(rs.getInt(1));
+                m.setNombre(rs.getString(2));
+                m.setDescripcionn(rs.getString(3));
+
+            }
+        } catch (Exception e) {
+        }
+        return m;
+    }
+
+    @Override
+    public boolean Add(Material m) {
+        String sql = "insert into material (Nombre, Descripcion) values ('" + m.getNombre() + "','" + m.getDescripcionn() + "')";
+        try {
+            con = cn.getConnection();
+            ps = con.prepareStatement(sql);
+            ps.executeUpdate();
         } catch (Exception e) {
         }
         return false;
     }
 
     @Override
-    public boolean Edit(Departamento de) {
-        String sql = "update departamento set Nombre='" + de.getNombre() + "' where IdDepartamento=" + de.getIdDepartamento();
+    public boolean Edit(Material m) {
+        String sql = "update proveedor set Nombre='" + m.getNombre() + "',Descripcion='" + m.getDescripcionn() + "' where IdMaterial=" + m.getIdMaterial();
         try {
             con = cn.getConnection();
             ps = con.prepareStatement(sql);
-            ps.executeQuery();
+            ps.executeUpdate();
         } catch (Exception e) {
         }
         return false;
     }
 
     @Override
-    public boolean Delete(int IdDepartamento) {
-        String sql = "delete from departamento where IdDepartamentor =" + IdDepartamento;
+    public boolean Delete(int IdMaterial) {
+        String sql = "delete from material where IdMaterial =" + IdMaterial;
         try {
             con = cn.getConnection();
             ps = con.prepareStatement(sql);

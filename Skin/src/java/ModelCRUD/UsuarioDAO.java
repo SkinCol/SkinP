@@ -15,12 +15,13 @@ import java.sql.ResultSet;
  * @author alejandro
  */
 public class UsuarioDAO {
+
     Conexion cn = new Conexion();
     Connection con;
     ResultSet rs;
     PreparedStatement ps;
-    
-    public Usuario Validacion(String Email, String Contrasena){
+
+    public Usuario Validacion(String Email, String Contrasena) {
         Usuario u = new Usuario();
         String sql = "select * from usuario where Email=? and Contrasena=?";
         try {
@@ -29,7 +30,7 @@ public class UsuarioDAO {
             ps.setString(1, Email);
             ps.setString(2, Contrasena);
             rs = ps.executeQuery();
-            while(rs.next()){
+            while (rs.next()) {
                 u.setIdUser(rs.getInt(1));
                 u.setEmail(rs.getString(9));
                 u.setContrasena(rs.getString(10));

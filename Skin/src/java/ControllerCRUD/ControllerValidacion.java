@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Controller;
+package ControllerCRUD;
 
-import Model.Usuario;
-import Model.UsuarioDAO;
+import ModelCRUD.Usuario;
+import ModelCRUD.UsuarioDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -16,9 +16,9 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author angel
+ * @author alejandro
  */
-public class Validacion extends HttpServlet {
+public class ControllerValidacion extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -35,16 +35,15 @@ public class Validacion extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Validacion</title>");
+            out.println("<title>Servlet ControllerValidacion</title>");
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet Validacion at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet ControllerValidacion at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -65,14 +64,24 @@ public class Validacion extends HttpServlet {
         processRequest(request, response);
     }
 
+    /**
+     * Handles the HTTP <code>POST</code> method.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String accion = request.getParameter("accion");
+
         if (accion.equalsIgnoreCase("Ingresar")) {
             String Email = request.getParameter("Email");
             String Contrasena = request.getParameter("Contrasena");
             u = udao.Validacion(Email, Contrasena);
+
             if (u.getEmail() != null) {
                 request.setAttribute("usuario", u);
                 request.getRequestDispatcher("Controlador?accion=Principal").forward(request, response);
@@ -84,6 +93,11 @@ public class Validacion extends HttpServlet {
         }
     }
 
+    /**
+     * Returns a short description of the servlet.
+     *
+     * @return a String containing servlet description
+     */
     @Override
     public String getServletInfo() {
         return "Short description";

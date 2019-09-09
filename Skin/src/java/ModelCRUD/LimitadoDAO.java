@@ -6,12 +6,11 @@
 package ModelCRUD;
 
 import Config.Conexion;
-import Interface.DepartamentoCRUD;
-import ModelCRUD.Departamento;
+import Interface.LimitadoCRUD;
+import Model.Limitado;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,77 +18,79 @@ import java.util.List;
  *
  * @author alejandro
  */
-public class DepartamentoDAO implements DepartamentoCRUD {
+public class LimitadoDAO implements LimitadoCRUD {
 
     Conexion cn = new Conexion();
     Connection con;
-    ResultSet rs;
     PreparedStatement ps;
-    Departamento de = new Departamento();
+    ResultSet rs;
+    Limitado li = new Limitado();
 
     @Override
-    public List Listar() {
-        List<Departamento> Departamento = new ArrayList();
-        String sql = "Select + From departamento";
-        try {
-            con = cn.getConnection();
-            ps = con.prepareStatement(sql);
-            rs = ps.executeQuery();
-
-            while (rs.next()) {
-                Departamento de = new Departamento();
-                de.setIdDepartamento(rs.getInt(1));
-                de.setNombre(rs.getString(2));
-                Departamento.add(de);
-            }
-        } catch (Exception e) {
-        }
-        return Departamento;
-    }
-
-    @Override
-    public Departamento List(int IdDepartamento) {
-        String sql = "Select * from departamento where IdDepartamento = " + IdDepartamento;
+    public java.util.List Listar() {
+        List<Limitado> Limitado = new ArrayList();
+        String sql = "select * from limitado";
         try {
             con = cn.getConnection();
             ps = con.prepareStatement(sql);
             rs = ps.executeQuery();
             while (rs.next()) {
-                de.setIdDepartamento(rs.getInt(1));
-                de.setNombre(rs.getString(2));
+                Limitado li = new Limitado();
+                li.setIdLimitado(rs.getInt(1));
+                li.setNombre(rs.getString(2));
+                li.setImagen(rs.getString(3));
+                Limitado.add(li);
             }
         } catch (Exception e) {
         }
-        return de;
+        return Limitado;
     }
 
     @Override
-    public boolean Add(Departamento de) {
-        String sql = "insert into departamento (Nombre) values ('" + de.getNombre() + "')";
+    public Limitado List(int IdLimitado) {
+        String sql = "select * from limitado where IdLimitado=" + IdLimitado;
         try {
             con = cn.getConnection();
             ps = con.prepareStatement(sql);
-            ps.executeQuery();
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                li.setIdLimitado(rs.getInt(1));
+                li.setNombre(rs.getString(2));
+                li.setImagen(rs.getString(3));
+
+            }
+        } catch (Exception e) {
+        }
+        return li;
+    }
+
+    @Override
+    public boolean Add(Limitado li) {
+        String sql = "insert into limitado (Nombre, Imagen) values ('" + li.getNombre() + "','" + li.getImagen() + "')";
+        try {
+            con = cn.getConnection();
+            ps = con.prepareStatement(sql);
+            ps.executeUpdate();
         } catch (Exception e) {
         }
         return false;
     }
 
     @Override
-    public boolean Edit(Departamento de) {
-        String sql = "update departamento set Nombre='" + de.getNombre() + "' where IdDepartamento=" + de.getIdDepartamento();
+    public boolean Edit(Limitado li) {
+        String sql = "update limitado set Nombre='" + li.getNombre() + "', Imagen='" + li.getImagen() + "' where IdLimitado=" + li.getIdLimitado();
         try {
             con = cn.getConnection();
             ps = con.prepareStatement(sql);
-            ps.executeQuery();
+            ps.executeUpdate();
         } catch (Exception e) {
         }
         return false;
     }
 
     @Override
-    public boolean Delete(int IdDepartamento) {
-        String sql = "delete from departamento where IdDepartamentor =" + IdDepartamento;
+    public boolean Delete(int IdLimitado) {
+        String sql = "delete from limitado where IdLimitado =" + IdLimitado;
         try {
             con = cn.getConnection();
             ps = con.prepareStatement(sql);
