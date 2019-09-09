@@ -34,8 +34,6 @@ public class ControllerSkin extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-
-
     SkinsiPhone6DAO Sip6DAO = new SkinsiPhone6DAO();
     SkinsiPhone5DAO Sip5DAO = new SkinsiPhone5DAO();
     Skin s = new Skin();
@@ -61,7 +59,7 @@ public class ControllerSkin extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String accion = request.getParameter("accion");    
+        String accion = request.getParameter("accion");
 
         carbon = Sip6DAO.CarbonSeriesiPhone6();
         camo = Sip6DAO.CamoSeriesiPhone6();
@@ -76,7 +74,7 @@ public class ControllerSkin extends HttpServlet {
         aniversario = Sip6DAO.EdicionAniversarioiPhone6();
         retro = Sip6DAO.RetroAppleiPhone6();
         hemp = Sip6DAO.HempSeriesiPhone6();
-        
+
         carbon = Sip5DAO.CarbonSeriesiPhone5();
         board = Sip5DAO.BoardSeriesiPhone5();
         color = Sip5DAO.ColorSeriesiPhone5();
@@ -124,37 +122,37 @@ public class ControllerSkin extends HttpServlet {
             case "camo":
                 request.setAttribute("camo", camo);
                 request.getRequestDispatcher("Skins/iPhone6/CamoSeriesiPhone6.jsp").forward(request, response);
-                break; 
+                break;
 
             case "leather":
                 request.setAttribute("leather", leather);
                 request.getRequestDispatcher("Skins/iPhone6/LeatherSeriesiPhone6.jsp").forward(request, response);
-                break; 
+                break;
 
             case "glitz":
                 request.setAttribute("glitz", glitz);
                 request.getRequestDispatcher("Skins/iPhone6/GlitzSeriesiPhone6.jsp").forward(request, response);
-                break;  
+                break;
 
             case "stone":
                 request.setAttribute("stone", stone);
                 request.getRequestDispatcher("Skins/iPhone6/StoneSeriesiPhone6.jsp").forward(request, response);
-                break;   
+                break;
 
             case "alcantara":
                 request.setAttribute("alcantara", alcantara);
                 request.getRequestDispatcher("Skins/iPhone6/AlcantaraSeriesiPhone6.jsp").forward(request, response);
-                break;  
+                break;
 
             case "natural":
                 request.setAttribute("natural", natural);
                 request.getRequestDispatcher("Skins/iPhone6/NaturalSeriesiPhone6.jsp").forward(request, response);
-                break;  
+                break;
 
             case "aniversario":
                 request.setAttribute("aniversario", aniversario);
                 request.getRequestDispatcher("Skins/iPhone6/EdicionAniversarioiPhone6.jsp").forward(request, response);
-                break; 
+                break;
 
             case "retro":
                 request.setAttribute("retro", retro);
@@ -164,30 +162,59 @@ public class ControllerSkin extends HttpServlet {
             case "hemp":
                 request.setAttribute("hemp", hemp);
                 request.getRequestDispatcher("Skins/iPhone6/HempSeriesiPhone6.jsp").forward(request, response);
-                break;    
-                
+                break;
+
             case "AgregarCarrito":
+                int pos = 0;
+                cantidad = 1;
                 int idskin = Integer.parseInt(request.getParameter("Id"));
                 s = Sip6DAO.listarId(idskin);
-                item = item + 1;
-                Carrito cart = new Carrito();
-                cart.setItem(item);
-                cart.setIdSkin(s.getIdSkin());
-                cart.setNombre(s.getNombre());
-                cart.setPrecioCompra(s.getCostoSkin());
-                cart.setCantidad(cantidad);
-                cart.setSubTotal(cantidad * s.getCostoSkin());
-                cart.setImagen(s.getImagen());
+                if (listaCarrito.size() > 0) {
+                    for (int i = 0; i < listaCarrito.size(); i++) {
+                        if (idskin == listaCarrito.get(i).getIdSkin()) {
+                            pos = i;
+                        }
+                    }
+                    if (idskin == listaCarrito.get(pos).getIdSkin()) {
+                        cantidad = listaCarrito.get(pos).getCantidad() + cantidad;
+                        double subtotal = listaCarrito.get(pos).getPrecioCompra() * cantidad;
+                        listaCarrito.get(pos).setCantidad(cantidad);
+                        listaCarrito.get(pos).setSubTotal(subtotal);
+                    } else {
+                        item = item + 1;
+                        Carrito cart = new Carrito();
+                        cart.setItem(item);
+                        cart.setIdSkin(s.getIdSkin());
+                        cart.setNombre(s.getNombre());
+                        cart.setPrecioCompra(s.getCostoSkin());
+                        cart.setCantidad(cantidad);
+                        cart.setSubTotal(cantidad * s.getCostoSkin());
+                        cart.setImagen(s.getImagen());
 
-                listaCarrito.add(cart);
+                        listaCarrito.add(cart);
+                    }
+                } else {
+                    item = item + 1;
+                    Carrito cart = new Carrito();
+                    cart.setItem(item);
+                    cart.setIdSkin(s.getIdSkin());
+                    cart.setNombre(s.getNombre());
+                    cart.setPrecioCompra(s.getCostoSkin());
+                    cart.setCantidad(cantidad);
+                    cart.setSubTotal(cantidad * s.getCostoSkin());
+                    cart.setImagen(s.getImagen());
+
+                    listaCarrito.add(cart);
+                }
+
                 request.setAttribute("contador", listaCarrito.size());
                 request.getRequestDispatcher("ControllerSkin?accion=carbon").forward(request, response);
                 break;
 
             case "Delete":
                 int Id = Integer.parseInt(request.getParameter("IdSkin"));
-                for(int i = 0; i <listaCarrito.size(); i++){
-                    if (listaCarrito.get(i).getIdSkin()== Id) {
+                for (int i = 0; i < listaCarrito.size(); i++) {
+                    if (listaCarrito.get(i).getIdSkin() == Id) {
                         listaCarrito.remove(i);
                     }
                 }
@@ -196,7 +223,7 @@ public class ControllerSkin extends HttpServlet {
             case "Carrito":
                 totalPagar = 0.0;
                 request.setAttribute("carrito", listaCarrito);
-                for(int i = 0; i < listaCarrito.size(); i++){
+                for (int i = 0; i < listaCarrito.size(); i++) {
                     totalPagar = totalPagar + listaCarrito.get(i).getSubTotal();
                 }
                 request.setAttribute("totalPagar", totalPagar);

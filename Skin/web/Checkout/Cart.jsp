@@ -83,7 +83,7 @@
         <main class="mt-5 pt-4">
             <div class="container-fluid pl-5 pr-5">
                 <div class="row">
-                    <div class="col-9">
+                    <div class="col-sm-9">
                         <!-- Editable table -->
                         <div class="card">
                             <h3 class="card-header text-center font-weight-bold text-uppercase py-4">Tu Carrito  <a class="btn btn-success btn-sm" href="Dispositivos.jsp">
@@ -125,7 +125,7 @@
                         </div>
                         <!-- Editable table -->
                     </div>
-                    <div class="col-3">
+                    <div class="col-lg-3 col-sm-12">
                         <!-- Card -->
                         <div class="card">
                             <div class="card-header">
