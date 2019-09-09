@@ -3,13 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/angel/Documents/NetBeansProjects/skinp/web/Principal.jsp</file>
-            <file>file:/C:/Users/angel/Documents/NetBeansProjects/skinp/src/java/Model/Skin.java</file>
-            <file>file:/C:/Users/angel/Documents/NetBeansProjects/skinp/src/java/config/Conexion.java</file>
-            <file>file:/C:/Users/angel/Documents/NetBeansProjects/skinp/src/java/ModeloDAO/SkinDAO.java</file>
-            <file>file:/C:/Users/angel/Documents/NetBeansProjects/skinp/src/java/Controller/SkinController.java</file>
-            <file>file:/C:/Users/angel/Documents/NetBeansProjects/skinp/web/WEB-INF/jsp/indexSkin.jsp</file>
-            <file>file:/C:/Users/angel/Documents/NetBeansProjects/skinp/src/java/Interfaces/CRUDskin.java</file>
+            <file>file:/home/alejandro/Documentos/GitHub/SkinP/skinp/src/java/ModeloDAO/DeptoDAO.java</file>
+            <file>file:/home/alejandro/Documentos/GitHub/SkinP/skinp/src/java/Model/UsuarioDAO.java</file>
+            <file>file:/home/alejandro/Documentos/GitHub/SkinP/skinp/src/java/ModeloDAO/DispositivoDAO.java</file>
         </group>
     </open-files>
 </project-private>
