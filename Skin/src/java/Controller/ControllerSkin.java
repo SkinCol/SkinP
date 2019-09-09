@@ -9,6 +9,7 @@ import Model.Carrito;
 
 import Model.Skin;
 import Model.SkinsiPhone5DAO;
+import Model.SkinsiPhone5sDAO;
 import Model.SkinsiPhone6DAO;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -36,7 +37,9 @@ public class ControllerSkin extends HttpServlet {
      */
     SkinsiPhone6DAO Sip6DAO = new SkinsiPhone6DAO();
     SkinsiPhone5DAO Sip5DAO = new SkinsiPhone5DAO();
+    SkinsiPhone5sDAO Sip5sDAO = new SkinsiPhone5sDAO();
     Skin s = new Skin();
+
     List<Skin> carbon = new ArrayList();
     List<Skin> camo = new ArrayList();
     List<Skin> color = new ArrayList();
@@ -81,6 +84,17 @@ public class ControllerSkin extends HttpServlet {
         wood = Sip5DAO.WoodSeriesiPhone5();
         metal = Sip5DAO.MetalSeriesiPhone5();
 
+        carbon = Sip5sDAO.CarbonSeriesiPhone5s();
+        color = Sip5sDAO.ColorSeriesiPhone5s();
+        wood = Sip5sDAO.WoodSeriesiPhone5s();
+        metal = Sip5sDAO.MetalSeriesiPhone5s();
+        leather = Sip5sDAO.LeatherSeriesiPhone5s();
+        glitz = Sip5sDAO.GlitzSeriesiPhone5s();
+        stone = Sip5sDAO.StoneSeriesiPhone5s();
+        alcantara = Sip5sDAO.AlcantaraSeriesiPhone5s();
+        natural = Sip5sDAO.NaturalSeriesiPhone5s();
+        hemp = Sip5sDAO.HempSeriesiPhone5s();
+
         switch (accion) {
             case "1":
                 request.setAttribute("carbon", carbon);
@@ -96,27 +110,64 @@ public class ControllerSkin extends HttpServlet {
                 request.setAttribute("aniversario", aniversario);
                 request.setAttribute("retro", retro);
                 request.setAttribute("hemp", hemp);
+                request.setAttribute("board", board);
                 request.getRequestDispatcher("Skins/iPhone6Skins.jsp").forward(request, response);
+                break;
+
+            case "2":
+                request.setAttribute("carbon", carbon);
+                request.setAttribute("color", color);
+                request.setAttribute("wood", wood);
+                request.setAttribute("metal", metal);
+                request.setAttribute("board", board);
+                request.getRequestDispatcher("Skins/iPhone5sSkins.jsp").forward(request, response);
+                break;
+
+            case "3":
+                request.setAttribute("carbon", carbon);
+                request.setAttribute("color", color);
+                request.setAttribute("wood", wood);
+                request.setAttribute("metal", metal);
+                request.setAttribute("leather", leather);
+                request.setAttribute("glitz", glitz);
+                request.setAttribute("stone", stone);
+                request.setAttribute("alcantara", alcantara);
+                request.setAttribute("natural", natural);
+                request.setAttribute("hemp", hemp);
+                request.getRequestDispatcher("Skins/iPhone5Skins.jsp").forward(request, response);
                 break;
 
             case "color":
                 request.setAttribute("color", color);
                 request.getRequestDispatcher("Skins/iPhone6/ColorSeriesiPhone6.jsp").forward(request, response);
+                request.getRequestDispatcher("Skins/iPhone6/ColorSeriesiPhone5.jsp").forward(request, response);
+                request.getRequestDispatcher("Skins/iPhone6/ColorSeriesiPhone5s.jsp").forward(request, response);
                 break;
 
             case "carbon":
                 request.setAttribute("carbon", carbon);
                 request.getRequestDispatcher("Skins/iPhone6/CarbonSeriesiPhone6.jsp").forward(request, response);
+                request.getRequestDispatcher("Skins/iPhone6/CarbonSeriesiPhone5.jsp").forward(request, response);
+                request.getRequestDispatcher("Skins/iPhone6/CarbonSeriesiPhone5s.jsp").forward(request, response);
                 break;
 
             case "wood":
                 request.setAttribute("wood", wood);
                 request.getRequestDispatcher("Skins/iPhone6/WoodSeriesiPhone6.jsp").forward(request, response);
+                request.getRequestDispatcher("Skins/iPhone6/WoodSeriesiPhone5.jsp").forward(request, response);
+                request.getRequestDispatcher("Skins/iPhone6/WoodSeriesiPhone5s.jsp").forward(request, response);
                 break;
 
             case "metal":
                 request.setAttribute("metal", metal);
                 request.getRequestDispatcher("Skins/iPhone6/MetalSeriesiPhone6.jsp").forward(request, response);
+                request.getRequestDispatcher("Skins/iPhone6/MetalSeriesiPhone5.jsp").forward(request, response);
+                request.getRequestDispatcher("Skins/iPhone6/MetalSeriesiPhone5s.jsp").forward(request, response);
+                break;
+
+            case "board":
+                request.setAttribute("board", board);
+                request.getRequestDispatcher("Skins/iPhone6/BoardSeriesiPhone5.jsp").forward(request, response);
                 break;
 
             case "camo":
@@ -127,26 +178,31 @@ public class ControllerSkin extends HttpServlet {
             case "leather":
                 request.setAttribute("leather", leather);
                 request.getRequestDispatcher("Skins/iPhone6/LeatherSeriesiPhone6.jsp").forward(request, response);
+                request.getRequestDispatcher("Skins/iPhone6/LeatherSeriesiPhone5s.jsp").forward(request, response);
                 break;
 
             case "glitz":
                 request.setAttribute("glitz", glitz);
                 request.getRequestDispatcher("Skins/iPhone6/GlitzSeriesiPhone6.jsp").forward(request, response);
+                request.getRequestDispatcher("Skins/iPhone6/GlitzSeriesiPhone5s.jsp").forward(request, response);
                 break;
 
             case "stone":
                 request.setAttribute("stone", stone);
                 request.getRequestDispatcher("Skins/iPhone6/StoneSeriesiPhone6.jsp").forward(request, response);
+                request.getRequestDispatcher("Skins/iPhone6/StoneSeriesiPhone5s.jsp").forward(request, response);
                 break;
 
             case "alcantara":
                 request.setAttribute("alcantara", alcantara);
                 request.getRequestDispatcher("Skins/iPhone6/AlcantaraSeriesiPhone6.jsp").forward(request, response);
+                request.getRequestDispatcher("Skins/iPhone6/AlcantaraSeriesiPhone5s.jsp").forward(request, response);
                 break;
 
             case "natural":
                 request.setAttribute("natural", natural);
                 request.getRequestDispatcher("Skins/iPhone6/NaturalSeriesiPhone6.jsp").forward(request, response);
+                request.getRequestDispatcher("Skins/iPhone6/NaturalSeriesiPhone5s.jsp").forward(request, response);
                 break;
 
             case "aniversario":
@@ -162,6 +218,7 @@ public class ControllerSkin extends HttpServlet {
             case "hemp":
                 request.setAttribute("hemp", hemp);
                 request.getRequestDispatcher("Skins/iPhone6/HempSeriesiPhone6.jsp").forward(request, response);
+                request.getRequestDispatcher("Skins/iPhone6/HempSeriesiPhone5s.jsp").forward(request, response);
                 break;
 
             case "AgregarCarrito":

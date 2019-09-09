@@ -48,7 +48,7 @@ public class SkinsiPhone5DAO {
 
     public List CarbonSeriesiPhone5() {
         List<Skin> Carbon = new ArrayList();
-        String sql = "SELECT * FROM skin WHERE IdSerie = 1 and IdDispositivo = 160";
+        String sql = "SELECT * FROM skin WHERE IdSerie = 1 and IdDispositivo = 163";
         try {
             con = cn.getConnection();
             ps = con.prepareStatement(sql);
@@ -77,7 +77,7 @@ public class SkinsiPhone5DAO {
 
     public List BoardSeriesiPhone5() {
         List<Skin> Camo = new ArrayList();
-        String sql = "SELECT * FROM skin WHERE IdSerie = 3 and IdDispositivo = 160";
+        String sql = "SELECT * FROM skin WHERE IdSerie = 10 and IdDispositivo = 163";
         try {
             con = cn.getConnection();
             ps = con.prepareStatement(sql);
@@ -106,7 +106,7 @@ public class SkinsiPhone5DAO {
 
     public List ColorSeriesiPhone5() {
         List<Skin> Color = new ArrayList();
-        String sql = "SELECT * FROM skin WHERE IdSerie = 2 and IdDispositivo = 160";
+        String sql = "SELECT * FROM skin WHERE IdSerie = 2 and IdDispositivo = 163";
         try {
             con = cn.getConnection();
             ps = con.prepareStatement(sql);
@@ -135,7 +135,7 @@ public class SkinsiPhone5DAO {
 
     public List WoodSeriesiPhone5() {
         List<Skin> Wood = new ArrayList();
-        String sql = "SELECT * FROM skin WHERE IdSerie = 5 and IdDispositivo = 160";
+        String sql = "SELECT * FROM skin WHERE IdSerie = 5 and IdDispositivo = 163";
         try {
             con = cn.getConnection();
             ps = con.prepareStatement(sql);
@@ -164,7 +164,7 @@ public class SkinsiPhone5DAO {
 
     public List MetalSeriesiPhone5() {
         List<Skin> Metal = new ArrayList();
-        String sql = "SELECT * FROM skin WHERE IdSerie = 6 and IdDispositivo = 160";
+        String sql = "SELECT * FROM skin WHERE IdSerie = 6 and IdDispositivo = 163";
         try {
             con = cn.getConnection();
             ps = con.prepareStatement(sql);
