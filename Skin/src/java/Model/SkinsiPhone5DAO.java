@@ -76,7 +76,7 @@ public class SkinsiPhone5DAO {
     }
 
     public List BoardSeriesiPhone5() {
-        List<Skin> Camo = new ArrayList();
+        List<Skin> board = new ArrayList();
         String sql = "SELECT * FROM skin WHERE IdSerie = 10 and IdDispositivo = 163";
         try {
             con = cn.getConnection();
@@ -84,24 +84,24 @@ public class SkinsiPhone5DAO {
             rs = ps.executeQuery();
 
             while (rs.next()) {
-                Skin ca = new Skin();
-                ca.setIdSkin(rs.getInt(1));
-                ca.setIdSerie(rs.getInt(2));
-                ca.setIdLimitado(rs.getInt(3));
-                ca.setIdDispositivo(rs.getInt(4));
-                ca.setNombre(rs.getString(5));
-                ca.setImagen(rs.getString(6));
-                ca.setStock(rs.getInt(7));
-                ca.setCostoSkin(rs.getDouble(8));
+                Skin bo = new Skin();
+                bo.setIdSkin(rs.getInt(1));
+                bo.setIdSerie(rs.getInt(2));
+                bo.setIdLimitado(rs.getInt(3));
+                bo.setIdDispositivo(rs.getInt(4));
+                bo.setNombre(rs.getString(5));
+                bo.setImagen(rs.getString(6));
+                bo.setStock(rs.getInt(7));
+                bo.setCostoSkin(rs.getDouble(8));
 
-                Camo.add(ca);
+                board.add(bo);
             }
             con.close();
         } catch (Exception e) {
 
         }
 
-        return Camo;
+        return board;
     }
 
     public List ColorSeriesiPhone5() {

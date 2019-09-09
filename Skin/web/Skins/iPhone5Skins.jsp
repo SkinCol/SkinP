@@ -145,20 +145,20 @@
                         </div>
                     </div>
 
+                    <!-- Carbon Series -->
                     <div class="col-lg-4 col-md-6 mb-4">
+                        <!--Card-->
                         <div class="card">
+                            <!--Card content-->
                             <div class="card-body">
                                 <ul class="rslides" id="slider3">
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571254/Series/iPhone/iPhone%205/Carbon%20Series/sw-aip5-cfwht-2_1_tffp6a.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571253/Series/iPhone/iPhone%205/Carbon%20Series/sw-aip5-cfpur-2_1_ux2bs6.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571253/Series/iPhone/iPhone%205/Carbon%20Series/sw-aip5-cfslv-2_1_ewteda.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571253/Series/iPhone/iPhone%205/Carbon%20Series/sw-aip5-cfred-2_mpaqh9.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571253/Series/iPhone/iPhone%205/Carbon%20Series/sw-aip5-cfpink-2_1_bw66vc.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571253/Series/iPhone/iPhone%205/Carbon%20Series/sw-aip5-cflime-2_2_ax8fnv.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571253/Series/iPhone/iPhone%205/Carbon%20Series/sw-aip5-cforg-2_1_ecdict.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571252/Series/iPhone/iPhone%205/Carbon%20Series/sw-aip5-cfblue-2_1_vohqd6.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571252/Series/iPhone/iPhone%205/Carbon%20Series/sw-aip5-cfgun-2_1_wdhfik.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571252/Series/iPhone/iPhone%205/Carbon%20Series/sw-aip5-cfblk-2_2_1_qj7ccg.jpg"></li>
+                                    <c:forEach var="car" items="${carbon}">
+                                        <li>
+                                            <a href="ControllerSkin?accion=carbon">
+                                                <img style="width: 300px; height: 300px;" src="${car.getImagen()}" alt="${car.getNombre()}">
+                                            </a>
+                                        </li>
+                                    </c:forEach>
                                 </ul>
                             </div>
                             <div class="card-body elegant-color white-text">
@@ -166,59 +166,26 @@
                                     <a>Carbon Series</a>
                                 </h5>
                             </div>
-                        </div>
-                    </div>
 
+                        </div>
+                        <!--/.Card-->
+                    </div>
+                    <!-- Carbon Series -->
+                    
+                    <!-- Wood Series -->
                     <div class="col-lg-4 col-md-6 mb-4">
+                        <!--Card-->
                         <div class="card">
+                            <!--Card content-->
                             <div class="card-body">
                                 <ul class="rslides" id="slider3">
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571255/Series/iPhone/iPhone%205/Color%20Series/sw-aip5-ccyellow-2_1_wa1eqv.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571255/Series/iPhone/iPhone%205/Color%20Series/sw-aip5-ccorg-2_1_1_kjbqtq.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571255/Series/iPhone/iPhone%205/Color%20Series/sw-aip5-ccwht-2_1_1_m3aeql.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571255/Series/iPhone/iPhone%205/Color%20Series/sw-aip5-ccprpl-2_1_2_fcezyg.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571255/Series/iPhone/iPhone%205/Color%20Series/sw-aip5-ccred-2_1_1_g6yysn.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571255/Series/iPhone/iPhone%205/Color%20Series/sw-aip5-ccpink-2_1_1_l9yqgc.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571255/Series/iPhone/iPhone%205/Color%20Series/sw-aip5-ccgreen-2_1_1_rmxm3h.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571254/Series/iPhone/iPhone%205/Color%20Series/sw-aip5-ccblue-2_1_nzvzwe.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571254/Series/iPhone/iPhone%205/Color%20Series/sw-aip5-ccblk-2_1_1_snev6s.jpg"></li>
-                                </ul>
-                            </div>
-                            <div class="card-body elegant-color white-text">
-                                <h5 class="entry-title p-1">
-                                    <a>Color Series</a>
-                                </h5>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <ul class="rslides" id="slider3">
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571254/Series/iPhone/iPhone%205/Color%20Series/sw-aip5-ccblk-2_1_1_snev6s.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571256/Series/iPhone/iPhone%205/Metal%20Series/sw-aip5-msonyx-3_1_y44fyv.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571256/Series/iPhone/iPhone%205/Metal%20Series/sw-aip5-msgold-3_1_tofoyp.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571255/Series/iPhone/iPhone%205/Metal%20Series/sw-aip5-mscopper-3_1_nvy17m.jpg"></li>
-                                </ul>
-                            </div>
-                            <div class="card-body elegant-color white-text">
-                                <h5 class="entry-title p-1">
-                                    <a>Metal Series</a>
-                                </h5>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <ul class="rslides" id="slider3">
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571257/Series/iPhone/iPhone%205/Wood%20Series/sw-aip5-wszebra-3_2_ucpnsj.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571257/Series/iPhone/iPhone%205/Wood%20Series/sw-aip5-wsmaple-3_1_kscygo.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571257/Series/iPhone/iPhone%205/Wood%20Series/sw-aip5-wsmahogany-3_2_yt6eoi.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571257/Series/iPhone/iPhone%205/Wood%20Series/sw-aip5-wsgfebony-3_2_f2psvj.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571257/Series/iPhone/iPhone%205/Wood%20Series/sw-aip5-wsebony-3_1_ugpdyt.jpg"></li>
+                                    <c:forEach var="w" items="${wood}">
+                                        <li>
+                                            <a href="ControllerSkin?accion=wood">
+                                                <img style="width: 300px; height: 300px;" src="${w.getImagen()}" alt="${w.getNombre()}">
+                                            </a>
+                                        </li>
+                                    </c:forEach>
                                 </ul>
                             </div>
                             <div class="card-body elegant-color white-text">
@@ -226,8 +193,92 @@
                                     <a>Wood Series</a>
                                 </h5>
                             </div>
+
                         </div>
+                        <!--/.Card-->
                     </div>
+                    <!-- Wood Series -->
+                    
+                    <!-- Metal Series -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <!--Card-->
+                        <div class="card">
+                            <!--Card content-->
+                            <div class="card-body">
+                                <ul class="rslides" id="slider3">
+                                    <c:forEach var="m" items="${metal}">
+                                        <li>
+                                            <a>
+                                                <img style="width: 300px; height: 300px;" src="${m.getImagen()}" alt="${m.getNombre()}">
+                                            </a>
+                                        </li>
+                                    </c:forEach>
+                                </ul>
+                            </div>
+                            <div class="card-body elegant-color white-text">
+                                <h5 class="entry-title p-1">
+                                    <a>Metal Series</a>
+                                </h5>
+                            </div>
+
+                        </div>
+                        <!--/.Card-->
+                    </div>
+                    <!-- Metal Series -->
+                    
+                    <!-- Color Series -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <!--Card-->
+                        <div class="card">
+                            <!--Card content-->
+                            <div class="card-body">
+                                <ul class="rslides" id="slider3">
+                                    <c:forEach var="co" items="${color}">
+                                        <li>
+                                            <a href="ControllerSkin?accion=color">
+                                                <img style="width: 300px; height: 300px;" src="${co.getImagen()}" alt="${co.getNombre()}">
+                                            </a>
+                                        </li>
+                                    </c:forEach>
+                                </ul>
+                            </div>
+                            <div class="card-body elegant-color white-text">
+                                <h5 class="entry-title p-1">
+                                    <a>Color Series</a>
+                                </h5>
+                            </div>
+
+                        </div>
+                        <!--/.Card-->
+                    </div>
+                    <!-- Color Series -->
+                    
+                    <!-- Board Series -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <!--Card-->
+                        <div class="card">
+                            <!--Card content-->
+                            <div class="card-body">
+                                <ul class="rslides" id="slider3">
+                                    <c:forEach var="bo" items="${board}">
+                                        <li>
+                                            <a href="ControllerSkin?accion=color">
+                                                <img style="width: 300px; height: 300px;" src="${bo.getImagen()}" alt="${bo.getNombre()}">
+                                            </a>
+                                        </li>
+                                    </c:forEach>
+                                </ul>
+                            </div>
+                            <div class="card-body elegant-color white-text">
+                                <h5 class="entry-title p-1">
+                                    <a>Board Series</a>
+                                </h5>
+                            </div>
+
+                        </div>
+                        <!--/.Card-->
+                    </div>
+                    <!-- Board Series -->
                 </div>
                 <!--Grid row-->
             </div>

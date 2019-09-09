@@ -176,7 +176,7 @@
                                                 $ ${me.getCostoSkin()}
                                             </span>
                                         </p>
-                                        <a href="ControllerSkin?accion=AgregarCarrito&IdSkin=${me.getIdSkin()}" class="btn btn-light-green">
+                                        <a href="ControllerSkin?accion=AgregarCarrito&Id=${me.getIdSkin()}" class="btn btn-light-green">
                                             <i class="fas fa-cart-arrow-down"></i> Añadir al carrito
                                         </a>
                                     </div>
