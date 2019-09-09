@@ -55,17 +55,17 @@ public class SkinsiPhone5DAO {
             rs = ps.executeQuery();
 
             while (rs.next()) {
-                Skin car = new Skin();
-                car.setIdSkin(rs.getInt(1));
-                car.setIdSerie(rs.getInt(2));
-                car.setIdLimitado(rs.getInt(3));
-                car.setIdDispositivo(rs.getInt(4));
-                car.setNombre(rs.getString(5));
-                car.setImagen(rs.getString(6));
-                car.setStock(rs.getInt(7));
-                car.setCostoSkin(rs.getDouble(8));
+                Skin Ca = new Skin();
+                Ca.setIdSkin(rs.getInt(1));
+                Ca.setIdSerie(rs.getInt(2));
+                Ca.setIdLimitado(rs.getInt(3));
+                Ca.setIdDispositivo(rs.getInt(4));
+                Ca.setNombre(rs.getString(5));
+                Ca.setImagen(rs.getString(6));
+                Ca.setStock(rs.getInt(7));
+                Ca.setCostoSkin(rs.getDouble(8));
 
-                Carbon.add(car);
+                Carbon.add(Ca);
             }
             con.close();
         } catch (Exception e) {

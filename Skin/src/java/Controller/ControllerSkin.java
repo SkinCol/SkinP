@@ -41,6 +41,7 @@ public class ControllerSkin extends HttpServlet {
     Skin s = new Skin();
 
     List<Skin> carbon = new ArrayList();
+
     List<Skin> camo = new ArrayList();
     List<Skin> color = new ArrayList();
     List<Skin> wood = new ArrayList();
@@ -53,7 +54,23 @@ public class ControllerSkin extends HttpServlet {
     List<Skin> aniversario = new ArrayList();
     List<Skin> retro = new ArrayList();
     List<Skin> hemp = new ArrayList();
-    List<Skin> board = new ArrayList();
+
+    List<Skin> carbon2 = new ArrayList();
+    List<Skin> board2 = new ArrayList();
+    List<Skin> color2 = new ArrayList();
+    List<Skin> wood2 = new ArrayList();
+    List<Skin> metal2 = new ArrayList();
+    
+     List<Skin> carbon3 = new ArrayList();
+    List<Skin> color3 = new ArrayList();
+    List<Skin> wood3 = new ArrayList();
+    List<Skin> metal3 = new ArrayList();
+    List<Skin> leather3 = new ArrayList();
+    List<Skin> glitz3 = new ArrayList();
+    List<Skin> stone3 = new ArrayList();
+    List<Skin> alcantara3 = new ArrayList();
+    List<Skin> natural3 = new ArrayList();
+    List<Skin> hemp3 = new ArrayList();
 
     List<Carrito> listaCarrito = new ArrayList();
     int item;
@@ -78,22 +95,22 @@ public class ControllerSkin extends HttpServlet {
         retro = Sip6DAO.RetroAppleiPhone6();
         hemp = Sip6DAO.HempSeriesiPhone6();
 
-        carbon = Sip5DAO.CarbonSeriesiPhone5();
-        board = Sip5DAO.BoardSeriesiPhone5();
-        color = Sip5DAO.ColorSeriesiPhone5();
-        wood = Sip5DAO.WoodSeriesiPhone5();
-        metal = Sip5DAO.MetalSeriesiPhone5();
+        carbon2 = Sip5DAO.CarbonSeriesiPhone5();
+        board2 = Sip5DAO.BoardSeriesiPhone5();
+        color2 = Sip5DAO.ColorSeriesiPhone5();
+        wood2 = Sip5DAO.WoodSeriesiPhone5();
+        metal2 = Sip5DAO.MetalSeriesiPhone5();
 
-        carbon = Sip5sDAO.CarbonSeriesiPhone5s();
-        color = Sip5sDAO.ColorSeriesiPhone5s();
-        wood = Sip5sDAO.WoodSeriesiPhone5s();
-        metal = Sip5sDAO.MetalSeriesiPhone5s();
-        leather = Sip5sDAO.LeatherSeriesiPhone5s();
-        glitz = Sip5sDAO.GlitzSeriesiPhone5s();
-        stone = Sip5sDAO.StoneSeriesiPhone5s();
-        alcantara = Sip5sDAO.AlcantaraSeriesiPhone5s();
-        natural = Sip5sDAO.NaturalSeriesiPhone5s();
-        hemp = Sip5sDAO.HempSeriesiPhone5s();
+        carbon3 = Sip5sDAO.CarbonSeriesiPhone5s();
+        color3 = Sip5sDAO.ColorSeriesiPhone5s();
+        wood3 = Sip5sDAO.WoodSeriesiPhone5s();
+        metal3 = Sip5sDAO.MetalSeriesiPhone5s();
+        leather3 = Sip5sDAO.LeatherSeriesiPhone5s();
+        glitz3 = Sip5sDAO.GlitzSeriesiPhone5s();
+        stone3 = Sip5sDAO.StoneSeriesiPhone5s();
+        alcantara3 = Sip5sDAO.AlcantaraSeriesiPhone5s();
+        natural3 = Sip5sDAO.NaturalSeriesiPhone5s();
+        hemp3 = Sip5sDAO.HempSeriesiPhone5s();
 
         switch (accion) {
             case "1":
@@ -110,16 +127,15 @@ public class ControllerSkin extends HttpServlet {
                 request.setAttribute("aniversario", aniversario);
                 request.setAttribute("retro", retro);
                 request.setAttribute("hemp", hemp);
-                request.setAttribute("board", board);
                 request.getRequestDispatcher("Skins/iPhone6Skins.jsp").forward(request, response);
                 break;
 
             case "2":
-                request.setAttribute("carbon", carbon);
-                request.setAttribute("color", color);
-                request.setAttribute("wood", wood);
-                request.setAttribute("metal", metal);
-                request.setAttribute("board", board);
+                request.setAttribute("carbon2", carbon2);
+                request.setAttribute("color2", color2);
+                request.setAttribute("wood2", wood2);
+                request.setAttribute("metal2", metal2);
+                request.setAttribute("board2", board2);
                 request.getRequestDispatcher("Skins/iPhone5sSkins.jsp").forward(request, response);
                 break;
 
@@ -138,6 +154,7 @@ public class ControllerSkin extends HttpServlet {
                 break;
 
             case "color":
+                request.setAttribute("color2", color2);
                 request.setAttribute("color", color);
                 request.getRequestDispatcher("Skins/iPhone6/ColorSeriesiPhone6.jsp").forward(request, response);
                 request.getRequestDispatcher("Skins/iPhone6/ColorSeriesiPhone5.jsp").forward(request, response);
@@ -145,6 +162,7 @@ public class ControllerSkin extends HttpServlet {
                 break;
 
             case "carbon":
+                request.setAttribute("carbon2", carbon2);
                 request.setAttribute("carbon", carbon);
                 request.getRequestDispatcher("Skins/iPhone6/CarbonSeriesiPhone6.jsp").forward(request, response);
                 request.getRequestDispatcher("Skins/iPhone6/CarbonSeriesiPhone5.jsp").forward(request, response);
@@ -166,7 +184,7 @@ public class ControllerSkin extends HttpServlet {
                 break;
 
             case "board":
-                request.setAttribute("board", board);
+                request.setAttribute("board", board2);
                 request.getRequestDispatcher("Skins/iPhone6/BoardSeriesiPhone5.jsp").forward(request, response);
                 break;
 

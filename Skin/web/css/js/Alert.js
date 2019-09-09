@@ -4,8 +4,8 @@ $(function () {
         var elemento = $(this);
         var IdSkin = elemento.parent().find('#idskin').text();
         swal({
-            title: "Are you sure?",
-            text: "Once deleted, you will not be able to recover this imaginary file!",
+            title: "Estas seguro?",
+            text: "Una vez eliminado, ¡no podrá recuperar este archivo imaginario!",
             icon: "warning",
             buttons: true,
             dangerMode: true,
@@ -13,7 +13,7 @@ $(function () {
                 .then((willDelete) => {
                     if (willDelete) {
                         eliminar(IdSkin);
-                        swal("Poof! Your imaginary file has been deleted!", {
+                        swal("Oye! Tu producto ha sido eliminado!", {
                             icon: "success",
                         }).then((willDelete)=>{
                             if(willDelete){
@@ -21,7 +21,7 @@ $(function () {
                             }
                         });
                     } else {
-                        swal("Your imaginary file is safe!");
+                        swal("Tu producto esta a salvo!");
                     }
                 });
     });

@@ -152,10 +152,10 @@
                             <!--Card content-->
                             <div class="card-body">
                                 <ul class="rslides" id="slider3">
-                                    <c:forEach var="car" items="${carbon}">
+                                    <c:forEach var="Ca" items="${carbon2}">
                                         <li>
                                             <a href="ControllerSkin?accion=carbon">
-                                                <img style="width: 300px; height: 300px;" src="${car.getImagen()}" alt="${car.getNombre()}">
+                                                <img style="width: 300px; height: 300px;" src="${Ca.getImagen()}" alt="${Ca.getNombre()}">
                                             </a>
                                         </li>
                                     </c:forEach>

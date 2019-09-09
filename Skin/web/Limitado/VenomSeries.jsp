@@ -104,7 +104,7 @@
                         <!--Card content-->
                         <div class="card-body">
                             <!--Carousel Wrapper-->
-                            <div id="carouselExampleIndicators" class="carousel slide .carousel-fade" data-ride="carousel">
+                            <div id="carouselExampleIndicators" class="carousel" data-ride="carousel">
                                 <!--Indicators-->
                                 <ol class="carousel-indicators">
                                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
