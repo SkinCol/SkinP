@@ -24,7 +24,7 @@
     </head>
     <body>
         <!-- Navbar -->
-        <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar bg-dark">
             <div class="container">
 
                 <!-- Brand -->
@@ -148,7 +148,7 @@
                                 <br>
 
                                 <!-- Button -->
-                                <a href="#" class="btn btn-primary btn-sm btn-block">PASAR POR LA CAJA</a>
+                                <a href="ControllerSkin?accion=Pagar" class="btn btn-primary btn-sm btn-block">PASAR POR LA CAJA</a>
                                 <hr>
                                 <a href="#" class="btn btn-light btn-sm btn-block">GENERAR COMPRA</a>
                             </div>

@@ -24,7 +24,7 @@
     </head>
     <body>
         <!-- Navbar -->
-        <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar bg-dark">
             <div class="container">
 
                 <!-- Brand -->
@@ -43,13 +43,13 @@
                     <!-- Left -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="Dispositivos.jsp"><i class="fas fa-mobile-alt"></i> Dispositivos</a>
+                            <a class="nav-link h5" href="Dispositivos.jsp"><i class="fas fa-mobile-alt"></i> Dispositivos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="ControllerLimitado?accion=1"><i class="fab fa-artstation"></i> Limitado</a>
+                            <a class="nav-link h5" href="ControllerLimitado?accion=1"><i class="fab fa-artstation"></i> Limitado</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fas fa-bezier-curve"></i> Personalizador</a>
+                            <a class="nav-link h5" href="#"><i class="fas fa-bezier-curve"></i> Personalizador</a>
                         </li>
                     </ul>
 

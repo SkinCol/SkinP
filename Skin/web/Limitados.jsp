@@ -19,11 +19,11 @@
         <link href="css/css/style.min.css" rel="stylesheet" type="text/css"/>
         <link href="css/css/estilos.css" rel="stylesheet" type="text/css"/>
         <link rel="shortcut icon" type="image/x-ico" href="favicon.ico" />
-        <title>Limitados</title>
+        <title>Series Limitadas</title>
     </head>
     <body>
         <!-- Navbar -->
-        <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar bg-dark">
             <div class="container">
 
                 <!-- Brand -->
@@ -42,13 +42,13 @@
                     <!-- Left -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="Dispositivos.jsp"><i class="fas fa-mobile-alt"></i> Dispositivos</a>
+                            <a class="nav-link h5" href="Dispositivos.jsp"><i class="fas fa-mobile-alt"></i> Dispositivos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="ControllerLimitado?accion=1"><i class="fab fa-artstation"></i> Limitado</a>
+                            <a class="nav-link h5" href="ControllerLimitado?accion=1"><i class="fab fa-artstation"></i> Limitado</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fas fa-bezier-curve"></i> Personalizador</a>
+                            <a class="nav-link h5" href="#"><i class="fas fa-bezier-curve"></i> Personalizador</a>
                         </li>
                     </ul>
 
@@ -79,44 +79,25 @@
         <!--Main layout-->
         <main class="mt-5 pt-5">
             <div class="container">
-
                 <h1 class="my-5 display-4 text-left">Serie Limitada</h1>
-                <!--Section: Jumbotron-->
-                <div class="view col-md-12 col-sm-12"
-                     style="background-image: url('css/img/Limited/ColorShift-Limited.jpg'); background-repeat: no-repeat;
-                     background-size: cover;
-                     background-position: center center;
-                     ">
-                </div>
-                <c:forEach var="li" items="${limitado}">
-                    <section class="card blue-gradient wow fadeIn mb-4" id="intro">
-
-                        <!-- Content -->
-                        <!-- Card -->
-                        <div class="card">
-
-                            <!-- Card image -->
-                            <div class="view overlay">
-                                <img class="card-img-top" src="${li.getImagen()}" alt="Card image cap">
-                                <a href="ControllerLimitado?accion=${li.getEnlace()}">
-                                    <div class="mask rgba-white-slight"></div>
-                                </a>
-                            </div>
-
-                            <!-- Card content -->
-                            <div class="card-body justify-content-center">
-
-                                <!-- Title -->
-                                <h1 class="text-center display-3 entry-title p-1">${li.getNombre()}</h1>
-
-                            </div>
-                        </div>
-                        <!-- Card -->
-
-                    </section>
-                </c:forEach>
-                <!--Section: Jumbotron-->
             </div>
+            <!--Section: Jumbotron-->
+
+            <c:forEach var="li" items="${limitado}">
+                <div class="jumbotron card card-image ml-5 mr-5" style="background-image: url(${li.getImagen()}); 
+                     background-size: cover;
+                     background-position: center;">
+                    <div class="text-white text-center py-5 px-5 mb-5 mt-5">
+                        <div>
+                            <h2 class="card-title h1-responsive pt-1 font-bold text-center display-3 entry-title p-1"><strong>${li.getNombre()}</strong></h2>
+                            <br>
+                            <a class="btn btn-white btn-sm" href="ControllerLimitado?accion=${li.getEnlace()}"><i class="fas fa-angle-left"></i> Ver <i class="fas fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </c:forEach>
+            <!--Section: Jumbotron-->
+
         </main>
         <!--Main layout-->
 

@@ -32,7 +32,7 @@
     </head>
     <body>
         <!-- Navbar -->
-        <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar bg-dark">
             <div class="container">
 
                 <!-- Brand -->
