@@ -220,7 +220,7 @@
                                 <ul class="rslides" id="slider3">
                                     <c:forEach var="m" items="${metal}">
                                         <li>
-                                            <a>
+                                            <a href="ControllerSkin?accion=metal">
                                                 <img style="width: 300px; height: 300px;" src="${m.getImagen()}" alt="${m.getNombre()}">
                                             </a>
                                         </li>
@@ -247,7 +247,7 @@
                                 <ul class="rslides" id="slider3">
                                     <c:forEach var="t" items="${leather}">
                                         <li>
-                                            <a>
+                                            <a href="ControllerSkin?accion=leather">
                                                 <img style="width: 300px; height: 300px;" src="${t.getImagen()}" alt="${t.getNombre()}">
                                             </a>
                                         </li>
@@ -326,7 +326,7 @@
                             <!--Card content-->
                             <div class="card-body">
                                 <ul class="rslides" id="slider3">
-                                    <c:forEach var="ca" items="${color}">
+                                    <c:forEach var="ca" items="${camo}">
                                         <li>
                                             <a>
                                                 <img style="width: 300px; height: 300px;" src="${ca.getImagen()}" alt="${ca.getNombre()}">

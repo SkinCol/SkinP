@@ -48,6 +48,14 @@
         <servlet-name>ProveedorController</servlet-name>
         <servlet-class>ControllerCRUD.ProveedorController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ControllerSkiniPhone5</servlet-name>
+        <servlet-class>Controller.ControllerSkiniPhone5</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ControllerSkiniPhone5s</servlet-name>
+        <servlet-class>Controller.ControllerSkiniPhone5s</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ControllerDispositivo</servlet-name>
         <url-pattern>/ControllerDispositivo</url-pattern>
@@ -95,6 +103,14 @@
     <servlet-mapping>
         <servlet-name>ProveedorController</servlet-name>
         <url-pattern>/ProveedorController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControllerSkiniPhone5</servlet-name>
+        <url-pattern>/ControllerSkiniPhone5</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControllerSkiniPhone5s</servlet-name>
+        <url-pattern>/ControllerSkiniPhone5s</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

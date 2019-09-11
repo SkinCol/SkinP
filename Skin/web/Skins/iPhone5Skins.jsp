@@ -152,10 +152,10 @@
                             <!--Card content-->
                             <div class="card-body">
                                 <ul class="rslides" id="slider3">
-                                    <c:forEach var="Ca" items="${carbon2}">
+                                    <c:forEach var="ca" items="${carbon}">
                                         <li>
-                                            <a href="ControllerSkin?accion=carbon">
-                                                <img style="width: 300px; height: 300px;" src="${Ca.getImagen()}" alt="${Ca.getNombre()}">
+                                            <a href="ControllerSkiniPhone5?accion=carbon">
+                                                <img style="width: 300px; height: 300px;" src="${ca.getImagen()}" alt="${ca.getNombre()}">
                                             </a>
                                         </li>
                                     </c:forEach>
@@ -181,7 +181,7 @@
                                 <ul class="rslides" id="slider3">
                                     <c:forEach var="w" items="${wood}">
                                         <li>
-                                            <a href="ControllerSkin?accion=wood">
+                                            <a href="ControllerSkiniPhone5?accion=wood">
                                                 <img style="width: 300px; height: 300px;" src="${w.getImagen()}" alt="${w.getNombre()}">
                                             </a>
                                         </li>
@@ -206,10 +206,10 @@
                             <!--Card content-->
                             <div class="card-body">
                                 <ul class="rslides" id="slider3">
-                                    <c:forEach var="m" items="${metal}">
+                                    <c:forEach var="me" items="${metal}">
                                         <li>
-                                            <a>
-                                                <img style="width: 300px; height: 300px;" src="${m.getImagen()}" alt="${m.getNombre()}">
+                                            <a href="ControllerSkiniPhone5?accion=metal">
+                                                <img style="width: 300px; height: 300px;" src="${me.getImagen()}" alt="${me.getNombre()}">
                                             </a>
                                         </li>
                                     </c:forEach>
@@ -235,7 +235,7 @@
                                 <ul class="rslides" id="slider3">
                                     <c:forEach var="co" items="${color}">
                                         <li>
-                                            <a href="ControllerSkin?accion=color">
+                                            <a href="ControllerSkiniPhone5?accion=color">
                                                 <img style="width: 300px; height: 300px;" src="${co.getImagen()}" alt="${co.getNombre()}">
                                             </a>
                                         </li>
@@ -262,7 +262,7 @@
                                 <ul class="rslides" id="slider3">
                                     <c:forEach var="bo" items="${board}">
                                         <li>
-                                            <a href="ControllerSkin?accion=color">
+                                            <a href="ControllerSkiniPhone5?accion=board">
                                                 <img style="width: 300px; height: 300px;" src="${bo.getImagen()}" alt="${bo.getNombre()}">
                                             </a>
                                         </li>

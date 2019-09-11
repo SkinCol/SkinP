@@ -130,11 +130,16 @@
 
                 <!--Grid row-->
                 <div class="row text-center wow fadeIn">
+                    <!-- Cunstom -->
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card">
                             <div class="card-body">
                                 <ul class="rslides" id="slider3">
-                                    <li><img style="width: 300px; height: 300px;"src="https://www.slickwraps.com/media/catalog/product/cache/1/small_image/300x300/9df78eab33525d08d6e5fb8d27136e95/s/w/sw-aip5s-ds-10.jpg"></li>
+                                    <li>
+                                        <a>
+                                            <img style="width: 300px; height: 300px;"src="https://www.slickwraps.com/media/catalog/product/cache/1/small_image/300x300/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone_6_trio_desidner_southwestern_5.jpg">
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                             <div class="card-body elegant-color white-text">
@@ -144,21 +149,22 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Cunstom -->
 
+                    <!-- Carbon Series -->
                     <div class="col-lg-4 col-md-6 mb-4">
+                        <!--Card-->
                         <div class="card">
+                            <!--Card content-->
                             <div class="card-body">
                                 <ul class="rslides" id="slider3">
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571261/Series/iPhone/iPhone%205S/Carbon%20Series/sw-aip5s-cfwht-3_nsnxn9.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571261/Series/iPhone/iPhone%205S/Carbon%20Series/sw-aip5s-cfslv-3_kxsdgk.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571260/Series/iPhone/iPhone%205S/Carbon%20Series/sw-aip5s-cfred-3_cvcoer.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571260/Series/iPhone/iPhone%205S/Carbon%20Series/sw-aip5s-cfprp-3_y3vaxw.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571260/Series/iPhone/iPhone%205S/Carbon%20Series/sw-aip5s-cforg-3_od8rso.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571260/Series/iPhone/iPhone%205S/Carbon%20Series/sw-aip5s-cfpink-3_zn13e5.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571259/Series/iPhone/iPhone%205S/Carbon%20Series/sw-aip5s-cfgrn-3_erqicw.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571259/Series/iPhone/iPhone%205S/Carbon%20Series/sw-aip5s-cfgm-3_xwts6t.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571259/Series/iPhone/iPhone%205S/Carbon%20Series/sw-aip5s-cfblu-3_i3btzc.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571259/Series/iPhone/iPhone%205S/Carbon%20Series/sw-aip5s-cfblk-3_2_k4g7bz.jpg"></li>
+                                    <c:forEach var="car" items="${carbon}">
+                                        <li>
+                                            <a href="ControllerSkiniPhone5s?accion=carbon">
+                                                <img style="width: 300px; height: 300px;" src="${car.getImagen()}" alt="${car.getNombre()}">
+                                            </a>
+                                        </li>
+                                    </c:forEach>
                                 </ul>
                             </div>
                             <div class="card-body elegant-color white-text">
@@ -166,80 +172,26 @@
                                     <a>Carbon Series</a>
                                 </h5>
                             </div>
-                        </div>
-                    </div>
 
+                        </div>
+                        <!--/.Card-->
+                    </div>
+                    <!-- Carbon Series -->
+                    
+                    <!-- Color Series -->
                     <div class="col-lg-4 col-md-6 mb-4">
+                        <!--Card-->
                         <div class="card">
+                            <!--Card content-->
                             <div class="card-body">
                                 <ul class="rslides" id="slider3">
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571264/Series/iPhone/iPhone%205S/Leather%20Series/sw-aip5s-lsorg-5_hjxhpb.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571264/Series/iPhone/iPhone%205S/Leather%20Series/sw-aip5s-lsbrn-3_zct6u9.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571264/Series/iPhone/iPhone%205S/Leather%20Series/sw-aip5s-lsblk-3_ouvscj.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571264/Series/iPhone/iPhone%205S/Leather%20Series/sw-aip5s-lawht-3_ckwcih.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571264/Series/iPhone/iPhone%205S/Leather%20Series/sw-aip5s-lablk-3_2_uowcc9.jpg"></li>
-                                </ul>
-                            </div>
-                            <div class="card-body elegant-color white-text">
-                                <h5 class="entry-title p-1">
-                                    <a>Leather Series</a>
-                                </h5>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <ul class="rslides" id="slider3">
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571266/Series/iPhone/iPhone%205S/Metal%20Series/sw-aip5s-mssteel-3_1_rixkzr.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571266/Series/iPhone/iPhone%205S/Metal%20Series/sw-aip5s-msony-3_a7snz1.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571266/Series/iPhone/iPhone%205S/Metal%20Series/sw-aip5s-msgold-3_xbu7ze.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571265/Series/iPhone/iPhone%205S/Metal%20Series/sw-aip5s-mscop-5_cdvqkb.jpg"></li>
-                                </ul>
-                            </div>
-                            <div class="card-body elegant-color white-text">
-                                <h5 class="entry-title p-1">
-                                    <a>Metal Series</a>
-                                </h5>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <ul class="rslides" id="slider3">
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571270/Series/iPhone/iPhone%205S/Wood%20Series/sw-aip5s-wszeb-3_azmv4q.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571270/Series/iPhone/iPhone%205S/Wood%20Series/sw-aip5s-wsmap-5_1_plg1hr.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571270/Series/iPhone/iPhone%205S/Wood%20Series/sw-aip5s-wsmah-3_szgxuh.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571269/Series/iPhone/iPhone%205S/Wood%20Series/sw-aip5s-wseby-3_t1aqtj.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571270/Series/iPhone/iPhone%205S/Wood%20Series/sw-aip5s-wsteak-2_vjvzio.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571270/Series/iPhone/iPhone%205S/Wood%20Series/sw-aip5s-wsgfe-2_sjwgtv.jpg"></li>
-
-                                </ul>
-                            </div>
-                            <div class="card-body elegant-color white-text">
-                                <h5 class="entry-title p-1">
-                                    <a>Wood Series</a>
-                                </h5>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <ul class="rslides" id="slider3">
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571262/Series/iPhone/iPhone%205S/Color%20Series/sw-aip5s-ccylw-3_eyyjld.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571262/Series/iPhone/iPhone%205S/Color%20Series/sw-aip5s-ccwht-3_qeiggg.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571262/Series/iPhone/iPhone%205S/Color%20Series/sw-aip5s-ccred-3_1_t3um07.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571262/Series/iPhone/iPhone%205S/Color%20Series/sw-aip5s-ccpur-3_2_f1geym.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571261/Series/iPhone/iPhone%205S/Color%20Series/sw-aip5s-ccpink-3_fudgee.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571261/Series/iPhone/iPhone%205S/Color%20Series/sw-aip5s-ccorg-3_wkamnl.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571261/Series/iPhone/iPhone%205S/Color%20Series/sw-aip5s-ccgrn-3_uwp0gg.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571261/Series/iPhone/iPhone%205S/Color%20Series/sw-aip5s-ccblu-3_rl5bre.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571261/Series/iPhone/iPhone%205S/Color%20Series/sw-aip5s-ccblk-3_kt8smp.jpg"></li>
+                                    <c:forEach var="co" items="${color}">
+                                        <li>
+                                            <a href="ControllerSkiniPhone5s?accion=carbon">
+                                                <img style="width: 300px; height: 300px;" src="${co.getImagen()}" alt="${co.getNombre()}">
+                                            </a>
+                                        </li>
+                                    </c:forEach>
                                 </ul>
                             </div>
                             <div class="card-body elegant-color white-text">
@@ -247,19 +199,107 @@
                                     <a>Color Series</a>
                                 </h5>
                             </div>
-                        </div>
-                    </div>
 
+                        </div>
+                        <!--/.Card-->
+                    </div>
+                    <!-- Color Series -->
+                    
+                    <!-- Wood Series -->
                     <div class="col-lg-4 col-md-6 mb-4">
+                        <!--Card-->
                         <div class="card">
+                            <!--Card content-->
                             <div class="card-body">
                                 <ul class="rslides" id="slider3">
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571263/Series/iPhone/iPhone%205S/Glitz%20Series/sw-aip5s-glsvio-3_uq9thv.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571263/Series/iPhone/iPhone%205S/Glitz%20Series/sw-aip5s-glswht-3_bjtxbv.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571263/Series/iPhone/iPhone%205S/Glitz%20Series/sw-aip5s-glsorg-3_yah1oh.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571263/Series/iPhone/iPhone%205S/Glitz%20Series/sw-aip5s-glsred-3_rgwhfn.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571263/Series/iPhone/iPhone%205S/Glitz%20Series/sw-aip5s-glspnk-3_mq9qbt.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571263/Series/iPhone/iPhone%205S/Glitz%20Series/sw-aip5s-glsblu-3_1_omawze.jpg"></li>
+                                    <c:forEach var="w" items="${wood}">
+                                        <li>
+                                            <a href="ControllerSkiniPhone5s?accion=carbon">
+                                                <img style="width: 300px; height: 300px;" src="${w.getImagen()}" alt="${w.getNombre()}">
+                                            </a>
+                                        </li>
+                                    </c:forEach>
+                                </ul>
+                            </div>
+                            <div class="card-body elegant-color white-text">
+                                <h5 class="entry-title p-1">
+                                    <a>Wood Series</a>
+                                </h5>
+                            </div>
+
+                        </div>
+                        <!--/.Card-->
+                    </div>
+                    <!-- Wood Series -->
+                    
+                    <!-- Metal Series -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <!--Card-->
+                        <div class="card">
+                            <!--Card content-->
+                            <div class="card-body">
+                                <ul class="rslides" id="slider3">
+                                    <c:forEach var="me" items="${metal}">
+                                        <li>
+                                            <a href="ControllerSkiniPhone5s?accion=carbon">
+                                                <img style="width: 300px; height: 300px;" src="${me.getImagen()}" alt="${me.getNombre()}">
+                                            </a>
+                                        </li>
+                                    </c:forEach>
+                                </ul>
+                            </div>
+                            <div class="card-body elegant-color white-text">
+                                <h5 class="entry-title p-1">
+                                    <a>Metal Series</a>
+                                </h5>
+                            </div>
+
+                        </div>
+                        <!--/.Card-->
+                    </div>
+                    <!-- Metal Series -->
+                    
+                    <!-- Piel Series -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <!--Card-->
+                        <div class="card">
+                            <!--Card content-->
+                            <div class="card-body">
+                                <ul class="rslides" id="slider3">
+                                    <c:forEach var="t" items="${leather}">
+                                        <li>
+                                            <a href="ControllerSkiniPhone5s?accion=carbon">
+                                                <img style="width: 300px; height: 300px;" src="${t.getImagen()}" alt="${t.getNombre()}">
+                                            </a>
+                                        </li>
+                                    </c:forEach>
+                                </ul>
+                            </div>
+                            <div class="card-body elegant-color white-text">
+                                <h5 class="entry-title p-1">
+                                    <a>Piel Series</a>
+                                </h5>
+                            </div>
+
+                        </div>
+                        <!--/.Card-->
+                    </div>
+                    <!-- Piel Series -->
+
+                    <!-- Glitz Series -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <!--Card-->
+                        <div class="card">
+                            <!--Card content-->
+                            <div class="card-body">
+                                <ul class="rslides" id="slider3">
+                                    <c:forEach var="g" items="${glitz}">
+                                        <li>
+                                            <a href="ControllerSkiniPhone5s?accion=carbon">
+                                                <img style="width: 300px; height: 300px;" src="${g.getImagen()}" alt="${g.getNombre()}">
+                                            </a>
+                                        </li>
+                                    </c:forEach>
                                 </ul>
                             </div>
                             <div class="card-body elegant-color white-text">
@@ -267,36 +307,26 @@
                                     <a>Glitz Series</a>
                                 </h5>
                             </div>
-                        </div>
-                    </div>
 
+                        </div>
+                        <!--/.Card-->
+                    </div>
+                    <!-- Glitz Series -->
+                    
+                    <!-- Stone Series -->
                     <div class="col-lg-4 col-md-6 mb-4">
+                        <!--Card-->
                         <div class="card">
+                            <!--Card content-->
                             <div class="card-body">
                                 <ul class="rslides" id="slider3">
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571259/Series/iPhone/iPhone%205S/Alcantara%20Series/iphone-se_view1_alcantara_pool_1_s0b53z.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571259/Series/iPhone/iPhone%205S/Alcantara%20Series/iphone-se_view1_alcantara_goya_1_dhtgwz.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571259/Series/iPhone/iPhone%205S/Alcantara%20Series/iphone-se_view1_alcantara_cricket_1_bldzow.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571258/Series/iPhone/iPhone%205S/Alcantara%20Series/iphone-se_view1_alcantara_concrete_1_b1lev3.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571258/Series/iPhone/iPhone%205S/Alcantara%20Series/iphone-se_view1_alcantara_bon-bon_1_zglavp.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571258/Series/iPhone/iPhone%205S/Alcantara%20Series/iphone-se_view1_alcantara_arancione-papaya_1_fg5ir0.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571257/Series/iPhone/iPhone%205S/Alcantara%20Series/iphone-se_view1_alcantara_anthracite_1_nblntm.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571257/Series/iPhone/iPhone%205S/Alcantara%20Series/iphone-se_view1_alcantara_andy_1_mzrnzm.jpg"></li>
-                                </ul>
-                            </div>
-                            <div class="card-body elegant-color white-text">
-                                <h5 class="entry-title p-1">
-                                    <a>Alcantara Series</a>
-                                </h5>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <ul class="rslides" id="slider3">
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571257/Series/iPhone/iPhone%205S/Alcantara%20Series/iphone-se_view1_alcantara_andy_1_mzrnzm.jpg"></li>
+                                    <c:forEach var="st" items="${stone}">
+                                        <li>
+                                            <a href="ControllerSkiniPhone5s?accion=carbon">
+                                                <img style="width: 300px; height: 300px;" src="${st.getImagen()}" alt="${st.getNombre()}">
+                                            </a>
+                                        </li>
+                                    </c:forEach>
                                 </ul>
                             </div>
                             <div class="card-body elegant-color white-text">
@@ -304,37 +334,53 @@
                                     <a>Stone Series</a>
                                 </h5>
                             </div>
-                        </div>
-                    </div>
 
+                        </div>
+                        <!--/.Card-->
+                    </div>
+                    <!-- Stone Series -->
+                    
+                    <!-- Alcantara Series -->
                     <div class="col-lg-4 col-md-6 mb-4">
+                        <!--Card-->
                         <div class="card">
+                            <!--Card content-->
                             <div class="card-body">
                                 <ul class="rslides" id="slider3">
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571264/Series/iPhone/iPhone%205S/Hemp%20Series/iphone-se_view1_hemp_1_u9lmkr.jpg"></li>
+                                    <c:forEach var="al" items="${alcantara}">
+                                        <li>
+                                            <a href="ControllerSkiniPhone5s?accion=carbon">
+                                                <img style="width: 300px; height: 300px;" src="${al.getImagen()}" alt="${al.getNombre()}">
+                                            </a>
+                                        </li>
+                                    </c:forEach>
                                 </ul>
                             </div>
                             <div class="card-body elegant-color white-text">
                                 <h5 class="entry-title p-1">
-                                    <a>Hemp Series</a>
+                                    <a>Alcantara Series</a>
                                 </h5>
                             </div>
-                        </div>
-                    </div>
 
+                        </div>
+                        <!--/.Card-->
+                    </div>
+                    <!-- Alcantara Series -->
+                    
+                    <!-- Natural Series -->
                     <div class="col-lg-4 col-md-6 mb-4">
+                        <!--Card-->
                         <div class="card">
+                            <!--Card content-->
                             <div class="card-body">
                                 <ul class="rslides" id="slider3">
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571269/Series/iPhone/iPhone%205S/Natural%20Series/reall.wood.skins.iphone.se9_1_hv93vz.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571268/Series/iPhone/iPhone%205S/Natural%20Series/reall.wood.skins.iphone.se8_1_yr9gyv.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571267/Series/iPhone/iPhone%205S/Natural%20Series/reall.wood.skins.iphone.se7_1_e48vda.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571267/Series/iPhone/iPhone%205S/Natural%20Series/reall.wood.skins.iphone.se6_1_dgg8b1.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571266/Series/iPhone/iPhone%205S/Natural%20Series/reall.wood.skins.iphone.se5_1_wedyow.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571266/Series/iPhone/iPhone%205S/Natural%20Series/reall.wood.skins.iphone.se4_1_qqxoys.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571266/Series/iPhone/iPhone%205S/Natural%20Series/reall.wood.skins.iphone.se3_1_cjm4w5.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571266/Series/iPhone/iPhone%205S/Natural%20Series/reall.wood.skins.iphone.se2_1_reyfkj.jpg"></li>
-                                    <li><img style="width: 300px; height: 300px;"src="https://res.cloudinary.com/skincol-me/image/upload/v1567571266/Series/iPhone/iPhone%205S/Natural%20Series/reall.wood.skins.iphone.se1_1_j04mrw.jpg"></li>
+                                    <c:forEach var="na" items="${natural}">
+                                        <li>
+                                            <a href="ControllerSkiniPhone5s?accion=carbon">
+                                                <img style="width: 300px; height: 300px;" src="${na.getImagen()}" alt="${na.getNombre()}">
+                                            </a>
+                                        </li>
+                                    </c:forEach>
                                 </ul>
                             </div>
                             <div class="card-body elegant-color white-text">
@@ -342,8 +388,38 @@
                                     <a>Natural Series</a>
                                 </h5>
                             </div>
+
                         </div>
+                        <!--/.Card-->
                     </div>
+                    <!-- Natural Series -->
+                    
+                    <!-- Hemp Series -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <!--Card-->
+                        <div class="card">
+                            <!--Card content-->
+                            <div class="card-body">
+                                <ul class="rslides" id="slider3">
+                                    <c:forEach var="he" items="${hemp}">
+                                        <li>
+                                            <a href="ControllerSkiniPhone5s?accion=carbon">
+                                                <img style="width: 300px; height: 300px;" src="${he.getImagen()}" alt="${he.getNombre()}">
+                                            </a>
+                                        </li>
+                                    </c:forEach>
+                                </ul>
+                            </div>
+                            <div class="card-body elegant-color white-text">
+                                <h5 class="entry-title p-1">
+                                    <a>Hemp Series</a>
+                                </h5>
+                            </div>
+
+                        </div>
+                        <!--/.Card-->
+                    </div>
+                    <!-- Hemp Series -->
                 </div>
                 <!--Grid row-->
             </div>

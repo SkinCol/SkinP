@@ -140,10 +140,10 @@
                 <hr>
                 <!--Content-->
                 <div class="p-4">
-                    <h1 class="h1-responsive font-weight-bold">CARBON FIBER WRAPS/SKINS FOR IPHONE 6</h1>
+                    <h1 class="h1-responsive font-weight-bold">METAL SERIES SKINS/WRAPS FOR IPHONE 6</h1>
                     <ul>
                         <li>Se adapta a: Apple iPhone 6 (4.7 ") </li>
-                        <li>Profunda textura y profundidad de carbono: protege de pequeños arañazos y pequeñas gotas</li>
+                        <li>Textura y profundidad metálicas profundas: protege contra rasguños menores y caídas pequeñas </li>
                         <li>Incluye un fondo de pantalla descargable a juego </li>
                         <li>Instalación fácil, sin burbujas y eliminación sin manchas </li>
                         <li>Hecho en Colombia!</li>
