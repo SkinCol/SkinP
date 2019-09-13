@@ -32,7 +32,7 @@ public class FacInsumosDAO implements CRUDfacinsumos {
                      "FROM proveedor p, material m, facturainsumos f \n" +
                      "WHERE p.IdProveedor = f.IdProveedor and m.IdMaterial = f.IdMaterial";
         try {
-            con=cn.getCennection();
+            con=cn.getConnection();
             ps=con.prepareStatement(sql);
             rs=ps.executeQuery();
             while (rs.next()) {
@@ -54,7 +54,7 @@ public class FacInsumosDAO implements CRUDfacinsumos {
     public FacInsumos list(int IdFacturaInsumos) {
         String sql = "select * from facturainsumos where IdFacturaInsumos="+IdFacturaInsumos;
         try {
-            con=cn.getCennection();
+            con=cn.getConnection();
             ps=con.prepareStatement(sql);
             rs=ps.executeQuery();
             while (rs.next()) {
@@ -74,7 +74,7 @@ public class FacInsumosDAO implements CRUDfacinsumos {
     public boolean add(FacInsumos fi) {
         String sql = "insert into facturainsumos (IdProveedor, IdMaterial, Cantidad, Costo) values ('"+fi.getIdProveedor()+"','"+ fi.getIdMaterial()+"','"+ fi.getCantidad()+"','"+fi.getCosto()+"')";
         try {
-            con=cn.getCennection();
+            con=cn.getConnection();
             ps=con.prepareStatement(sql);
             ps.executeUpdate();
         } catch (Exception e) {
@@ -86,7 +86,7 @@ public class FacInsumosDAO implements CRUDfacinsumos {
     public boolean edit(FacInsumos fi) {
         String sql = "update facturainsumos set IdProveedor='"+fi.getIdProveedor()+"',IdMaterial='"+ fi.getIdMaterial()+"',Cantidad='"+ fi.getCantidad()+"',Costo='"+fi.getCosto()+"' where IdFacturaInsumos="+fi.getIdFacturaInsumos();
         try {
-            con=cn.getCennection();
+            con=cn.getConnection();
             ps=con.prepareStatement(sql);
             ps.executeUpdate();
         } catch (Exception e) {
@@ -98,7 +98,7 @@ public class FacInsumosDAO implements CRUDfacinsumos {
     public boolean eliminar(int IdFacturaInsumos) {
         String sql = "delete from facturainsumos where IdFacturaInsumos =" + IdFacturaInsumos;
         try {
-            con=cn.getCennection();
+            con=cn.getConnection();
             ps=con.prepareStatement(sql);
             ps.executeUpdate();
         } catch (Exception e) {

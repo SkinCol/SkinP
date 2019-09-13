@@ -31,7 +31,7 @@ public class DeptoDAO implements CRUDdepto{
         ArrayList<Departamento>list=new  ArrayList<>();
        String sql = "select * from departamento";
         try {
-            con=cn.getCennection();
+            con=cn.getConnection();
             ps=con.prepareStatement(sql);
             rs=ps.executeQuery();
             while (rs.next()) {
@@ -49,7 +49,7 @@ public class DeptoDAO implements CRUDdepto{
     public Departamento list(int IdDepartamento) {
         String sql = "select * from departamento where IdDepartamento="+IdDepartamento;
         try {
-            con=cn.getCennection();
+            con=cn.getConnection();
             ps=con.prepareStatement(sql);
             rs=ps.executeQuery();
             while (rs.next()) {
@@ -65,7 +65,7 @@ public class DeptoDAO implements CRUDdepto{
     public boolean add(Departamento de) {
         String sql = "insert into departamento (Nombre) values ('"+de.getNombre()+"')";
         try {
-            con=cn.getCennection();
+            con=cn.getConnection();
             ps=con.prepareStatement(sql);
             ps.executeUpdate();
         } catch (Exception e) {
@@ -77,7 +77,7 @@ public class DeptoDAO implements CRUDdepto{
     public boolean edit(Departamento de) {
         String sql = "update departamento set Nombre='"+de.getNombre()+"' where IdDepartamento="+de.getIdDepartamento();
         try {
-            con=cn.getCennection();
+            con=cn.getConnection();
             ps=con.prepareStatement(sql);
             ps.executeUpdate();
         } catch (Exception e) {
@@ -87,9 +87,9 @@ public class DeptoDAO implements CRUDdepto{
 
     @Override
     public boolean eliminar(int IdDepartamento) {
-        String sql = "delete from departamento where IdDepartamentor =" + IdDepartamento;
+        String sql = "delete from departamento where IdDepartamento =" + IdDepartamento;
         try {
-            con=cn.getCennection();
+            con=cn.getConnection();
             ps=con.prepareStatement(sql);
             ps.executeUpdate();
         } catch (Exception e) {

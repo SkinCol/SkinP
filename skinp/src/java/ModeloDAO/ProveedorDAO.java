@@ -17,14 +17,14 @@ public class ProveedorDAO implements CRUDproveedor{
     Connection con;
     PreparedStatement ps;
     ResultSet rs;
-    Proveedor pro= new Proveedor();
+    Proveedor prov= new Proveedor();
 
     @Override
     public List listar() {
        ArrayList<Proveedor>list=new  ArrayList<>();
        String sql = "select * from proveedor";
         try {
-            con=cn.getCennection();
+            con=cn.getConnection();
             ps=con.prepareStatement(sql);
             rs=ps.executeQuery();
             while (rs.next()) {
@@ -47,28 +47,28 @@ public class ProveedorDAO implements CRUDproveedor{
     public Proveedor list(int IdProveedor) {
         String sql = "select * from proveedor where IdProveedor="+IdProveedor;
         try {
-            con=cn.getCennection();
+            con=cn.getConnection();
             ps=con.prepareStatement(sql);
             rs=ps.executeQuery();
             while (rs.next()) {
-                pro.setIdProveedor(rs.getInt("IdProveedor"));
-                pro.setNombre(rs.getString("Nombre"));
-                pro.setNIT(rs.getString("NIT"));
-                pro.setDireccion(rs.getString("Direccion"));
-                pro.setCorreo(rs.getString("Correo"));
-                pro.setTelefono(rs.getString("Telefono"));
+                prov.setIdProveedor(rs.getInt("IdProveedor"));
+                prov.setNombre(rs.getString("Nombre"));
+                prov.setNIT(rs.getString("NIT"));
+                prov.setDireccion(rs.getString("Direccion"));
+                prov.setCorreo(rs.getString("Correo"));
+                prov.setTelefono(rs.getString("Telefono"));
        
             }
         } catch (Exception e) {
         }
-       return pro;
+       return prov;
     }
 
     @Override
     public boolean add(Proveedor pro) {
         String sql = "insert into proveedor (Nombre, NIT, Direccion, Correo, Telefono) values ('"+pro.getNombre()+"','"+ pro.getNIT()+"','"+ pro.getDireccion()+"','"+pro.getCorreo()+"','"+pro.getTelefono()+"')";
         try {
-            con=cn.getCennection();
+            con=cn.getConnection();
             ps=con.prepareStatement(sql);
             ps.executeUpdate();
         } catch (Exception e) {
@@ -80,7 +80,7 @@ public class ProveedorDAO implements CRUDproveedor{
     public boolean edit(Proveedor pro) {
         String sql = "update proveedor set Nombre='"+pro.getNombre()+"',NIT='"+ pro.getNIT()+"',Direccion='"+ pro.getDireccion()+"',Correo='"+pro.getCorreo()+"',Telefono='"+pro.getTelefono()+"' where IdProveedor="+pro.getIdProveedor();
         try {
-            con=cn.getCennection();
+            con=cn.getConnection();
             ps=con.prepareStatement(sql);
             ps.executeUpdate();
         } catch (Exception e) {
@@ -92,7 +92,7 @@ public class ProveedorDAO implements CRUDproveedor{
     public boolean eliminar(int IdProveedor) {
         String sql = "delete from proveedor where IdProveedor =" + IdProveedor;
         try {
-            con=cn.getCennection();
+            con=cn.getConnection();
             ps=con.prepareStatement(sql);
             ps.executeUpdate();
         } catch (Exception e) {

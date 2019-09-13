@@ -10,10 +10,19 @@ package Model;
  * @author angel
  */
 public class Ciudad {
-    private int IdCiudad;
-    private int IdDepartamento;
-    private Departamento Departamento;
-    private String Nombre;
+    int IdCiudad;
+    int IdDepartamento;
+    Departamento Departamento;
+    String Nombre;
+
+    public Ciudad() {
+    }
+
+    public Ciudad(int IdDepartamento, Departamento Departamento, String Nombre) {
+        this.IdDepartamento = IdDepartamento;
+        this.Departamento = Departamento;
+        this.Nombre = Nombre;
+    }
 
     public int getIdCiudad() {
         return IdCiudad;
@@ -48,6 +57,5 @@ public class Ciudad {
     }
     
     
-
     
 }

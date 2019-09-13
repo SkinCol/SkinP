@@ -25,7 +25,7 @@ public class UsuarioDAO {
         Usuario U=new Usuario();
         String sql="select * from usuario where Email=? and Contrasena=?";
         try {
-            con=cn.getCennection();
+            con=cn.getConnection();
             ps=con.prepareStatement(sql);
             ps.setString(1, Email);
             ps.setString(2, Contrasena);          

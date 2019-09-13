@@ -86,10 +86,10 @@ public class ControllerValidacion extends HttpServlet {
                 request.setAttribute("usuario", u);
                 request.getRequestDispatcher("Controlador?accion=Principal").forward(request, response);
             } else {
-                request.getRequestDispatcher("index.jsp").forward(request, response);
+                request.getRequestDispatcher("Login.jsp").forward(request, response);
             }
         } else {
-            request.getRequestDispatcher("index.jsp").forward(request, response);
+            request.getRequestDispatcher("Login.jsp").forward(request, response);
         }
     }
 

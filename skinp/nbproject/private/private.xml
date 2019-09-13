@@ -2,6 +2,14 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/angel/Documents/GitHub/SkinP/skinp/src/java/Controller/DeptoController.java</file>
+            <file>file:/C:/Users/angel/Documents/GitHub/SkinP/skinp/web/WEB-INF/jsp/editarDepartamento.jsp</file>
+            <file>file:/C:/Users/angel/Documents/GitHub/SkinP/skinp/src/java/Interfaces/CRUDdepto.java</file>
+            <file>file:/C:/Users/angel/Documents/GitHub/SkinP/skinp/web/WEB-INF/jsp/agregarDepartamento.jsp</file>
+            <file>file:/C:/Users/angel/Documents/GitHub/SkinP/skinp/src/java/Model/Departamento.java</file>
+            <file>file:/C:/Users/angel/Documents/GitHub/SkinP/skinp/src/java/ModeloDAO/DeptoDAO.java</file>
+            <file>file:/C:/Users/angel/Documents/GitHub/SkinP/skinp/web/WEB-INF/jsp/indexDepartamento.jsp</file>
+        </group>
     </open-files>
 </project-private>

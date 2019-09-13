@@ -1,21 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Model;
 
-/**
- *
- * @author angel
- */
+
 public class Proveedor {
-    private int IdProveedor;
-    private String Nombre;
-    private String NIT;
-    private String Direccion;
-    private String Correo;
-    private String Telefono;
+    int IdProveedor;
+    String Nombre;
+    String NIT;
+    String Direccion;
+    String Correo;
+    String Telefono;
     
     public Proveedor(){
         

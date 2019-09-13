@@ -1,6 +1,17 @@
+<%@page import="java.sql.Statement"%>
+
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.Connection"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+<%@page import="java.io.*"%>
+<%@page import="org.jfree.chart.*"%>
+<%@page import="org.jfree.chart.plot.*" %>
+<%@page import="org.jfree.data.category.*"%>
+<%@page import="java.sql.*" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
     "http://www.w3.org/TR/html4/loose.dtd">
+
 
 <html lang="en">
     <head>
@@ -46,7 +57,8 @@
                         <div class="dropdown-menu" aria-labelledby="dropdownMenu4">
                             <a class="dropdown-item" href="DispositivoController?accion=listar">Dispositivos</a>
                             <a class="dropdown-item" href="SkinController?listar=listar">Skins</a>
-                            <a class="dropdown-item" href="CategoriaController?accion=listar">Categorias</a>
+                            <a class="dropdown-item" href="SerieController?accion=listar">Series</a>
+                            <a class="dropdown-item" href="LimitadoController?accion=listar">Limitado</a>
                             <div class="dropdown-divider"></div> 
                             <a class="dropdown-item" href="indexFactura.htm">Facturas</a>
                             <a class="dropdown-item" href="indexSolicitud.htm">Solicitudes</a>
@@ -57,6 +69,9 @@
                             <a class="dropdown-item" href="ProveedorController?accion=listar">Proveedores</a>
                             <a class="dropdown-item" href="MaterialController?accion=listar">Materiales</a>
                             <a class="dropdown-item" href="DeptoController?accion=listar">Departamento</a>
+                            
+                                                        <a class="dropdown-item" href="ControllerCiudad?accion=listar">Ciudad</a>
+
                             <div class="dropdown-divider"></div>
                         </div>
 
@@ -92,7 +107,26 @@
         </nav>
         <!-- Navbar -->
     </header>
-
+    
+    
+    
+<%
+    
+    Class.forName("com.mysql.jdbc.Driver").newInstance();
+    Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/skincol", "root", "");
+    Statement cmd = cn.createStatement();
+    String sql = "SELECT s.Nombre, COUNT(l.IdLimitado) as cant FROM limitado l, skin s WHERE l.IdLimitado=s.IdLimitado GROUP BY l.IdLimitado ";
+    ResultSet rs=cmd.executeQuery(sql);
+    DefaultCategoryDataset data= new DefaultCategoryDataset();
+    while(rs.next()){
+    data.setValue(2000,     "ji", "5000");
+    }
+    
+    JFreeChart grafico=ChartFactory.createBarChart("ji", "jij", "jiji", data, PlotOrientation.VERTICAL, true, true, true);
+    response.setContentType("image/JPGE");
+    OutputStream sa=response.getOutputStream();
+    ChartUtilities.writeChartAsJPEG(sa, grafico, 500, 500);
+%>
 
     <!--/.Carousel Wrapper-->
 

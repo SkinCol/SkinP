@@ -5,7 +5,6 @@
 --%>
 <%@page import="Model.Material"%>
 <%@page import="ModeloDAO.MaterialDAO"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
@@ -25,61 +24,78 @@
 
 <body>
   <header>
-    <!-- Navbar -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
-      <div class="container-fluid">
-        <!-- Brand -->
-        <a class="navbar-brand waves-effect" href="home.html" target="_blank">
-          <img src="img/Logo Skin Black.png" style="width:150px" alt="" />
-        </a>
+        <!-- Navbar -->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+            <div class="container-fluid">
+                <!-- Brand -->
+                <a class="navbar-brand waves-effect" href="index.htm" target="_blank">
+                    <img src="img/Logo Skin Black.png"  style="width:150px" alt="" />
+                </a>
 
-        <!-- Collapse -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+                <!-- Collapse -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-        <!-- Links -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <!-- Left -->
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link waves-effect" href="#">Dashboard</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link waves-effect" href="#" target="_blank">Perfil</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link waves-effect" href="#" target="_blank">Tablas</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link waves-effect" href="#" target="_blank">Ordenes</a>
-            </li>
-          </ul>
+                <!-- Links -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Left -->
 
-          <!-- Right -->
-          <ul class="navbar-nav nav-flex-icons">
-            <li class="nav-item">
-              <a href="https://www.facebook.com" class="nav-link waves-effect" target="_blank">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="https://twitter.com" class="nav-link waves-effect" target="_blank">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="IncioSesion.html" class="nav-link border border-light rounded waves-effect" target="_blank">
-                <i class="fas fa-user"></i>Usuario
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <!-- Navbar -->
-  </header>
+                    <div class="dropdown mr-auto">
+                        <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenu4" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                            Dropdown
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu4">
+                            <a class="dropdown-item" href="DispositivoController?accion=listar">Dispositivos</a>
+                            <a class="dropdown-item" href="SkinController?listar=listar">Skins</a>
+                            <a class="dropdown-item" href="SerieController?accion=listar">Series</a>
+                            <div class="dropdown-divider"></div> 
+                            <a class="dropdown-item" href="indexFactura.htm">Facturas</a>
+                            <a class="dropdown-item" href="indexSolicitud.htm">Solicitudes</a>
+                            <a class="dropdown-item" href="indexEnvio.htm">Envios</a>
+                            <a class="dropdown-item" href="indexUsuario.htm">Usuario</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="FacInsumosController?accion=listar">Facturas Insumos</a>
+                            <a class="dropdown-item" href="ProveedorController?accion=listar">Proveedores</a>
+                            <a class="dropdown-item" href="MaterialController?accion=listar">Materiales</a>
+                            <a class="dropdown-item" href="DeptoController?accion=listar">Departamento</a>
+                            <div class="dropdown-divider"></div>
+                        </div>
+
+                    </div>
+
+                    <!-- Right -->
+                    <ul class="navbar-nav nav-flex-icons">
+                        <li class="nav-item">
+                            <a href="https://www.facebook.com" class="nav-link waves-effect" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://twitter.com" class="nav-link waves-effect" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <a href="IncioSesion.html" class="btn btn-white rounded" target="_blank">
+                                    <i class="fas fa-user"></i> ${usuario.getNombres()}
+                                </a>
+                                <form action="Validacion" method="POST">
+                                    <button name="accion" class="btn btn-danger text-white rounded waves-effect">
+                                        <i class="fas fa-sign-out-alt text-white mb-1 mt-1"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar -->
+    </header>
 
   <!--Main layout-->
   <main class="pt-5 mx-lg-5">
@@ -118,7 +134,7 @@
                 <div class="card">
 
                   <h5 class="card-header info-color white-text text-center py-4">
-                    <strong>Agregar Proveedor</strong>
+                    <strong>Editar Proveedor</strong>
                   </h5>
 
                   <div class="card-body px-lg-5 pt-5">
@@ -126,24 +142,23 @@
                       <%
                           MaterialDAO dao=new MaterialDAO();
                           int IdMaterial=Integer.parseInt((String)request.getAttribute("Id"));
-                          Material m=(Material)dao.list(IdMaterial);
+                          Material ma=(Material)dao.list(IdMaterial);
                       %>
                       
 
-                    <form class="mb-3 pb-1" name="formulario" id="formulario" method="POST">
+                    <form class="mb-3 pb-1" name="formulario" id="formulario" action="MaterialController">
 
                       <div class="form-group col-sm-12 col-md-6 col-xl-12">
                         <label>Nombre</label>
-                        <input type="text" class="form-control" name="Nombre" id="Nombre" maxlength="50"  value="<%= m.getNombre()%>" >
-                        <input type="hidden" name="IdMaterial" value="<%= m.getIdMaterial()%>">
+                        <input type="text" class="form-control" name="Nombre" id="Nombre" maxlength="50"  value="<%= ma.getNombre()%>" >
                       </div>
                       <div class="form-group col-sm-12 col-md-6 col-xl-12">
                         <label>Descripción</label>
-                        <input type="text" name="Descripcion" id="Descripcion" class="form-control" value="<%= m.getDescripcion()%>">
+                        <input type="text" name="Descripcion" id="Descripcion" class="form-control" value="<%= ma.getDescripcion()%>">
                       </div>
-
+                      <input type="hidden" name="IdMaterial" value="<%= ma.getIdMaterial()%>">
                       <hr>
-                      <button class="btn btn-outline-success btn-block" type="submit" value="Actualizar"><i class="fa fa-save"></i>
+                      <button class="btn btn-outline-success btn-block" type="submit" value="Actualizar" name="accion"><i class="fa fa-save"></i>
                         Guardar</button>
                       <a class="btn btn-outline-danger btn-block" href="MaterialController?accion=listar"><i
                           class="fa fa-arrow-alt-circle-left"></i> Cancelar</a>

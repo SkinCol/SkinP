@@ -24,7 +24,7 @@ public class MaterialDAO implements CRUDmaterial {
         ArrayList<Material>list=new  ArrayList<>();
        String sql = "select * from material";
         try {
-            con=cn.getCennection();
+            con=cn.getConnection();
             ps=con.prepareStatement(sql);
             rs=ps.executeQuery();
             while (rs.next()) {
@@ -42,9 +42,9 @@ public class MaterialDAO implements CRUDmaterial {
 
     @Override
     public Material list(int IdMaterial) {
-        String sql = "select * from proveedor where IdMaterial="+IdMaterial;
+        String sql = "select * from material where IdMaterial="+IdMaterial;
         try {
-            con=cn.getCennection();
+            con=cn.getConnection();
             ps=con.prepareStatement(sql);
             rs=ps.executeQuery();
             while (rs.next()) {
@@ -62,7 +62,7 @@ public class MaterialDAO implements CRUDmaterial {
     public boolean add(Material m) {
         String sql = "insert into material (Nombre, Descripcion) values ('"+m.getNombre()+"','"+ m.getDescripcion()+"')";
         try {
-            con=cn.getCennection();
+            con=cn.getConnection();
             ps=con.prepareStatement(sql);
             ps.executeUpdate();
         } catch (Exception e) {
@@ -72,9 +72,9 @@ public class MaterialDAO implements CRUDmaterial {
 
     @Override
     public boolean edit(Material m) {
-        String sql = "update proveedor set Nombre='"+m.getNombre()+"',Descripcion='"+ m.getDescripcion()+"' where IdMaterial="+m.getIdMaterial();
+        String sql = "update material set Nombre='"+m.getNombre()+"',Descripcion='"+ m.getDescripcion()+"' where IdMaterial="+m.getIdMaterial();
         try {
-            con=cn.getCennection();
+            con=cn.getConnection();
             ps=con.prepareStatement(sql);
             ps.executeUpdate();
         } catch (Exception e) {
@@ -86,7 +86,7 @@ public class MaterialDAO implements CRUDmaterial {
     public boolean eliminar(int IdMaterial) {
         String sql = "delete from material where IdMaterial =" + IdMaterial;
         try {
-            con=cn.getCennection();
+            con=cn.getConnection();
             ps=con.prepareStatement(sql);
             ps.executeUpdate();
         } catch (Exception e) {

@@ -44,6 +44,18 @@
         <servlet-name>SkinController</servlet-name>
         <servlet-class>Controller.SkinController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SerieController</servlet-name>
+        <servlet-class>Controller.SerieController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CiudadController</servlet-name>
+        <servlet-class>Controller.CiudadController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ControllerCiudad</servlet-name>
+        <servlet-class>Controller.ControllerCiudad</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Validar</servlet-name>
         <url-pattern>/Validar</url-pattern>
@@ -87,6 +99,18 @@
     <servlet-mapping>
         <servlet-name>SkinController</servlet-name>
         <url-pattern>/SkinController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SerieController</servlet-name>
+        <url-pattern>/SerieController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CiudadController</servlet-name>
+        <url-pattern>/CiudadController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControllerCiudad</servlet-name>
+        <url-pattern>/ControllerCiudad</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

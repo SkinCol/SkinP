@@ -1,27 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Model;
 
-import ModeloDAO.LimitadoDAO;
-import config.Conexion;
-import config.Conexion;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 
-/**
- *
- * @author angel
- */
 public class Limitado {
-    private int IdLimitado;
-    private String Nombre;
-    private String Imagen;
-    private List<Limitado> listaLimitado;
+    int IdLimitado;
+    String Nombre;
+    String Imagen;
+
 
     public Limitado() {
     }

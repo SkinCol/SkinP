@@ -33,7 +33,7 @@ public class SkinDAO implements CRUDskin {
                      "FROM skin s, limitado l \n" +
                      "WHERE l.IdLimitado=s.IdLimitado";
         try {
-            con=cn.getCennection();
+            con=cn.getConnection();
             ps=con.prepareStatement(sql);
             rs=ps.executeQuery();
             while (rs.next()) {
@@ -56,7 +56,7 @@ public class SkinDAO implements CRUDskin {
     public Skin list(int IdSkin) {
         String sql = "select * from skin where IdSkin="+IdSkin;
         try {
-            con=cn.getCennection();
+            con=cn.getConnection();
             ps=con.prepareStatement(sql);
             rs=ps.executeQuery();
             while (rs.next()) {
@@ -76,7 +76,7 @@ public class SkinDAO implements CRUDskin {
     public boolean add(Skin s) {
         String sql = "insert into skin (IdLimitado, Imagen, Disponible) values ('"+s.getLimitado()+"','"+ s.getImagen()+"','"+ s.getImagenUsuario()+"','"+ s.isDisponible()+ "','"+s.getCostoSkin()+"')";
         try {
-            con=cn.getCennection();
+            con=cn.getConnection();
             ps=con.prepareStatement(sql);
             ps.executeUpdate();
         } catch (Exception e) {
@@ -88,7 +88,7 @@ public class SkinDAO implements CRUDskin {
     public boolean edit(Skin s) {
         String sql = "update skin set IdLimitado='"+s.getLimitado()+"',Imagen='"+ s.getImagen()+"' ImagenUsuario='"+ s.getImagenUsuario()+"' Disponible='"+ s.isDisponible()+ "'CostoSkin='"+s.getCostoSkin()+"' where IdSkin="+s.getIdSkin();
         try {
-            con=cn.getCennection();
+            con=cn.getConnection();
             ps=con.prepareStatement(sql);
             ps.executeUpdate();
         } catch (Exception e) { 
@@ -100,7 +100,7 @@ public class SkinDAO implements CRUDskin {
     public boolean eliminar(int IdSkin) {
         String sql = "delete from skin where IdSkin =" + IdSkin;
         try {
-            con=cn.getCennection();
+            con=cn.getConnection();
             ps=con.prepareStatement(sql);
             ps.executeUpdate();
         } catch (Exception e) {

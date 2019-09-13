@@ -1,10 +1,10 @@
 <%-- 
-    Document   : editarCiudad
-    Created on : 16/07/2019, 07:17:02 PM
+    Document   : editarProveedor
+    Created on : 18/06/2019, 05:00:12 PM
     Author     : angel
 --%>
-
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page import="Model.Ciudad"%>
+<%@page import="ModeloDAO.CiudadDAO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
@@ -24,61 +24,78 @@
 
 <body>
   <header>
-    <!-- Navbar -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
-      <div class="container-fluid">
-        <!-- Brand -->
-        <a class="navbar-brand waves-effect" href="home.html" target="_blank">
-          <img src="img/Logo Skin Black.png" style="width:150px" alt="" />
-        </a>
+        <!-- Navbar -->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+            <div class="container-fluid">
+                <!-- Brand -->
+                <a class="navbar-brand waves-effect" href="index.htm" target="_blank">
+                    <img src="img/Logo Skin Black.png"  style="width:150px" alt="" />
+                </a>
 
-        <!-- Collapse -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+                <!-- Collapse -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-        <!-- Links -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <!-- Left -->
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link waves-effect" href="#">Dashboard</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link waves-effect" href="#" target="_blank">Perfil</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link waves-effect" href="#" target="_blank">Tablas</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link waves-effect" href="#" target="_blank">Ordenes</a>
-            </li>
-          </ul>
+                <!-- Links -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Left -->
 
-          <!-- Right -->
-          <ul class="navbar-nav nav-flex-icons">
-            <li class="nav-item">
-              <a href="https://www.facebook.com" class="nav-link waves-effect" target="_blank">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="https://twitter.com" class="nav-link waves-effect" target="_blank">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="IncioSesion.html" class="nav-link border border-light rounded waves-effect" target="_blank">
-                <i class="fas fa-user"></i>Usuario
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <!-- Navbar -->
-  </header>
+                    <div class="dropdown mr-auto">
+                        <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenu4" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                            Dropdown
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu4">
+                            <a class="dropdown-item" href="DispositivoController?accion=listar">Dispositivos</a>
+                            <a class="dropdown-item" href="SkinController?listar=listar">Skins</a>
+                            <a class="dropdown-item" href="SerieController?accion=listar">Series</a>
+                            <div class="dropdown-divider"></div> 
+                            <a class="dropdown-item" href="indexFactura.htm">Facturas</a>
+                            <a class="dropdown-item" href="indexSolicitud.htm">Solicitudes</a>
+                            <a class="dropdown-item" href="indexEnvio.htm">Envios</a>
+                            <a class="dropdown-item" href="indexUsuario.htm">Usuario</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="FacInsumosController?accion=listar">Facturas Insumos</a>
+                            <a class="dropdown-item" href="ProveedorController?accion=listar">Proveedores</a>
+                            <a class="dropdown-item" href="MaterialController?accion=listar">Materiales</a>
+                            <a class="dropdown-item" href="DeptoController?accion=listar">Departamento</a>
+                            <div class="dropdown-divider"></div>
+                        </div>
+
+                    </div>
+
+                    <!-- Right -->
+                    <ul class="navbar-nav nav-flex-icons">
+                        <li class="nav-item">
+                            <a href="https://www.facebook.com" class="nav-link waves-effect" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://twitter.com" class="nav-link waves-effect" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <a href="IncioSesion.html" class="btn btn-white rounded" target="_blank">
+                                    <i class="fas fa-user"></i> ${usuario.getNombres()}
+                                </a>
+                                <form action="Validacion" method="POST">
+                                    <button name="accion" class="btn btn-danger text-white rounded waves-effect">
+                                        <i class="fas fa-sign-out-alt text-white mb-1 mt-1"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar -->
+    </header>
 
   <!--Main layout-->
   <main class="pt-5 mx-lg-5">
@@ -90,7 +107,7 @@
           <h4 class="mb-2 mb-sm-0 pt-1">
             <a href="index.html" target="_blank">SkinCol</a>
             <span>/</span>
-            <span>Ciudad</span>
+            <span>Proveedor</span>
           </h4>
 
           <form class="d-flex justify-content-center">
@@ -121,35 +138,30 @@
                   </h5>
 
                   <div class="card-body px-lg-5 pt-5">
-
-                    <form class="mb-3 pb-1" name="formulario" id="formulario" method="POST">
-
-                      <label for="select">Departamento</label>
-                        <select class="browser-default custom-select mb-4" name="IdDepartamento" id="IdDepartamento">
-                            <c:forEach var="dato" items="${listaD}">
-                                <c:if test="${dato.IdCiudad != lista[0].IdDepartamento}">
-                                    <option value="${dato.IdDepartamento}">
-                                        ${dato.Nombre}
-                                    </option>
-                                </c:if>
-                                    <c:if test="${dato.Ciudad == lista[0].IdDepartamento}">
-                                        <option value="${dato.IdDepartamento}" selected="true">
-                                        ${dato.Nombre}
-                                        </option>                                                                          
-                                </c:if>
-                            </c:forEach>
-                        </select>
+                      
+                      <%
+                          CiudadDAO dao=new CiudadDAO();
+                          int IdCiudad=Integer.parseInt((String)request.getAttribute("Id"));
+                          Ciudad ciu=(Ciudad)dao.list(IdCiudad);
+                      %>
                       
                       
+
+                    <form class="mb-3 pb-1" name="formulario" id="formulario" action="ControllerCiudad">
+
                       <div class="form-group col-sm-12 col-md-6 col-xl-12">
-                        <label>Ciudad</label>
-                        <input type="text" name="Nombre" id="Nombre" class="form-control" value="${lista[0].Nombre}">
-                      </div>
-
+                      <label>Departamento</label>
+                      <input type="text" class="form-control" name="IdDepartamento" id="Nombre" maxlength="50"  value="<%= ciu.getIdDepartamento()%>">
+                      <input type="hidden" name="IdCiudad" value="<%= ciu.getIdCiudad()%>">
+                  </div>
+                       <div class="form-group col-sm-12 col-md-6 col-xl-12">
+                      <label>Nombre</label>
+                      <input type="text" class="form-control" name="Nombre" id="Nombre" maxlength="50"  value="<%= ciu.getNombre()%>">
+                  </div>
                       <hr>
-                      <button class="btn btn-outline-success btn-block" type="submit" value="Guardar"><i class="fa fa-save"></i>
+                      <button class="btn btn-outline-success btn-block" type="submit" value="Actualizar" name="accion"><i class="fa fa-save"></i>
                         Guardar</button>
-                      <a class="btn btn-outline-danger btn-block" href="indexCiudad.htm"><i
+                      <a class="btn btn-outline-danger btn-block" href="ControllerCiudad?accion=listar"><i
                           class="fa fa-arrow-alt-circle-left"></i> Cancelar</a>
                     </form>
                   </div>
@@ -217,5 +229,3 @@ new WOW().init();
               <!-- Form -->
     </body>
 </html>
- 
-

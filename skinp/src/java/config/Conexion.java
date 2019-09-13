@@ -19,7 +19,7 @@ public class Conexion {
     String url="jdbc:mysql://localhost:3306/skincol";
     String user="root";
     String pass="";
-    public Connection getCennection(){
+    public Connection getConnection(){
         try {
             Class.forName("com.mysql.jdbc.Driver");
             con=DriverManager.getConnection(url,user, pass);

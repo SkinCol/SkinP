@@ -23,61 +23,78 @@
 
 <body>
   <header>
-    <!-- Navbar -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
-      <div class="container-fluid">
-        <!-- Brand -->
-        <a class="navbar-brand waves-effect" href="home.html" target="_blank">
-          <img src="img/Logo Skin Black.png" style="width:150px" alt="" />
-        </a>
+        <!-- Navbar -->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+            <div class="container-fluid">
+                <!-- Brand -->
+                <a class="navbar-brand waves-effect" href="index.htm" target="_blank">
+                    <img src="img/Logo Skin Black.png"  style="width:150px" alt="" />
+                </a>
 
-        <!-- Collapse -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+                <!-- Collapse -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-        <!-- Links -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <!-- Left -->
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link waves-effect" href="#">Dashboard</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link waves-effect" href="#" target="_blank">Perfil</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link waves-effect" href="#" target="_blank">Tablas</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link waves-effect" href="#" target="_blank">Ordenes</a>
-            </li>
-          </ul>
+                <!-- Links -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Left -->
 
-          <!-- Right -->
-          <ul class="navbar-nav nav-flex-icons">
-            <li class="nav-item">
-              <a href="https://www.facebook.com" class="nav-link waves-effect" target="_blank">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="https://twitter.com" class="nav-link waves-effect" target="_blank">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="IncioSesion.html" class="nav-link border border-light rounded waves-effect" target="_blank">
-                <i class="fas fa-user"></i>Usuario
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <!-- Navbar -->
-  </header>
+                    <div class="dropdown mr-auto">
+                        <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenu4" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                            Dropdown
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu4">
+                            <a class="dropdown-item" href="DispositivoController?accion=listar">Dispositivos</a>
+                            <a class="dropdown-item" href="SkinController?listar=listar">Skins</a>
+                            <a class="dropdown-item" href="SerieController?accion=listar">Series</a>
+                            <div class="dropdown-divider"></div> 
+                            <a class="dropdown-item" href="indexFactura.htm">Facturas</a>
+                            <a class="dropdown-item" href="indexSolicitud.htm">Solicitudes</a>
+                            <a class="dropdown-item" href="indexEnvio.htm">Envios</a>
+                            <a class="dropdown-item" href="indexUsuario.htm">Usuario</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="FacInsumosController?accion=listar">Facturas Insumos</a>
+                            <a class="dropdown-item" href="ProveedorController?accion=listar">Proveedores</a>
+                            <a class="dropdown-item" href="MaterialController?accion=listar">Materiales</a>
+                            <a class="dropdown-item" href="DeptoController?accion=listar">Departamento</a>
+                            <div class="dropdown-divider"></div>
+                        </div>
+
+                    </div>
+
+                    <!-- Right -->
+                    <ul class="navbar-nav nav-flex-icons">
+                        <li class="nav-item">
+                            <a href="https://www.facebook.com" class="nav-link waves-effect" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://twitter.com" class="nav-link waves-effect" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <a href="IncioSesion.html" class="btn btn-white rounded" target="_blank">
+                                    <i class="fas fa-user"></i> ${usuario.getNombres()}
+                                </a>
+                                <form action="Validacion" method="POST">
+                                    <button name="accion" class="btn btn-danger text-white rounded waves-effect">
+                                        <i class="fas fa-sign-out-alt text-white mb-1 mt-1"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar -->
+    </header>
 
   <!--Main layout-->
   <main class="pt-5 mx-lg-5">
@@ -121,7 +138,7 @@
 
                   <div class="card-body px-lg-5 pt-5">
 
-                    <form class="mb-3 pb-1" name="formulario" id="formulario" action="ProveedorLimitado">
+                    <form class="mb-3 pb-1" name="formulario" id="formulario" action="LimitadoController">
 
                       <label for="Nombre">Nombre </label>
                       <input type="text" name="Nombre" id="nombre" class="form-control" placeholder="">
@@ -133,7 +150,7 @@
                       <hr>
                       <button class="btn btn-outline-success btn-block" type="submit" name="accion" value="Agregar"><i class="fa fa-save"></i>
                         Guardar</button>
-                      <a class="btn btn-outline-danger btn-block" href="indexLimitado.htm"><i
+                      <a class="btn btn-outline-danger btn-block" href="LimitadoController?accion=listar"><i
                           class="fa fa-arrow-alt-circle-left"></i> Cancelar</a>
                     </form>
                   </div>

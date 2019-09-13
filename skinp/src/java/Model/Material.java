@@ -10,9 +10,9 @@ package Model;
  * @author angel
  */
 public class Material {
-    private int IdMaterial;
-    private String Nombre;
-    private String Descripcion;
+    int IdMaterial;
+    String Nombre;
+    String Descripcion;
 
     public Material() {
     }
