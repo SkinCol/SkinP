@@ -59,7 +59,8 @@ public class ControllerSkin extends HttpServlet {
     int item;
     double totalPagar = 0.0;
     int cantidad = 1;
-
+    double Pagar = 0.0;
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String accion = request.getParameter("accion");
@@ -224,11 +225,20 @@ public class ControllerSkin extends HttpServlet {
                 for (int i = 0; i < listaCarrito.size(); i++) {
                     totalPagar = totalPagar + listaCarrito.get(i).getSubTotal();
                 }
+                ArrayList lsCar=(ArrayList)request.getAttribute("carrito");
                 request.setAttribute("totalPagar", totalPagar);
                 request.getRequestDispatcher("Checkout/Cart.jsp").forward(request, response);
+                request.getRequestDispatcher("Checkout/CheckoutCart.jsp").forward(request, response);
+
                 break;
                 
             case "Pagar":
+                totalPagar = 0.0;
+                request.setAttribute("carrito", listaCarrito);
+                for (int i = 0; i < listaCarrito.size(); i++) {
+                    totalPagar = totalPagar + listaCarrito.get(i).getSubTotal();
+                }
+                request.setAttribute("totalPagar", totalPagar);
                 request.getRequestDispatcher("Checkout/CheckoutCart.jsp").forward(request, response);
                 break;
         }

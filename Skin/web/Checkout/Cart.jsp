@@ -132,9 +132,6 @@
                                 <h4><a>Generar Comprar</a></h4>
                             </div>
 
-                            <!-- Card image -->
-                            <!-- <img class="card-img-top" src="https://res.cloudinary.com/skincol-me/image/upload/v1566554303/Limited/aStickerBomb_LimitedPage.jpg.pagespeed.ic.W-EDgX1GtZ_b9ekia.webp" alt="Card image cap">
-
                             <!-- Card content -->
                             <div class="card-body">
 

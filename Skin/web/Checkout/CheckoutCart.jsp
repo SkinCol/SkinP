@@ -4,6 +4,8 @@
     Author     : alejandro
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -21,7 +23,7 @@
         <link href="css/css/estilos.css" rel="stylesheet" type="text/css" />
         <link href="css/assets/css/styles.css" rel="stylesheet">
         <link rel="shortcut icon" type="image/x-ico" href="favicon.ico" />
-        <title>Carrito de Compras</title>
+        <title>Checkout</title>
     </head>
 
     <body>
@@ -233,7 +235,7 @@
                         </form>
                         <!-- Default form register -->
                     </div>
-                    
+
                     <div class="col-sm-12 col-lg-4">
                         <br>
                         <br>
@@ -280,18 +282,18 @@
                                         <div class="col-8">
                                             <label>Mes*</label>
                                             <select class="form-control">
-                                                <option value="01">January</option>
-                                                <option value="02">February </option>
-                                                <option value="03">March</option>
-                                                <option value="04">April</option>
-                                                <option value="05">May</option>
-                                                <option value="06">June</option>
-                                                <option value="07">July</option>
-                                                <option value="08">August</option>
-                                                <option value="09">September</option>
-                                                <option value="10">October</option>
-                                                <option value="11">November</option>
-                                                <option value="12">December</option>
+                                                <option value="01">Enero</option>
+                                                <option value="02">Febrero </option>
+                                                <option value="03">Marzo</option>
+                                                <option value="04">Abril</option>
+                                                <option value="05">Mayo</option>
+                                                <option value="06">Junio</option>
+                                                <option value="07">Julio</option>
+                                                <option value="08">Agosto</option>
+                                                <option value="09">Septiembre</option>
+                                                <option value="10">Octubre</option>
+                                                <option value="11">Noviembre</option>
+                                                <option value="12">Deciembre</option>
                                             </select>
                                         </div>
                                         <div class="col-4">
@@ -303,13 +305,17 @@
                                                 <option value="19"> 2019</option>
                                                 <option value="20"> 2020</option>
                                                 <option value="21"> 2021</option>
+                                                <option value="22"> 2022</option>
+                                                <option value="23"> 2023</option>
+                                                <option value="24"> 2024</option>
+                                                <option value="25"> 2025</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="form-group" id="credit_cards">
-                                        <img src="css/assets/images/visa.jpg" id="visa">
-                                        <img src="css/assets/images/mastercard.jpg" id="mastercard">
-                                        <img src="css/assets/images/amex.jpg" id="amex">
+                                        <img style="width: 72px;" src="css/assets/images/visa.jpg" id="visa">
+                                        <img style="width: 72px;" src="css/assets/images/mastercard.png" id="mastercard">
+                                        <img style="width: 72px;" src="css/assets/images/amex.jpg" id="amex">
                                     </div>
                                     <div class="form-group" id="pay-now">
                                         <button type="submit" class="btn btn-info btn-sm btn-block" id="confirm-purchase">Confirm</button>
@@ -318,10 +324,34 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col-sm-12 col-lg-4">
                         <br>
                         <p class="h3">4. REVISIÓN</p>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="text-center">Item</th>
+                                    <th class="text-center">Imagen</th>
+                                    <th class="text-center">Producto</th>
+                                    <th class="text-center">Precio</th>
+                                    <th class="text-center">Cantidad</th>
+                                    <th class="text-center">SubTotal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <c:forEach var="cart" items="${carrito}">
+                                    <tr>
+                                        <td class="pt-3-half pt-1" >${cart.getItem()}</td>
+                                        <td class="pt-3-half" ><img src="${cart.getImagen()}" width="80" height="80"></td>
+                                        <td class="pt-3-half pt-1" >${cart.getNombre()}</td>
+                                        <td class="pt-3-half pt-1" >${cart.getPrecioCompra()}</td>
+                                        <td class="pt-3-half pt-1" >${cart.getCantidad()}</td>
+                                        <td class="pt-3-half pt-1" >${cart.getSubTotal()}</td>
+                                    </tr>
+                                </c:forEach>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
 
