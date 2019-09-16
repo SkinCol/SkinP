@@ -3,408 +3,311 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-  <link rel="stylesheet" href="blk/css/blk-design-system.min.css"/>
-  <link rel="stylesheet" href="blk/css/nucleo-icons.css"/>
-  <link rel="stylesheet" href="blk/css/blk-design-system.css?=1.0.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <script src="https://kit.fontawesome.com/960e8817a0.js"></script>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/mdb.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <!-- <link rel="stylesheet" href="blk/css/blk-design-system.min.css" />
+  <link rel="stylesheet" href="blk/css/nucleo-icons.css" />
+  <link rel="stylesheet" href="blk/css/blk-design-system.css?=1.0.0" /> -->
   <link rel="shortcut icon" type="" href="favicon.ico" />
-
-
   <title>Personalizador</title>
   <link rel="stylesheet" href="resize.css">
-
-
-
-    <link rel="stylesheet" href="uploadImage/main.css" />
+  <link rel="stylesheet" href="uploadImage/main.css" />
 </head>
 
 
-<body class="index-page">
+<body style="background-color: darkgrey;">
   <div class="wrapper">
     <div class="page-header header-filter">
-      <div class="squares square1"></div>
-      <div class="squares square2"></div>
-      <div class="squares square3"></div>
-      <div class="squares square4"></div>
-      <div class="squares square5"></div>
-      <div class="squares square6"></div>
-      <div class="squares square7"></div>
+      <div class="row">
+        <div class="card col-4">
+          <div class="main">
+            <div class="card-header">
+              <ul class="nav nav-tabs nav-tabs-info" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" data-toggle="tab" href="#link1" role="tablist">
+                    Dispositivo
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " data-toggle="tab" href="#link2" role="tablist">
+                    Diseño
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " data-toggle="tab" href="#link3" role="tablist">
+                    Mix
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="card-body">
 
-<div class="row">
-      <div class="card col-3"> 
-      <div class="main">
-       
-          <div class="card-header">
-            <ul class="nav nav-tabs nav-tabs-info" role="tablist">
-              <li class="nav-item">
-                <a class="nav-link active" data-toggle="tab" href="#link1" role="tablist">
-                  Dispositivo
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link " data-toggle="tab" href="#link2" role="tablist">
-                  Diseño
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link " data-toggle="tab" href="#link3" role="tablist">
-                  Mix
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="card-body">
+              <div class="tab-content tab-space  scrollbar scrollbar-primary">
+                <div class="tab-pane active force-overflow" id="link1">
+                  <center>
+                    <h2>Escoje tu dispositivo</h2>
+                  </center>
+                  <div class="card">
+                    <div class="card-header">
+                      <ul class="nav nav-tabs nav-tabs-info">
+                        <li>
+                          <a class="nav-link" data-toggle="tab" role="tablist" href="#device1">iPhone</a>
+                        </li>
+                        <li>
+                          <a class="nav-link" data-toggle="tab" role="tablist" href="#device2">Android</a>
+                        </li>
+                        <li>
+                          <a class="nav-link" data-toggle="tab" role="tablist" href="#device3">Tablets</a>
+                        </li>
+                        <li>
+                          <a class="nav-link" data-toggle="tab" role="tablist" href="#device4">Portatiles</a>
+                        </li>
+                        <li>
+                          <a class="nav-link" data-toggle="tab" role="tablist" href="#device5">Consolas</a>
+                        </li>
+                        <li>
+                          <a class="nav-link" data-toggle="tab" role="tablist" href="#device6">Otros</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="card-body">
+                      <div class="tab-content tab-space">
 
-            <div class="tab-content tab-space  scrollbar scrollbar-primary">
-              <div class="tab-pane active force-overflow" id="link1">
-                <center>
-                  <h2>Escoje tu dispositivo</h2>
-                </center>
-                <div class="card">
-                  <div class="card-header">
-                    <ul class="nav nav-tabs nav-tabs-info">
-                      <li>
-                        <a class="nav-link" data-toggle="tab" role="tablist" href="#device1">iPhone</a>
-                      </li>
-                      <li>
-                        <a class="nav-link" data-toggle="tab" role="tablist" href="#device2">Android</a>
-                      </li>
-                      <li>
-                        <a class="nav-link" data-toggle="tab" role="tablist" href="#device3">Tablets</a>
-                      </li>
-                      <li>
-                        <a class="nav-link" data-toggle="tab" role="tablist" href="#device4">Portatiles</a>
-                      </li>
-                      <li>
-                        <a class="nav-link" data-toggle="tab" role="tablist" href="#device5">Consolas</a>
-                      </li>
-                      <li>
-                        <a class="nav-link" data-toggle="tab" role="tablist" href="#device6">Otros</a>
-                      </li>
-                    </ul>
-                  </div>
-           
+                        <div class="tab-pane col-12" id="device1">
+                          <a class="btn btn-block btn-sm text-black" id="xsmax" href="#"
+                            onclick="mostrar_imagen('imagen')">iPhone XS max</a>
+                          <a class="btn btn-block btn-sm text-black" id="xs" value="Mostrar imagen" href="#"
+                            onclick="mostrar_imagen('imagen')">iPhone XS</a>
+                          <a class="btn btn-block btn-sm text-black" value="Mostrar imagen" href="#"
+                            onclick="mostrar_imagen('imagen')">iPhone XR</a>
+                          <a class="btn btn-block btn-sm text-black" value="Mostrar imagen" href="#"
+                            onclick="mostrar_imagen('imagen')">iPhone X</a>
+                          <a class="btn btn-block btn-sm text-black" value="Mostrar imagen" href="#"
+                            onclick="mostrar_imagen('imagen')">iPhone 8+</a>
+                          <a class="btn btn-block btn-sm text-black" value="Mostrar imagen" href="#"
+                            onclick="mostrar_imagen('imagen')">iPhone 8</a>
+                          <a class="btn btn-block btn-sm text-black" value="Mostrar imagen" href="#"
+                            onclick="mostrar_imagen('imagen')">iPhone 7+</a>
+                          <a class="btn btn-block btn-sm text-black" value="Mostrar imagen" href="#"
+                            onclick="mostrar_imagen('imagen')">iPhone 7</a>
+                          <a class="btn btn-block btn-sm text-black" value="Mostrar imagen" href="#"
+                            onclick="mostrar_imagen('imagen')">iPhone 6S+</a>
+                          <a class="btn btn-block btn-sm text-black" value="Mostrar imagen" href="#"
+                            onclick="mostrar_imagen('imagen')">iPhone 6</a>
+                          <a class="btn btn-block btn-sm text-black" value="Mostrar imagen" href="#"
+                            onclick="mostrar_imagen('imagen')">iPhone 5S/5</a>
+                          <a class="btn btn-block btn-sm text-black" value="Mostrar imagen" href="#"
+                            onclick="mostrar_imagen('imagen')">iPhone 4/4S</a>
+                        </div>
 
-                  <div class="card-body">
-                    <div class="tab-content tab-space">
-
-                      <div class="tab-pane col-12" id="device1">
-                        <a class="btn btn btn-block btn-sm btn-round"  id="xsmax" onclick="mostrar_imagen('imagen')">iPhone XS max</a> 
-                        <a class="btn btn btn-block btn-sm btn-round"  id="xs" value="Mostrar imagen" onclick="mostrar_imagen('imagen')">iPhone XS</a>
-                        <a class="btn btn btn-block btn-sm btn-round"  value="Mostrar imagen" onclick="mostrar_imagen('imagen')">iPhone XR</a>
-                        <a class="btn btn btn-block btn-sm btn-round"  value="Mostrar imagen" onclick="mostrar_imagen('imagen')">iPhone X</a>
-                        <a class="btn btn btn-block btn-sm btn-round"  value="Mostrar imagen" onclick="mostrar_imagen('imagen')">iPhone 8+</a>
-                        <a class="btn btn btn-block btn-sm btn-round"  value="Mostrar imagen" onclick="mostrar_imagen('imagen')">iPhone 8</a>
-                        <a class="btn btn btn-block btn-sm btn-round"  value="Mostrar imagen" onclick="mostrar_imagen('imagen')">iPhone 7+</a>
-                        <a class="btn btn btn-block btn-sm btn-round"  value="Mostrar imagen" onclick="mostrar_imagen('imagen')">iPhone 7</a>
-                        <a class="btn btn btn-block btn-sm btn-round"  value="Mostrar imagen" onclick="mostrar_imagen('imagen')">iPhone 6S+</a>
-                        <a class="btn btn btn-block btn-sm btn-round"  value="Mostrar imagen" onclick="mostrar_imagen('imagen')">iPhone 6</a>
-                        <a class="btn btn btn-block btn-sm btn-round"  value="Mostrar imagen" onclick="mostrar_imagen('imagen')">iPhone 5S/5</a>
-                        <a class="btn btn btn-block btn-sm btn-round"  value="Mostrar imagen" onclick="mostrar_imagen('imagen')">iPhone 4/4S</a>
-                      </div>
-
-                      <div class="tab-pane col-12" id="device2"y Note10
-                        <center>
+                        <div class="tab-pane col-12" id="device2" y Note10 <center>
                           <h4>Samsung</h4>
-                        </center>
-                        <a class="btn btn btn-block btn-sm btn-round" id="Note10" value="Mostrar imagen" onclick="mostrar_imagen('imagen')">Galaxy Note 10</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">Galaxy Note10 Plus</a>
-                        <center>
-                          <h4>Google</h4>
-                        </center>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">Magic Trackpad 2</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">Magic Trackpad 2</a>
-                        <center>
-                          <h4>HTC</h4>
-                        </center>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">Magic Trackpad 2</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">Magic Trackpad 2</a>
-                        <center>
-                          <h4>LG</h4>
-                        </center>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">Magic Trackpad 2</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">Magic Trackpad 2</a>
-                        <center>
-                          <h4>Motorola</h4>
-                        </center>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">Magic Trackpad 2</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">Magic Trackpad 2</a>
-                        <center>
-                          <h4>Sony</h4>
-                        </center>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">Magic Trackpad 2</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">Magic Trackpad 2</a>
-                        <center>
-                          <h4>Huawei</h4>
-                        </center>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">Magic Trackpad 2</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">Magic Trackpad 2</a>
-                        <center>
-                          <h4>Xiaomi</h4>
-                        </center>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">Magic Trackpad 2</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">Magic Trackpad 2</a>
-                      </div>
+                          </center>
+                          <a class="btn btn btn-block btn-sm btn-round" id="Note10" value="Mostrar imagen"
+                            onclick="mostrar_imagen('imagen')">Galaxy Note 10</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">Galaxy Note10 Plus</a>
+                          <center>
+                            <h4>Google</h4>
+                          </center>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">Magic Trackpad 2</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">Magic Trackpad 2</a>
+                          <center>
+                            <h4>HTC</h4>
+                          </center>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">Magic Trackpad 2</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">Magic Trackpad 2</a>
+                          <center>
+                            <h4>LG</h4>
+                          </center>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">Magic Trackpad 2</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">Magic Trackpad 2</a>
+                          <center>
+                            <h4>Motorola</h4>
+                          </center>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">Magic Trackpad 2</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">Magic Trackpad 2</a>
+                          <center>
+                            <h4>Sony</h4>
+                          </center>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">Magic Trackpad 2</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">Magic Trackpad 2</a>
+                          <center>
+                            <h4>Huawei</h4>
+                          </center>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">Magic Trackpad 2</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">Magic Trackpad 2</a>
+                          <center>
+                            <h4>Xiaomi</h4>
+                          </center>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">Magic Trackpad 2</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">Magic Trackpad 2</a>
+                        </div>
 
-                      <div class="tab-pane col-12" id="device3">
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">iPad Pro 11" (2018)</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">iPad Pro 12.9" (2018)</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">iPad Pro 10.5" (2017)</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">iPad Pro 12.9" (2017)</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">iPad Pro 12.9" (2015)</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">iPad Pro 9.7" (2015)</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">iPad Pro 9.7" (2018)</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">iPad 4th Gen</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">iPad 3rd Gen</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">iPad 2</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">iPad Air 3</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">iPad Air 2</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">iPad Air</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">iPad Mini 5</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">iPad Mini 4</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">iPad Mini 3</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">iPad Mini Retina</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">iPad Mini</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">Nexus</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">Nexus 7</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">Amazon Kindle Fire</a>
-                      </div>
+                        <div class="tab-pane col-12" id="device3">
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">iPad Pro 11" (2018)</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">iPad Pro 12.9" (2018)</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">iPad Pro 10.5" (2017)</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">iPad Pro 12.9" (2017)</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">iPad Pro 12.9" (2015)</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">iPad Pro 9.7" (2015)</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">iPad Pro 9.7" (2018)</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">iPad 4th Gen</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">iPad 3rd Gen</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">iPad 2</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">iPad Air 3</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">iPad Air 2</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">iPad Air</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">iPad Mini 5</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">iPad Mini 4</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">iPad Mini 3</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">iPad Mini Retina</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">iPad Mini</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">Nexus</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">Nexus 7</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">Amazon Kindle Fire</a>
+                        </div>
 
-                      <div class="tab-pane col-12" id="device4">
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">Macbook Pro 13" (No Touch Bar)</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">Macbook Pro 13" (Touch Bar)</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">Macbook Pro 15" (Touch Bar)</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">Macbook 12" (2015)</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">Macbook Pro 13" (Retina 2012/2016)</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">Macbook Pro 15" (Retina 2012/2016)</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">Macbook Air 13" (2018)</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">Macbook Air 11"</a>
-                      </div>
+                        <div class="tab-pane col-12" id="device4">
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">Macbook Pro 13" (No Touch Bar)</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">Macbook Pro 13" (Touch Bar)</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">Macbook Pro 15" (Touch Bar)</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">Macbook 12" (2015)</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">Macbook Pro 13" (Retina 2012/2016)</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">Macbook Pro 15" (Retina 2012/2016)</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">Macbook Air 13" (2018)</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">Macbook Air 11"</a>
+                        </div>
 
-                      <div class="tab-pane col-12" id="device5">
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">Nintendo Switch</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">Switch Pro Dualshock</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">New Nintendo 3DSL XL</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">Nintendo 3DS/XL</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">PlayStation 4 Pro</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">PlayStation 4 Slim</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">PlayStation 4</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">PlayStation VR</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">PS Vita</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">PS4 Dualshock</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">PS3 Dualshock</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">Xbox One X</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">Xbox One S</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">Xbox One</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">Xbox One S Dualshock</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">Xbox Elite Dualshock</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">Xbox 360 Dualshock</a>
-                        
-                      </div>
+                        <div class="tab-pane col-12" id="device5">
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">Nintendo Switch</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">Switch Pro Dualshock</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">New Nintendo 3DSL XL</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">Nintendo 3DS/XL</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">PlayStation 4 Pro</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">PlayStation 4 Slim</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">PlayStation 4</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">PlayStation VR</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">PS Vita</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">PS4 Dualshock</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">PS3 Dualshock</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">Xbox One X</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">Xbox One S</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">Xbox One</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">Xbox One S Dualshock</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">Xbox Elite Dualshock</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">Xbox 360 Dualshock</a>
 
-                      <div class="tab-pane col-12" id="device6">
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">Magic Mouse 2</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">Magic Mouse</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">Magic Keyboard</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">Wireless Keyboard</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">Wired Keyboard</a>
-                        <a class="btn btn btn-block btn-sm btn-round" href="#">Magic Trackpad 2</a>
+                        </div>
+
+                        <div class="tab-pane col-12" id="device6">
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">Magic Mouse 2</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">Magic Mouse</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">Magic Keyboard</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">Wireless Keyboard</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">Wired Keyboard</a>
+                          <a class="btn btn btn-block btn-sm btn-round" href="#">Magic Trackpad 2</a>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              
-              <div class="tab-pane" id="link2">
-                <button class="btn btn-round btn-primary btn-large "><i class="fa fa-instagram" aria-hidden="true"></i>
-                  Instagram</button>
-                <button class="btn btn-round btn-info btn-large "><i class="fa fa-facebook" aria-hidden="true"></i>
-                  Facebook</button>
-                <button class="btn btn-round btn-warning btn-large btn-small">Sticker</button>
-                <button class="btn btn-round btn-neutral btn-large btn-small">Text</button>
-                <button class="btn btn-round btn-neutral btn-large btn-small">Color</button>
-                
-                <input  type="file" id="file" name="file[]" accept="image/*" multiple />
-              </div>
 
-                        <div  id="wrapper">
-                                <div id="container-input">
-                                    <div class="wrap-file">
-                                        <div id="preview-images">                                          
-                                        </div>
-                                    </div>
-                                    <button class="btn btn-round btn-success btn-large btn-small" id="publish" onclick="loadImage()">Publicar</button>
-                                </div>
-                            </div>
+                <div class="tab-pane" id="link2">
+                  <button class="btn btn-secondary btn-large "><i class="fab fa-instagram"></i>
+                    Instagram</button>
+                  <button class="btn btn-round btn-primary btn-large "><i class="fab fa-facebook-square"></i>
+                    Facebook</button>
+                  <button class="btn btn-round btn-warning btn-large btn-small"><i class="fas fa-sticky-note"></i>
+                    Sticker</button>
+                  <button class="btn btn-round btn-neutral btn-large btn-small"><i class="fas fa-font"></i>
+                    Text</button>
+                  <button class="btn btn-round btn-neutral btn-large btn-small"><i class="fas fa-fill-drip"></i>
+                    Color</button>
+
+                  <input type="file" id="file" name="file[]" accept="image/*" multiple />
+                </div>
+
+                <div id="wrapper">
+                  <div id="container-input">
+                    <div class="wrap-file">
+                      <div id="preview-images">
+                      </div>
+                    </div>
+                    <button class="btn btn-round btn-success btn-large btn-small" id="publish"
+                      onclick="loadImage()">Publicar</button>
+                  </div>
+                </div>
 
 
-              <div class="tab-pane" id="link3">
-                <div class="btn-group col-12" role="group" aria-label="Button group">
+                <div class="tab-pane" id="link3">
+                  <div class="btn-group col-12" role="group" aria-label="Button group">
                     <button class="btn btn-neutral">Back Center</button>
                     <button class="btn btn-neutral">Back Top</button>
                     <button class="btn btn-neutral">Back Bottom</button>
-                </div>
-                <div class="btn-group col-12" role="group" aria-label="Button group">
-                  <button class="btn btn-neutral">Sides</button>
-                  <button class="btn btn-neutral">Front</button>
-                  <button class="btn btn-neutral">Logo</button>
+                  </div>
+                  <div class="btn-group col-12" role="group" aria-label="Button group">
+                    <button class="btn btn-neutral">Sides</button>
+                    <button class="btn btn-neutral">Front</button>
+                    <button class="btn btn-neutral">Logo</button>
+                  </div>
                 </div>
               </div>
-            </div>
 
             </div>
-           
+
           </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         </div>
-        <div class="col"> 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
+        <div class="col">
           <div id="imagen" style="margin-left: 120px; margin-top: 30px">
-
           </div>
-              </div>
-              <script>		
-        
-                  window.addEventListener("load", init);
-                  
-                  function init(){
-                      ResizeJs.apply('.resizeMe', document.body);
-                      ResizeJs.apply('#div-3', document.body);
-                  }
-          
-                  
-            </script>
-            
-            <style>
-                  .resizeMe, #div-3{
-                      position: absolute;
-                      width:100px;
-                      height: 100px;
-                      text-align: center;
-                      line-height: 100px;
-                      font-family: sans-serif;
-                  }
-                  
-                  #div-3{
-                      
-                      background-color: forestgreen;
-                      left: 50px;
-                      top: 50px;
-                  }
-          
-                  
-              </style> 
-            
-              <div id="div-3" class="resizeMe"></div>
-                <div> <iframe name="file[]" id="frame" style="width:100%;height:600px; border:none; " scrolling="no"> 
-                   
-                </iframe></div>
-        </div>     
-    </div>
- 
+        </div>
+        <script>
+
+          window.addEventListener("load", init);
+
+          function init() {
+            ResizeJs.apply('.resizeMe', document.body);
+            ResizeJs.apply('#div-3', document.body);
+          }
+
+
+        </script>
+
+        <style>
+          .resizeMe,
+          #div-3 {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            font-family: sans-serif;
+          }
+
+          #div-3 {
+
+            background-color: forestgreen;
+            left: 50px;
+            top: 50px;
+          }
+        </style>
+
+        <div id="div-3" class="resizeMe"></div>
+        <div> <iframe name="file[]" id="frame" style="width:100%;height:600px; border:none; " scrolling="no">
+
+          </iframe></div>
+      </div>
     </div>
 
-  
-    <script src="resize.js"></script>
+  </div>
+
+
+  <script src="resize.js"></script>
 
   <script src="uploadImage/main.js"></script>
   <script src="customizer.js"></script>
@@ -446,7 +349,8 @@
   </script>
 </body>
 
-  </div>
+</div>
+
 </html>
 
 
